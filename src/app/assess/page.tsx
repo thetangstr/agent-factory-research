@@ -152,6 +152,10 @@ interface FormData {
   currentSystems: string[];
   customSystems: string;
   automationLevel: string;
+  aiUsageLevel: string;
+  aiGovernance: string;
+  agentExperience: string;
+  aiOwnership: string;
   challenges: string;
   selectedFunctions: string[];
   primaryGoal: string;
@@ -170,6 +174,10 @@ const INITIAL_FORM: FormData = {
   currentSystems: [],
   customSystems: "",
   automationLevel: "",
+  aiUsageLevel: "",
+  aiGovernance: "",
+  agentExperience: "",
+  aiOwnership: "",
   challenges: "",
   selectedFunctions: [],
   primaryGoal: "Both",
@@ -575,6 +583,99 @@ function Step2({ form, update, toggleSystem }: { form: FormData; update: <K exte
         </div>
 
         <Field label="Biggest Operational Challenges" value={form.challenges} onChange={(v) => update("challenges", v)} placeholder="What keeps them up at night? Where do they waste the most time/money?" multiline />
+
+        {/* AI Maturity Assessment (inspired by Jellyfish Maturity Maps) */}
+        <div className="pt-2" style={{ borderTop: "1px solid var(--md-sys-color-outline-variant)" }}>
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-xs font-bold uppercase tracking-wide" style={{ color: "var(--md-sys-color-primary)" }}>AI Maturity Snapshot</span>
+            <span className="text-[10px] px-1.5 py-0.5 rounded-full" style={{ background: "var(--md-sys-color-primary-container)", color: "var(--md-sys-color-primary)" }}>Helps detect readiness gaps</span>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-3">
+            <div>
+              <label className="block text-[10px] font-bold uppercase tracking-wide mb-1.5" style={{ color: "var(--md-sys-color-on-surface-muted)" }}>Current AI Usage</label>
+              <div className="space-y-1.5">
+                {[
+                  { value: "none", label: "No AI tools in use" },
+                  { value: "individual", label: "Individual use (ChatGPT, Copilot)" },
+                  { value: "embedded", label: "AI embedded in some workflows" },
+                  { value: "agents", label: "Running autonomous AI agents" },
+                ].map((opt) => (
+                  <button key={opt.value} onClick={() => update("aiUsageLevel", opt.value)}
+                    className="w-full text-left px-3 py-2 rounded-lg text-xs transition-colors"
+                    style={{
+                      border: form.aiUsageLevel === opt.value ? "2px solid var(--md-sys-color-primary)" : "1px solid var(--md-sys-color-outline-variant)",
+                      background: form.aiUsageLevel === opt.value ? "var(--md-sys-color-primary-container)" : "transparent",
+                      color: "var(--md-sys-color-on-surface)",
+                    }}
+                  >{opt.label}</button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-[10px] font-bold uppercase tracking-wide mb-1.5" style={{ color: "var(--md-sys-color-on-surface-muted)" }}>AI Governance</label>
+              <div className="space-y-1.5">
+                {[
+                  { value: "none", label: "No AI policy" },
+                  { value: "informal", label: "Informal guidelines" },
+                  { value: "formal", label: "Formal AI governance policy" },
+                  { value: "regulated", label: "Regulated (HIPAA, FedRAMP, etc.)" },
+                ].map((opt) => (
+                  <button key={opt.value} onClick={() => update("aiGovernance", opt.value)}
+                    className="w-full text-left px-3 py-2 rounded-lg text-xs transition-colors"
+                    style={{
+                      border: form.aiGovernance === opt.value ? "2px solid var(--md-sys-color-primary)" : "1px solid var(--md-sys-color-outline-variant)",
+                      background: form.aiGovernance === opt.value ? "var(--md-sys-color-primary-container)" : "transparent",
+                      color: "var(--md-sys-color-on-surface)",
+                    }}
+                  >{opt.label}</button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-[10px] font-bold uppercase tracking-wide mb-1.5" style={{ color: "var(--md-sys-color-on-surface-muted)" }}>Agent Experience</label>
+              <div className="space-y-1.5">
+                {[
+                  { value: "none", label: "Never deployed an AI agent" },
+                  { value: "experimented", label: "Experimented / POC stage" },
+                  { value: "production", label: "Agents in production" },
+                ].map((opt) => (
+                  <button key={opt.value} onClick={() => update("agentExperience", opt.value)}
+                    className="w-full text-left px-3 py-2 rounded-lg text-xs transition-colors"
+                    style={{
+                      border: form.agentExperience === opt.value ? "2px solid var(--md-sys-color-primary)" : "1px solid var(--md-sys-color-outline-variant)",
+                      background: form.agentExperience === opt.value ? "var(--md-sys-color-primary-container)" : "transparent",
+                      color: "var(--md-sys-color-on-surface)",
+                    }}
+                  >{opt.label}</button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-[10px] font-bold uppercase tracking-wide mb-1.5" style={{ color: "var(--md-sys-color-on-surface-muted)" }}>Who Would Own AI Agents?</label>
+              <div className="space-y-1.5">
+                {[
+                  { value: "nobody", label: "No one identified yet" },
+                  { value: "it", label: "IT / Engineering team" },
+                  { value: "business", label: "Business unit leads" },
+                  { value: "dedicated", label: "Dedicated AI / Innovation team" },
+                ].map((opt) => (
+                  <button key={opt.value} onClick={() => update("aiOwnership", opt.value)}
+                    className="w-full text-left px-3 py-2 rounded-lg text-xs transition-colors"
+                    style={{
+                      border: form.aiOwnership === opt.value ? "2px solid var(--md-sys-color-primary)" : "1px solid var(--md-sys-color-outline-variant)",
+                      background: form.aiOwnership === opt.value ? "var(--md-sys-color-primary-container)" : "transparent",
+                      color: "var(--md-sys-color-on-surface)",
+                    }}
+                  >{opt.label}</button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

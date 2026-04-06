@@ -98,6 +98,10 @@ export async function POST(req: Request) {
     targets: (body.targets as string) ?? "",
     timeline: (body.timeline as string) ?? "Exploring",
     budgetRange: (body.budgetRange as string) ?? "Unknown",
+    aiUsageLevel: (body.aiUsageLevel as string) ?? "Not specified",
+    aiGovernance: (body.aiGovernance as string) ?? "Not specified",
+    agentExperience: (body.agentExperience as string) ?? "Not specified",
+    aiOwnership: (body.aiOwnership as string) ?? "Not specified",
   };
 
   const format = (body.format as string) ?? "stream";

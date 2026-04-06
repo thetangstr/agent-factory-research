@@ -22,6 +22,11 @@ export interface AssessmentInput {
   targets: string;
   timeline: string;
   budgetRange: string;
+  // Maturity dimensions (inspired by Jellyfish Maturity Maps)
+  aiUsageLevel: string;
+  aiGovernance: string;
+  agentExperience: string;
+  aiOwnership: string;
 }
 
 export interface RetrievedContext {

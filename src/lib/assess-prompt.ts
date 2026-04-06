@@ -44,6 +44,19 @@ Produce a professional Agent Readiness Assessment with these sections:
 ## Executive Summary
 3-4 sentences: who the customer is, their primary opportunity, estimated total impact, and recommended starting point.
 
+## AI Maturity Assessment
+Based on the customer's self-reported AI maturity data, assess their readiness across these dimensions (inspired by Jellyfish Maturity Maps):
+- **Use**: Current AI tool adoption level — are they experimenting or embedded?
+- **Data & Infrastructure**: Based on their tech stack, how ready are their systems for agent integration?
+- **Workflow Integration**: How deeply is AI embedded vs surface-level ChatGPT usage?
+- **Agent Deployment**: Have they deployed agents before? What's their agent maturity?
+- **Talent & Culture**: Who owns AI? Is there organizational readiness?
+- **Governance**: Do they have AI policies? Regulatory requirements?
+
+**CRITICAL — Adoption Mirage Detection**: If the customer reports high AI usage (individual ChatGPT/Copilot) but has no governance, no agent experience, and no identified owner, call this out explicitly as an "adoption mirage" — surface-level AI adoption that masks deep infrastructure and organizational gaps. Do NOT assume they are advanced just because individuals use AI tools.
+
+**Readiness Gaps**: Before recommending what to build, explicitly list what MUST be in place first — missing data pipelines, governance frameworks, integration layers, team skills, or organizational buy-in. This is the "capability overhang" — the gap between what AI could do vs what their infrastructure actually supports.
+
 ## Company-Industry Fit
 - How this company maps to our research
 - Industry-specific insights from our data
@@ -133,6 +146,12 @@ export function buildUserPrompt(input: AssessmentInput, companyWebContent?: stri
     `- **Key Systems:** ${input.currentSystems || "Not specified"}`,
     `- **Automation Level:** ${input.automationLevel}`,
     `- **Biggest Challenges:** ${input.challenges || "Not specified"}`,
+    ``,
+    `## AI Maturity Self-Assessment`,
+    `- **AI Usage Level:** ${input.aiUsageLevel || "Not specified"}`,
+    `- **AI Governance:** ${input.aiGovernance || "Not specified"}`,
+    `- **Agent Experience:** ${input.agentExperience || "Not specified"}`,
+    `- **AI Ownership:** ${input.aiOwnership || "Not specified"}`,
     ``,
     `## Selected Functions for Analysis`,
     input.selectedFunctions.length > 0
