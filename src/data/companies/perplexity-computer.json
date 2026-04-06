@@ -1,0 +1,264 @@
+{
+  "name": "Perplexity Computer",
+  "slug": "perplexity-computer",
+  "category": "use-case",
+  "subcategory": "data-research",
+  "description": "Perplexity's computer-use agents autonomously browse the web, extract structured data, fill forms, and complete multi-step research workflows. Leverages Perplexity's web indexing and citation-grounded search for agents that navigate live websites and return structured outputs with source attribution.",
+  "oneLiner": "AI-powered computer use and web data extraction agents with citation-grounded research capabilities.",
+  "founded": "2022",
+  "funding": "$765M+ (valued at $9B+)",
+  "pricing": "Pro $20/mo; Enterprise custom pricing for API and computer-use agents",
+  "website": "https://www.perplexity.ai",
+  "screenshots": [],
+  "capabilities": [
+    "Autonomous web browsing via computer-use",
+    "Structured data extraction",
+    "Citation-grounded research",
+    "Multi-step web research workflows",
+    "Form filling and web interaction",
+    "Competitive intelligence gathering",
+    "API-driven batch research",
+    "Multi-format output (JSON, markdown)"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "NL prompts or API calls define research tasks. Agent browses, extracts, compiles results. Prompt-first with minimal config.",
+    "strengths": [
+      "Citation-grounded outputs eliminate trust problems",
+      "Computer-use reaches any web system",
+      "Massive user base for feedback loops",
+      "Strong financial backing"
+    ],
+    "weaknesses": [
+      "No enterprise governance layer",
+      "SaaS-only",
+      "No multi-agent orchestration",
+      "Computer-use sessions are opaque"
+    ],
+    "notableFeatures": [
+      "Citation-first architecture",
+      "Computer-use agents for live website interaction",
+      "Hybrid search combining index + real-time browsing"
+    ]
+  },
+  "recentDevelopments": [
+    "2025: Computer-use capabilities launched",
+    "Reached $9B+ valuation",
+    "Enterprise API with structured outputs",
+    "Exploring enterprise data platform partnerships"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://www.perplexity.ai",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "medium",
+  "scores": {
+    "total": 59,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 15,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 4,
+            "rationale": "NL prompting is intuitive. API for programmatic creation."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 3,
+            "rationale": "Citation trails provide visibility. Dedicated tools still early."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 4,
+            "rationale": "Solid API docs. Computer-use docs newer."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 4,
+            "rationale": "Prompt-based iteration is fast. No build steps."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 8,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 2,
+            "rationale": "No native multi-agent."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 2,
+            "rationale": "No structured handoff UX."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 2,
+            "rationale": "Shared API keys. No version control."
+          },
+          {
+            "name": "Team Development",
+            "score": 2,
+            "rationale": "Some guides. No marketplace."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 11.8,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 2,
+            "rationale": "No pre-built CRM/ERP connectors. Web-native."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 4,
+            "rationale": "REST API well-documented. MCP emerging."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 3,
+            "rationale": "API keys. SSO for enterprise."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 3,
+            "rationale": "Web search as context loader. No enterprise RAG."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 10,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 3,
+            "rationale": "Rate limiting and content filtering."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 2,
+            "rationale": "No built-in approval workflows."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 3,
+            "rationale": "Query and citation logs. No SOC2 confirmed for computer-use."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 2,
+            "rationale": "Basic team management."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 14.2,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 3,
+            "rationale": "SaaS-only. No self-hosted."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 4,
+            "rationale": "Search infra handles high volumes. Computer-use more resource-intensive."
+          },
+          {
+            "name": "Cost Management",
+            "score": 3,
+            "rationale": "Basic usage dashboards. No advanced observability."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 4,
+            "rationale": "100M+ monthly users. Enterprise base growing."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "Perplexity scores 68/100. Builder (17) good NL interface. Deployment (14) solid SaaS. Ecosystem (7) strong funding but computer-use is new. Governance (10) and Collaboration (8) need enterprise maturation.",
+  "competence": "Research & Data Extraction Agent",
+  "targetUser": "Teams needing citation-grounded web research at scale",
+  "marketIntelligence": {
+    "metrics": [
+      {
+        "metric": "Monthly Users",
+        "value": "100M+",
+        "source": "Reports"
+      },
+      {
+        "metric": "Search Queries",
+        "value": "Billions processed",
+        "source": "Perplexity"
+      }
+    ],
+    "funding": {
+      "total": "$765M+",
+      "lastRound": "Series C+",
+      "valuation": "$9B+",
+      "investors": [
+        "IVP",
+        "NEA",
+        "Databricks",
+        "Jeff Bezos"
+      ]
+    }
+  },
+  "supportedCUJs": ["data-extraction", "sales-outreach"],
+  "walkthrough": {
+    "title": "How Perplexity Computer Works: Citation-Grounded Web Research",
+    "steps": [
+      {
+        "title": "Define Your Research Task",
+        "description": "Describe what you need in natural language: 'Find the top 20 AI startups that raised Series A in Q1 2026, including funding amount, lead investor, and product description.' The agent plans a multi-step web research strategy."
+      },
+      {
+        "title": "Agent Browses the Live Web",
+        "description": "Using computer-use capabilities, the agent autonomously navigates websites, search engines, and databases. It handles dynamic JavaScript pages, pagination, and login-gated content where credentials are provided."
+      },
+      {
+        "title": "Extract and Structure Data",
+        "description": "As the agent browses, it extracts relevant data into your specified schema. Every data point is citation-grounded — linked back to the source URL and page where it was found."
+      },
+      {
+        "title": "Compile Research Output",
+        "description": "The agent compiles findings into structured formats (JSON, markdown tables, reports) with full source attribution. Cross-references multiple sources to validate accuracy and flags conflicting information."
+      },
+      {
+        "title": "API Integration for Scale",
+        "description": "Use the API for batch research jobs, recurring competitive intelligence monitoring, and integration into data pipelines. Enterprise tier provides higher rate limits and priority processing."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "K-NcyJM4EHA",
+      "title": "NEW Perplexity AI Browser Agent: Automate ANYTHING?",
+      "channel": "Julian Goldie SEO"
+    },
+    {
+      "videoId": "lqAHw6TwLsk",
+      "title": "10 Perplexity Comet Agents to Automate Your Work (AI Browser)",
+      "channel": "Grace Leung"
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "name": "Kagent",
+  "slug": "kagent",
+  "category": "open-source",
+  "subcategory": "devops",
+  "description": "Kagent is a Kubernetes-native platform for AI agents specialized in DevOps and platform engineering. Uses CRDs to define agents declaratively with Microsoft AutoGen as the multi-agent runtime. Ships with pre-built tools for kubectl, Helm, Istio, Argo CD, Prometheus, and GitHub. Built by Solo.io engineers.",
+  "oneLiner": "Kubernetes-native AI agent platform using CRDs and AutoGen for DevOps automation and cluster management.",
+  "founded": "2025",
+  "funding": "Backed by Solo.io ($56M+ total). Open-source project from Solo.io engineers.",
+  "pricing": "Open Source (Apache 2.0, free). No commercial tier.",
+  "website": "https://kagent.dev",
+  "githubRepo": "kagent-dev/kagent",
+  "githubStars": 1500,
+  "screenshots": [],
+  "capabilities": [
+    "K8s-native agent deployment via CRDs",
+    "Microsoft AutoGen multi-agent runtime",
+    "Web UI for management and chat",
+    "kubectl tool integration",
+    "Helm chart management",
+    "Istio service mesh diagnostics",
+    "Argo CD deployment management",
+    "Prometheus metrics querying",
+    "GitHub integration",
+    "K8s RBAC-based permissions",
+    "Helm chart installation",
+    "Declarative YAML agent configuration",
+    "GitOps-compatible definitions",
+    "Cluster troubleshooting and diagnostics"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "K8s-native: agents defined as CRDs via kubectl or web UI. Specs declare LLM provider, system prompt, tools, permissions in YAML. Web UI provides chat interface and management console. Pre-built templates for DevOps scenarios. Assumes K8s familiarity.",
+    "strengths": [
+      "True K8s-native — agents are first-class K8s resources",
+      "CRD definitions are GitOps-friendly and version-controllable",
+      "Leverages K8s RBAC for agent permissions",
+      "Deep DevOps tool integrations (kubectl, Helm, Istio, Prometheus)",
+      "AutoGen runtime for multi-agent capabilities",
+      "Apache 2.0, no vendor lock-in"
+    ],
+    "weaknesses": [
+      "Steep learning curve outside K8s teams",
+      "K8s-only — no standalone deployment",
+      "Narrow tool ecosystem (cloud-native only)",
+      "No RAG or knowledge base",
+      "Early-stage with limited docs",
+      "No MCP support",
+      "No cost tracking",
+      "Minimal debugging tools"
+    ],
+    "notableFeatures": [
+      "CRD-based agent lifecycle via K8s controller pattern",
+      "Automatic K8s RBAC inheritance for agents",
+      "Istio/service mesh awareness for microservices debugging",
+      "Prometheus integration for metrics-driven diagnostics",
+      "AutoGen-powered multi-agent conversations"
+    ]
+  },
+  "recentDevelopments": [
+    "2025 Q1: Initial open-source release under Apache 2.0",
+    "2025 Q1: kagent.dev docs site launched",
+    "2025 Q1: Pre-built tools for kubectl, Helm, Istio, Argo CD, Prometheus",
+    "2025 Q1: Web UI for agent management and chat"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://github.com/kagent-dev/kagent",
+      "accessedAt": "2026-04-04",
+      "type": "github"
+    },
+    {
+      "url": "https://kagent.dev",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "medium",
+  "scores": {
+    "total": 54,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 10.2,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 3,
+            "rationale": "CRD YAML definitions + web UI. Familiar to K8s users, steep for others."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 2,
+            "rationale": "Web UI shows conversations and tool calls. No dedicated debugging tools."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 3,
+            "rationale": "kagent.dev covers install and basics. Young project, still maturing."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 2,
+            "rationale": "CRD updates require controller reconciliation. No hot-reload."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 9.2,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 3,
+            "rationale": "AutoGen multi-agent conversations. CRDs define multiple collaborating agents."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 2,
+            "rationale": "Web UI chat interface. Basic AutoGen HITL. No structured handoff."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 2,
+            "rationale": "CRDs are GitOps-friendly. No built-in team workspaces or promotion pipelines."
+          },
+          {
+            "name": "Team Development",
+            "score": 2,
+            "rationale": "Pre-built agent definitions for K8s tasks. Limited library."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 11.2,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 3,
+            "rationale": "6-10 cloud-native tools. Deep within K8s. No business system connectors."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 3,
+            "rationale": "K8s API primary. CRDs for config. AutoGen agent protocol. No MCP."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 3,
+            "rationale": "K8s RBAC and ServiceAccount-based. No enterprise IAM beyond K8s."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 2,
+            "rationale": "No RAG or knowledge base. Live system queries via tools only."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 10.4,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 3,
+            "rationale": "Delete CRDs to stop. K8s resource limits apply. No behavioral guardrails."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 3,
+            "rationale": "AutoGen HITL. CRD approval configs. Web UI for review."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 2,
+            "rationale": "K8s audit logging. Conversation history. No tamper-proof or compliance certs."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 2,
+            "rationale": "K8s RBAC for platform access. Namespace isolation. No custom agent-level roles."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 12.8,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 5,
+            "rationale": "True K8s-native: Helm chart, CRDs, runs as controller. Core differentiator. K8s-only though."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 3,
+            "rationale": "K8s native scaling. Controller pattern inherently scalable. No benchmarks."
+          },
+          {
+            "name": "Cost Management",
+            "score": 3,
+            "rationale": "Prometheus integration. K8s observability. Web UI for conversations."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 2,
+            "rationale": "~1.5K GitHub stars. Young project. Growing cloud-native community."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "Kagent scores 52/100. Deployment (14) is standout — K8s-native CRD approach is unique differentiator. Integration (11) deep but narrow. Builder (10), Governance (10), Collaboration (8) limited as early project. Ecosystem (5) young with ~1.5K stars.",
+  "competence": "DevOps Agent Platform",
+  "targetUser": "Platform engineering teams automating Kubernetes operations",
+  "marketIntelligence": {
+    "metrics": [
+      {
+        "metric": "GitHub Stars",
+        "value": "1.5K+",
+        "source": "GitHub"
+      },
+      {
+        "metric": "K8s Tool Integrations",
+        "value": "kubectl, Helm, Istio, Argo CD, Prometheus",
+        "source": "Docs"
+      }
+    ],
+    "funding": {
+      "total": "Solo.io backed ($56M+ parent)",
+      "lastRound": "N/A (OSS project)",
+      "valuation": "N/A"
+    }
+  },
+  "supportedCUJs": ["devops-infra"],
+  "walkthrough": {
+    "title": "How Kagent Works: Kubernetes-Native AI Agent for DevOps",
+    "steps": [
+      {
+        "title": "Install via Helm Chart",
+        "description": "Deploy Kagent to your Kubernetes cluster with a single Helm install command. The operator registers custom resource definitions (CRDs) for agent management. No external dependencies beyond the cluster."
+      },
+      {
+        "title": "Define Agents Declaratively",
+        "description": "Create agents using Kubernetes YAML manifests — just like any other K8s resource. Specify the agent's capabilities (kubectl, Helm, Istio, Argo CD, Prometheus), LLM backend, and RBAC permissions. Apply with kubectl."
+      },
+      {
+        "title": "Chat with Your Cluster",
+        "description": "Open the Kagent web UI and interact with your agents conversationally. Ask 'Why is pod X crashing?' or 'Deploy service Y to staging.' The agent uses kubectl, queries Prometheus metrics, and checks Helm releases to answer."
+      },
+      {
+        "title": "Agent Diagnoses and Remediates",
+        "description": "When issues arise, the agent runs diagnostic commands (describe pods, check events, query metrics), correlates findings across tools, and proposes remediation. For approved operations, it applies fixes directly to the cluster."
+      },
+      {
+        "title": "GitOps-Compatible Management",
+        "description": "Agent definitions are standard YAML — store them in Git, manage via Argo CD, and version control your agent fleet. K8s RBAC controls what each agent can access, ensuring least-privilege security."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "IYdsZA7mAYA",
+      "title": "KAgent: Run AI Agents on Kubernetes, No Cloud",
+      "channel": "TeKanAid"
+    },
+    {
+      "videoId": "NibqbQqxDF0",
+      "title": "Agentic AI on Kubernetes | Kagent.dev",
+      "channel": "ITasCode"
+    }
+  ]
+}

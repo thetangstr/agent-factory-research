@@ -1,0 +1,281 @@
+{
+  "name": "Synthflow AI",
+  "slug": "synthflow-ai",
+  "category": "use-case",
+  "subcategory": "voice-cs",
+  "description": "Synthflow AI is a no-code platform for building AI voice agents that handle phone calls for lead qualification, appointment scheduling, customer support, and sales outreach. Features a drag-and-drop builder, pre-built templates, sub-second voice latency, 20+ languages, and a white-label agency program.",
+  "oneLiner": "No-code platform for building AI voice agents that handle phone calls for lead qualification, appointments, and support.",
+  "founded": "2023",
+  "funding": "Seed ~$7.4M",
+  "pricing": "Starter $29/mo (50 mins), Pro $450/mo (2K mins), Growth $900/mo (4K mins), Agency $1,400/mo (6K mins)",
+  "website": "https://synthflow.ai",
+  "screenshots": [],
+  "capabilities": [
+    "No-code visual voice agent builder",
+    "Inbound/outbound AI phone calls",
+    "Sub-second voice latency",
+    "Lead qualification via phone",
+    "Automated appointment scheduling",
+    "Live call transfer with context",
+    "20+ language support",
+    "CRM integration (HubSpot, Salesforce, GoHighLevel)",
+    "Telephony (Twilio, Vonage, SIP)",
+    "Zapier/Make automation",
+    "White-label agency program",
+    "Pre-built templates (receptionist, qualifier, support)",
+    "Call recording and transcription",
+    "Sentiment analysis",
+    "Custom voice selection and cloning",
+    "Post-call summaries",
+    "Knowledge base upload"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "No-code visual interface. Select template or start from scratch. Configure persona (voice, language, personality), define conversation workflow via node editor, connect integrations, upload knowledge base, test via built-in call simulator. Prioritizes speed-to-first-agent over customization depth.",
+    "strengths": [
+      "First voice agent in under 15 min with no technical background",
+      "Strong template library for common use cases",
+      "White-label agency program enables reseller ecosystem",
+      "Native GoHighLevel integration captures marketing agency market",
+      "20+ language multilingual support",
+      "Competitive per-minute pricing for SMBs"
+    ],
+    "weaknesses": [
+      "No pro-code SDK — advanced users hit customization ceilings",
+      "Cloud-only, no self-hosted option",
+      "No SOC2 or HIPAA compliance",
+      "Single-agent-per-call, no multi-agent orchestration",
+      "Limited debugging and observability",
+      "No MCP or emerging protocol support",
+      "Immature enterprise governance"
+    ],
+    "notableFeatures": [
+      "Agency white-label with branded subdomains and client management",
+      "Built-in call simulator for testing",
+      "Real-time sentiment detection triggering auto-transfers",
+      "Voice cloning for brand-consistent personas",
+      "GoHighLevel native integration for marketing agencies"
+    ]
+  },
+  "recentDevelopments": [
+    "2025: Expanded to 20+ languages",
+    "2025: Enhanced agency white-label program",
+    "2025: Native GoHighLevel integration",
+    "2025: Sentiment analysis and emotion detection",
+    "2025: Workflow automation with conditional branching",
+    "2025: Expanded telephony (Vonage, direct SIP)"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://synthflow.ai",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://synthflow.ai/pricing",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "medium",
+  "scores": {
+    "total": 51,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 13.2,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 4,
+            "rationale": "No-code visual builder with templates. First agent in under 15 min. No pro-code SDK."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 3,
+            "rationale": "Call transcript review, conversation testing, recordings for QA. No advanced debugging."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 3,
+            "rationale": "Covers setup, integrations, basic workflows. Video tutorials. Gaps in advanced topics."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 3,
+            "rationale": "Visual builder changes take effect quickly. Basic version history. Minutes not seconds."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 8.8,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 2,
+            "rationale": "Single agent per call. No multi-agent orchestration or inter-agent communication."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 2,
+            "rationale": "Call transfer with basic context. No structured evidence packets or shared workspace."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 2,
+            "rationale": "Agency model with client workspaces. No version control or CI/CD."
+          },
+          {
+            "name": "Team Development",
+            "score": 3,
+            "rationale": "Pre-built templates: receptionist, lead qualifier, scheduler. Template customization."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 11,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 3,
+            "rationale": "HubSpot, Salesforce, GoHighLevel, Twilio, Vonage, Google Calendar, Zapier, Make. 30-50 connectors."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 3,
+            "rationale": "REST API available. Webhooks. No MCP, GraphQL, or gRPC. SIP for telephony."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 2,
+            "rationale": "OAuth for major integrations. No SAML SSO or secret rotation."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 3,
+            "rationale": "Knowledge base upload. Basic CRM context loading. No advanced RAG pipeline."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 9.2,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 2,
+            "rationale": "Agent pause/deactivate. Prompt-based guardrails. No ML-powered monitoring."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 3,
+            "rationale": "Call transfer as HITL. Configurable triggers (sentiment, keywords). No multi-tier approval."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 2,
+            "rationale": "Call recordings stored. No SOC2. No tamper-proof logging."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 2,
+            "rationale": "Basic admin/member roles. Agency white-label provides client isolation. No SSO."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 9,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 2,
+            "rationale": "Cloud-only SaaS. No self-hosted or on-prem option."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 3,
+            "rationale": "Auto-scaling telephony. Adequate for SMB volumes. Sub-second voice latency."
+          },
+          {
+            "name": "Cost Management",
+            "score": 2,
+            "rationale": "Basic call analytics dashboard. No enterprise observability integration."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 2,
+            "rationale": "Growing SMB/agency user base. YouTube/social presence. No open-source community."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "Synthflow scores 52/100. Builder Experience (16) is standout — intuitive no-code with templates. Deployment (9) cloud-only. Integration (12) solid CRM/telephony but no MCP. Governance (8) no SOC2, basic RBAC. Collaboration (7) single-agent. Ecosystem (10) early-stage growing.",
+  "competence": "Voice Agent Platform",
+  "targetUser": "SMBs and agencies deploying AI phone agents without code",
+  "marketIntelligence": {
+    "metrics": [
+      {
+        "metric": "Languages Supported",
+        "value": "20+",
+        "source": "Docs"
+      },
+      {
+        "metric": "Telephony Providers",
+        "value": "Twilio, Vonage, SIP",
+        "source": "Docs"
+      }
+    ],
+    "funding": {
+      "total": "~$7.4M",
+      "lastRound": "Seed",
+      "valuation": "Undisclosed"
+    }
+  },
+  "supportedCUJs": ["voice-telephony", "customer-support", "sales-outreach"],
+  "walkthrough": {
+    "title": "How Synthflow Works: Build a Voice Agent for Phone Calls",
+    "steps": [
+      {
+        "title": "Select a Template or Create Custom Agent",
+        "description": "Choose from pre-built templates — receptionist, lead qualifier, appointment scheduler, support agent — or start from scratch. Configure the agent's persona: voice, language (20+ options), personality traits."
+      },
+      {
+        "title": "Build Conversation Flow",
+        "description": "Use the visual node editor to define conversation paths. Add conditional branches based on caller responses, sentiment triggers for auto-transfer, and knowledge base lookups for product questions."
+      },
+      {
+        "title": "Connect Telephony and Integrations",
+        "description": "Link your phone numbers via Twilio, Vonage, or SIP. Connect CRM (HubSpot, Salesforce, GoHighLevel), Google Calendar for appointment booking, and Zapier/Make for custom automations."
+      },
+      {
+        "title": "Test with Built-in Call Simulator",
+        "description": "Make test calls directly from the builder. Listen to the agent's voice responses, test conversation branches, verify CRM updates, and review call transcripts. Iterate until the agent handles edge cases naturally."
+      },
+      {
+        "title": "Deploy and Monitor Calls",
+        "description": "Assign the agent to phone numbers for inbound or outbound campaigns. Monitor live calls, review recordings and transcripts, track sentiment analytics, and manage costs via the per-minute dashboard."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "cnNPuMMzepg",
+      "title": "How To Make Voice AI Agents That Actually Work! | Full Walkthrough",
+      "channel": "Synthflow AI"
+    },
+    {
+      "videoId": "6zrdZmRNwl8",
+      "title": "How I Made An AI VOICE AGENT [Quick & Easy] - Synthflow AI Tutorial",
+      "channel": "AI Andy"
+    }
+  ]
+}

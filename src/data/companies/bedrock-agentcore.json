@@ -1,0 +1,332 @@
+{
+  "name": "Amazon Bedrock AgentCore",
+  "slug": "bedrock-agentcore",
+  "category": "enterprise",
+  "description": "AWS's fully managed infrastructure service for building, deploying, and scaling AI agents in production. Provides enterprise-grade runtime including identity management, memory, code execution, tool orchestration, guardrails, and observability — all integrated within the AWS ecosystem.",
+  "oneLiner": "AWS's managed infrastructure layer for deploying, scaling, and governing production AI agents across the enterprise.",
+  "founded": "2023",
+  "funding": "AWS (Amazon subsidiary)",
+  "pricing": "Pay-per-use: per-step pricing ($0.01-0.02/step) + model inference costs + Knowledge Base queries + Guardrails assessments. No per-agent licensing.",
+  "website": "https://aws.amazon.com/bedrock/agents/",
+  "screenshots": [
+    {
+      "path": "/screenshots/bedrock-agentcore/agent-builder.png",
+      "alt": "AWS Bedrock — agent builder console with name, model, and instruction setup",
+      "screen": "agent-builder"
+    },
+    {
+      "path": "/screenshots/bedrock-agentcore/model-instructions.png",
+      "alt": "AWS Bedrock — model selection and agent instructions configuration",
+      "screen": "model-config"
+    },
+    {
+      "path": "/screenshots/bedrock-agentcore/guardrails-config.png",
+      "alt": "AWS Bedrock — guardrails configuration with denied topics setup",
+      "screen": "guardrails"
+    },
+    {
+      "path": "/screenshots/bedrock-agentcore/knowledge-base.png",
+      "alt": "AWS Bedrock — knowledge base S3 data source configuration",
+      "screen": "knowledge-base"
+    }
+  ],
+  "capabilities": [
+    "Multi-step agent orchestration (ReAct)",
+    "Action groups (Lambda + OpenAPI tool use)",
+    "Knowledge Bases with managed RAG",
+    "Guardrails (content filtering, PII redaction, grounding checks)",
+    "Multi-agent collaboration (supervisor-worker)",
+    "Agent memory (cross-session)",
+    "Code interpretation (sandboxed)",
+    "Session management",
+    "Agent versioning and aliases",
+    "Return-of-control HITL",
+    "CloudFormation/CDK IaC",
+    "Multi-model (Claude, Llama, Titan, Mistral)",
+    "Bedrock Flows visual workflow builder",
+    "Cross-region inference",
+    "VPC/PrivateLink network isolation"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "Multi-step console wizard: name/instructions, select FM, define action groups (OpenAPI or Lambda), attach Knowledge Bases, configure Guardrails, test in chat with trace, create alias for deployment. SDK/CLI mirrors but more boilerplate. Bedrock Flows is a separate visual builder for prompt chains. Enterprise-heavy: optimized for control over delight.",
+    "strengths": [
+      "Deepest AWS ecosystem integration (200+ services)",
+      "Enterprise-grade security/compliance (HIPAA, FedRAMP, SOC, PCI)",
+      "Fully managed serverless infrastructure",
+      "Comprehensive observability (CloudTrail, CloudWatch, X-Ray, agent trace)",
+      "Multi-model flexibility (Claude, Llama, Titan, Mistral)",
+      "Pay-per-use with no per-seat licensing",
+      "CloudFormation/CDK for infrastructure-as-code",
+      "Managed RAG with enterprise data connectors",
+      "Configurable guardrails (content, PII, grounding)"
+    ],
+    "weaknesses": [
+      "Form-driven builder UX — no visual workflow editor for agents",
+      "Limited agent templates",
+      "Multi-agent collaboration is new and hierarchical-only",
+      "No MCP protocol support — AWS-proprietary tool-use",
+      "HITL is API-only with no approval UI",
+      "Complex pricing hard to predict",
+      "Strong vendor lock-in to AWS",
+      "Action group setup requires Lambda/OpenAPI overhead",
+      "No agent testing/evaluation framework"
+    ],
+    "notableFeatures": [
+      "AgentCore runtime (identity, memory, tools, code execution, observability)",
+      "Guardrails with contextual grounding checks against source documents",
+      "Cross-region inference for HA",
+      "Agent trace with full reasoning chain visibility",
+      "Knowledge Base hybrid search (semantic + keyword)"
+    ]
+  },
+  "recentDevelopments": [
+    "2024 re:Invent: Announced AgentCore managed runtime infrastructure",
+    "2024-2025: Multi-agent collaboration (supervisor-worker)",
+    "2025: AgentCore GA for production deployments",
+    "2024-2025: Bedrock Flows visual workflow builder",
+    "2024-2025: Expanded KB connectors (Confluence, SharePoint, Salesforce, web crawl)",
+    "2025: Agent memory for cross-session context",
+    "2025: Code interpretation in sandboxed environments"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://aws.amazon.com/bedrock/agents/",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://aws.amazon.com/bedrock/agentcore/",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://aws.amazon.com/bedrock/pricing/",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "high",
+  "scores": {
+    "total": 74,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 10.2,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 3,
+            "rationale": "Console wizard is form-driven, not visual drag-and-drop. Gap between console and SDK is significant."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 2,
+            "rationale": "Limited pre-built agent templates. Users start from scratch or adapt docs."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 3,
+            "rationale": "Agent trace is excellent for debugging. No regression testing or evaluation suite."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 2,
+            "rationale": "Multi-step setup: agent + action groups + KBs + guardrails. Slower feedback loop than competitors."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 11.2,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 3,
+            "rationale": "Supervisor-worker pattern. New and less mature than AutoGen/CrewAI. Hierarchical only."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 3,
+            "rationale": "Return-of-control API exists. No approval UI, escalation workflow, or notification system."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 2,
+            "rationale": "No agent teams, shared goals, or collaborative patterns. Hierarchical delegation only."
+          },
+          {
+            "name": "Team Development",
+            "score": 3,
+            "rationale": "AgentCore memory for cross-session retention. No cross-agent shared state."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 17.2,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 5,
+            "rationale": "Deepest native ecosystem: 200+ AWS services, KB connectors, AppFlow SaaS integrations."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 5,
+            "rationale": "OpenAPI 3.0 action groups. API Gateway. SDKs in 6+ languages. Comprehensive APIs."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 3,
+            "rationale": "AWS-proprietary tool-use paradigm. No native MCP support. Limits interoperability."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 4,
+            "rationale": "S3, Confluence, SharePoint, Salesforce, web crawl, Aurora, Redshift. Growing but not iPaaS-level."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 17.6,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 4,
+            "rationale": "Disable aliases, update IAM. Guardrails block content. No single emergency stop button."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 4,
+            "rationale": "Return-of-control for human approval. No native approval queue or notification system."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 5,
+            "rationale": "CloudTrail + agent trace + CloudWatch. Data stays in customer account. Among most complete."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 5,
+            "rationale": "Full IAM. Resource-level permissions. Cross-account roles. Tags. SCPs. Most mature in market."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 18,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 5,
+            "rationale": "Fully managed serverless. Auto-scaling. Multi-AZ. CloudFormation/CDK support. Gold standard."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 5,
+            "rationale": "Transparent auto-scaling. Provisioned throughput option. Zero to enterprise with no config."
+          },
+          {
+            "name": "Cost Management",
+            "score": 4,
+            "rationale": "CloudWatch, CloudTrail, X-Ray, agent trace. No purpose-built agent ops dashboard."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 4,
+            "rationale": "Large user base via AWS. Forums, re:Post. Smaller agent-specific community than OSS."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "Bedrock scores 78/100. Polarized profile: Deployment (22) and Governance (22) are near-best-in-class. Ecosystem (19) strong via AWS stability and enterprise base. Integration (20) deep within AWS. Builder Experience (12) and Collaboration (13) are weak — form-heavy UX and nascent multi-agent support.",
+  "competence": "Enterprise Agent Infrastructure",
+  "targetUser": "Enterprise teams deploying governed agents on AWS",
+  "marketIntelligence": {
+    "communityBuzz": [
+      "Gartner predicts 40% of enterprise apps will embed AI agents by end of 2026",
+      "AWS ecosystem integration is unmatched but vendor lock-in concerns persist",
+      "Builder UX criticized as form-heavy — developers want visual graph editors not console wizards",
+      "Guardrails feature praised as most mature in the enterprise space",
+      "Multi-agent collaboration is new and hierarchical-only — trailing open-source frameworks"
+    ],
+    "metrics": [
+      {
+        "metric": "AWS Services Integration",
+        "value": "200+",
+        "source": "AWS"
+      },
+      {
+        "metric": "Model Providers",
+        "value": "Claude, Llama, Titan, Mistral, Cohere",
+        "source": "AWS"
+      },
+      {
+        "metric": "Compliance",
+        "value": "SOC, HIPAA, FedRAMP, ISO, PCI",
+        "source": "AWS"
+      },
+      {
+        "metric": "Gartner Prediction",
+        "value": "40% enterprise apps embed agents by end 2026",
+        "source": "Gartner"
+      }
+    ],
+    "funding": {
+      "total": "AWS (Amazon subsidiary)",
+      "lastRound": "N/A",
+      "valuation": "Part of $2T+ Amazon"
+    }
+  },
+  "supportedCUJs": ["workflow-automation", "customer-support", "it-helpdesk", "security-monitoring"],
+  "walkthrough": {
+    "title": "How Bedrock AgentCore Works: Enterprise Agent Deployment on AWS",
+    "steps": [
+      {
+        "image": "/screenshots/bedrock-agentcore/agent-builder.png",
+        "title": "Create Your Agent",
+        "description": "Use the AWS Console wizard to name your agent, provide natural language instructions, and define its purpose. Select from multiple foundation models."
+      },
+      {
+        "image": "/screenshots/bedrock-agentcore/model-instructions.png",
+        "title": "Configure Model & Instructions",
+        "description": "Choose your foundation model (Claude, Llama, Titan, Mistral), write agent instructions, and configure action groups with OpenAPI schemas or Lambda functions."
+      },
+      {
+        "image": "/screenshots/bedrock-agentcore/guardrails-config.png",
+        "title": "Set Up Guardrails",
+        "description": "Configure content filtering, PII redaction, and denied topic policies. Guardrails evaluate agent inputs and outputs in real-time to prevent unsafe behavior."
+      },
+      {
+        "image": "/screenshots/bedrock-agentcore/knowledge-base.png",
+        "title": "Connect Knowledge Bases",
+        "description": "Attach S3 data sources, configure chunking and embedding models, and create a managed RAG pipeline that grounds your agent in enterprise data."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "xMnvibGFOYo",
+      "title": "Build AI Agents with Amazon Bedrock",
+      "channel": "AWS"
+    },
+    {
+      "videoId": "kvYjOq0avSg",
+      "title": "Amazon Bedrock Agents Deep Dive",
+      "channel": "Be A Better Dev"
+    }
+  ]
+}

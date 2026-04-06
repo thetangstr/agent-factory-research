@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* Material Design 3 — Light surface system */
+  --md-sys-color-background: #f8f9fa;
+  --md-sys-color-surface: #ffffff;
+  --md-sys-color-surface-variant: #f1f3f5;
+  --md-sys-color-surface-container: #ffffff;
+  --md-sys-color-surface-container-low: #f8f9fa;
+  --md-sys-color-surface-container-high: #eef0f2;
+
+  /* Primary — Indigo */
+  --md-sys-color-primary: #3f51b5;
+  --md-sys-color-primary-container: #e8eaf6;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-on-primary-container: #1a237e;
+
+  /* Outline / dividers */
+  --md-sys-color-outline: #dadce0;
+  --md-sys-color-outline-variant: #e8eaed;
+
+  /* Text */
+  --md-sys-color-on-surface: #1f2328;
+  --md-sys-color-on-surface-variant: #5f6368;
+  --md-sys-color-on-surface-muted: #80868b;
+
+  /* Semantic score colors — light-readable */
+  --score-high: #1e8a3c;
+  --score-high-bg: #e6f4ea;
+  --score-high-border: #b7dfbf;
+
+  --score-mid: #b45309;
+  --score-mid-bg: #fef3e2;
+  --score-mid-border: #fcd29b;
+
+  --score-low: #c0392b;
+  --score-low-bg: #fce8e6;
+  --score-low-border: #f4b8b4;
+
+  /* Elevation shadows — Material Design */
+  --elevation-1: 0 1px 2px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06);
+  --elevation-2: 0 2px 4px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.06);
+  --elevation-3: 0 4px 8px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06);
+
+  /* Legacy variable aliases (keep for any remnants) */
+  --bg-base: var(--md-sys-color-background);
+  --bg-surface: var(--md-sys-color-surface);
+  --bg-elevated: var(--md-sys-color-surface-variant);
+  --bg-overlay: var(--md-sys-color-surface-container-high);
+
+  --border-subtle: var(--md-sys-color-outline-variant);
+  --border-default: var(--md-sys-color-outline);
+  --border-strong: #bdc1c6;
+
+  --text-primary: var(--md-sys-color-on-surface);
+  --text-secondary: var(--md-sys-color-on-surface-variant);
+  --text-muted: var(--md-sys-color-on-surface-muted);
+  --text-inverse: #ffffff;
+
+  /* Accent color aliases — light-appropriate versions */
+  --cyan: var(--md-sys-color-primary);
+  --cyan-dim: #5c6bc0;
+  --cyan-glow: var(--md-sys-color-primary-container);
+
+  --amber: #b45309;
+  --amber-dim: #d97706;
+  --amber-glow: var(--score-mid-bg);
+
+  --red: #c0392b;
+  --red-dim: #e53935;
+  --red-glow: var(--score-low-bg);
+
+  --emerald: #1e8a3c;
+  --emerald-glow: var(--score-high-bg);
+
+  --background: var(--md-sys-color-background);
+  --foreground: var(--md-sys-color-on-surface);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", monospace;
+}
+
+/* Always light */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--md-sys-color-background);
+    --foreground: var(--md-sys-color-on-surface);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-surface);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar — subtle, light */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--md-sys-color-surface-variant);
+}
+::-webkit-scrollbar-thumb {
+  background: #bdc1c6;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9aa0a6;
+}
+
+/* Remove glow classes — replace with nothing on light theme */
+.score-glow-cyan {}
+.score-glow-amber {}
+.score-glow-red {}
+
+/* Grid background removed — clean white */
+.terminal-grid {}
+.terminal-grid-dim {}
+
+/* Card base — Material elevation */
+.card {
+  background: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 12px;
+  box-shadow: var(--elevation-1);
+}
+
+.card-elevated {
+  background: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 12px;
+  box-shadow: var(--elevation-2);
+}
+
+/* Focus ring — Material indigo */
+:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+}
+
+/* Stat number — use tabular nums, no monospace overload */
+.stat-number {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Category badges — light, Material chip style */
+.badge-open-source {
+  background: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #90caf9;
+}
+.badge-enterprise {
+  background: #ede7f6;
+  color: #4527a0;
+  border: 1px solid #b39ddb;
+}
+.badge-use-case {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+/* Progress bar track — light gray */
+.progress-track {
+  background: #e8eaed;
+  border-radius: 4px;
+  height: 6px;
+  overflow: hidden;
+}
+.progress-fill-cyan {
+  background: var(--md-sys-color-primary);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+.progress-fill-amber {
+  background: #f59e0b;
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+.progress-fill-red {
+  background: #ef4444;
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+/* Table — zebra striping for readability */
+.table-material tbody tr:nth-child(even) {
+  background: var(--md-sys-color-surface-variant);
+}
+.table-material tbody tr:hover {
+  background: var(--md-sys-color-primary-container);
+}
+.table-terminal tbody tr:nth-child(even) {
+  background: var(--md-sys-color-surface-variant);
+}
+.table-terminal tbody tr:hover {
+  background: var(--md-sys-color-primary-container);
+}
+
+/* Border that was formerly cyan-glow */
+.border-cyan-glow {
+  border-color: var(--md-sys-color-primary);
+  box-shadow: 0 0 0 2px var(--md-sys-color-primary-container);
+}
+
+/* Score chip utility classes */
+.score-chip-high {
+  background: var(--score-high-bg);
+  color: var(--score-high);
+  border: 1px solid var(--score-high-border);
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-weight: 600;
+  font-size: 13px;
+}
+.score-chip-mid {
+  background: var(--score-mid-bg);
+  color: var(--score-mid);
+  border: 1px solid var(--score-mid-border);
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-weight: 600;
+  font-size: 13px;
+}
+.score-chip-low {
+  background: var(--score-low-bg);
+  color: var(--score-low);
+  border: 1px solid var(--score-low-border);
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Section label */
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--md-sys-color-primary);
+}

@@ -1,0 +1,244 @@
+{
+  "name": "Devra",
+  "slug": "devra",
+  "category": "use-case",
+  "subcategory": "dev-tools",
+  "description": "Devra is an AI-powered autonomous code maintenance agent that monitors repos for dependency updates, security vulnerabilities, and documentation drift. Automatically generates PRs with code changes, upgrades, and doc updates. Differentiates from Dependabot/Renovate with LLM-powered code understanding.",
+  "oneLiner": "Autonomous AI agent that keeps codebases healthy by generating PRs for dependency updates, security patches, and doc maintenance.",
+  "founded": "2023",
+  "funding": "Seed stage; exact amount undisclosed",
+  "pricing": "Freemium — free for public repos; paid plans for private repos/teams; Enterprise custom pricing",
+  "website": "https://devra.ai",
+  "screenshots": [],
+  "capabilities": [
+    "Autonomous dependency update PR generation",
+    "Security vulnerability scanning and patching",
+    "Documentation drift detection and auto-sync",
+    "Multi-language support (npm, PyPI, Maven, Go, Cargo, NuGet)",
+    "GitHub, GitLab, Bitbucket integration",
+    "Configurable scan schedules",
+    "Breaking change detection for major upgrades",
+    "Changelog and migration guide summarization in PRs",
+    "CI/CD pipeline integration",
+    "Configurable ignore lists and update policies"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "Lightweight GitHub/GitLab app install: authorize, select repos, optionally configure YAML for custom policies. No visual builder — purpose-built for code maintenance. Agent runs autonomously, surfacing work through PRs in existing developer workflow.",
+    "strengths": [
+      "Extremely low friction onboarding — install app and agent starts working",
+      "Fits seamlessly into existing PR-based developer workflows",
+      "AI-powered doc updates go beyond traditional dependency bots",
+      "Natural HITL via standard code review",
+      "No context switching for developers"
+    ],
+    "weaknesses": [
+      "Narrow scope — only dependency/doc maintenance, not general-purpose",
+      "No visual builder or drag-and-drop",
+      "Competes against free tools (Dependabot, Renovate)",
+      "Early-stage with unclear long-term viability",
+      "No self-hosted deployment",
+      "Minimal observability and debugging"
+    ],
+    "notableFeatures": [
+      "AI-powered documentation drift detection and auto-sync",
+      "LLM-based breaking change impact analysis",
+      "Intelligent PR descriptions with changelog summaries",
+      "Concurrent multi-repo scanning with dependency graph awareness"
+    ]
+  },
+  "recentDevelopments": [
+    "Positions as AI-native alternative to Dependabot/Renovate",
+    "Documentation auto-sync differentiates from traditional dependency bots",
+    "Competes in growing AI-for-developer-tools space alongside Copilot, Cursor"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://devra.ai",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "low",
+  "scores": {
+    "total": 39,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 10,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 3,
+            "rationale": "GitHub app install + YAML config. No visual builder. Under 30 min to first agent."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 2,
+            "rationale": "See PR outputs and CI results. No interactive trace or evaluation harness."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 2,
+            "rationale": "Setup docs exist but thin on advanced topics. Early-stage product."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 3,
+            "rationale": "Config changes take effect on next scan cycle. Reasonable turnaround."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 5.2,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 1,
+            "rationale": "Single agent per repo. Fixed task set. No multi-agent."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 2,
+            "rationale": "Unidirectional: agent creates PR, human reviews. No shared workspace."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 1,
+            "rationale": "No team features. Config per-repo via Git."
+          },
+          {
+            "name": "Team Development",
+            "score": 1,
+            "rationale": "Single fixed workflow. No customizable patterns."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 9.2,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 3,
+            "rationale": "GitHub, GitLab, Bitbucket + npm, PyPI, Maven, Go, Cargo, NuGet. Code domain only."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 2,
+            "rationale": "Git platform APIs and webhooks. No MCP or external tool protocols."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 2,
+            "rationale": "OAuth app installation. Basic SSO. No SAML or credential rotation."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 2,
+            "rationale": "Reads dep manifests and code directly. No configurable RAG or doc loaders."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 7.6,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 2,
+            "rationale": "Disable per-repo. Configurable ignore lists. No behavioral monitoring."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 3,
+            "rationale": "PR review as inherent HITL. Not a platform feature but Git workflow property."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 1,
+            "rationale": "No dedicated audit trail. No SOC2. Early-stage startup."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 1,
+            "rationale": "Relies on Git platform permissions. No custom roles."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 6.8,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 2,
+            "rationale": "SaaS-only as GitHub/GitLab app. No self-hosted option."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 2,
+            "rationale": "Scales across repos in SaaS. Large monorepo performance unclear."
+          },
+          {
+            "name": "Cost Management",
+            "score": 2,
+            "rationale": "Basic dashboard: PR status, scan history. No deep observability."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 1,
+            "rationale": "Early-stage. Minimal public community. Competes with Dependabot (free) and Renovate (OSS)."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "Devra scores 42/100. Narrow use-case tool, not general-purpose agent factory. Builder (10) is config-only. Deployment (7) SaaS-only. Integration (9) deep in Git/package domain but narrow. Governance (7), Collaboration (4), Ecosystem (5) all limited by early stage and fixed scope.",
+  "competence": "Autonomous Coding Agent",
+  "targetUser": "Engineering teams automating dependency updates and doc maintenance",
+  "supportedCUJs": ["code-development", "security-monitoring"],
+  "walkthrough": {
+    "title": "How Devra Works: Autonomous Code Maintenance",
+    "steps": [
+      {
+        "title": "Install the GitHub/GitLab App",
+        "description": "Authorize Devra and select which repositories to monitor. No configuration file required — the agent starts scanning immediately with sensible defaults. Optionally add a YAML config for custom policies."
+      },
+      {
+        "title": "Agent Scans for Issues",
+        "description": "Devra continuously monitors your repos for outdated dependencies, known security vulnerabilities (CVEs), and documentation that has drifted from the code. Unlike Dependabot, it uses LLM-powered code understanding to assess impact."
+      },
+      {
+        "title": "AI Generates Pull Requests",
+        "description": "For each issue found, Devra generates a complete PR with code changes, dependency bumps, and migration notes. For major version upgrades, it detects breaking changes and updates affected code paths."
+      },
+      {
+        "title": "Review in Your Existing Workflow",
+        "description": "PRs appear in your normal review queue with clear descriptions, changelog summaries, and CI/CD pipeline results. Review, comment, request changes, or merge — all through your existing Git workflow."
+      },
+      {
+        "title": "Configure Policies and Schedules",
+        "description": "Customize scan frequency, ignore lists, auto-merge rules for patch updates, and notification preferences. Set policies per-repo or organization-wide. Track maintenance health over time."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "VE8Zpx2QoGM",
+      "title": "most depressing ai demo on record",
+      "channel": "Devra AI"
+    },
+    {
+      "videoId": "pYgThez0a_U",
+      "title": "AI makes JS Breakout",
+      "channel": "Devra AI"
+    }
+  ]
+}

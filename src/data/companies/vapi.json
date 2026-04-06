@@ -1,0 +1,329 @@
+{
+  "name": "Vapi",
+  "slug": "vapi",
+  "category": "use-case",
+  "subcategory": "voice-cs",
+  "description": "Vapi is a developer-first voice AI platform for building, testing, and deploying conversational voice agents. It handles real-time audio infrastructure, STT, LLM orchestration, and TTS with 200+ model integrations, sub-500ms latency, and enterprise-grade reliability. Powers 300M+ calls across 500K+ developers.",
+  "oneLiner": "The most configurable API to build voice AI products and scale phone operations.",
+  "founded": "2023",
+  "funding": "$20M Series A (Dec 2024) led by Bessemer Venture Partners; YC-backed; ~$130M valuation",
+  "pricing": "Pay-as-you-go: $0.05/min + model costs at-cost; $10 free credit; Enterprise with volume pricing",
+  "website": "https://vapi.ai",
+  "githubRepo": "VapiAI",
+  "screenshots": [
+    {
+      "path": "/screenshots/vapi/dashboard.png",
+      "alt": "Vapi Dashboard — voice agent management and configuration interface",
+      "screen": "dashboard"
+    }
+  ],
+  "capabilities": [
+    "Real-time voice AI (sub-500ms latency)",
+    "Inbound/outbound phone calls",
+    "Web call embedding",
+    "SMS and chat",
+    "200+ model integrations (STT/LLM/TTS)",
+    "BYOM support",
+    "Tool calling for API integrations",
+    "Multi-agent Squads orchestration",
+    "Automated voice agent testing",
+    "A/B experimentation",
+    "Evaluation scorecards",
+    "Voicemail detection",
+    "Custom SIP and warm transfers",
+    "DTMF support",
+    "100+ language support",
+    "SOC2/HIPAA/PCI compliance",
+    "4,200+ configuration points",
+    "1000+ templates",
+    "CLI and MCP support"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "Dual-track: developers use REST API (4,200+ config points) with SDKs and CLI. Product teams use Dashboard UI. Create agent by defining instructions/tools, selecting models (200+ STT/LLM/TTS options), integrating data via tools, then testing with built-in calling and evaluation. Squads for multi-agent. 1000+ templates for rapid prototyping.",
+    "strengths": [
+      "4,200+ config points — unmatched API flexibility",
+      "Sub-500ms voice latency — natural conversations",
+      "200+ model integrations with BYOM",
+      "300M+ calls, 99.99% uptime — production-proven",
+      "Automated testing with simulated voice agents",
+      "SOC2/HIPAA/PCI for regulated industries",
+      "500K+ developer community"
+    ],
+    "weaknesses": [
+      "Cloud-only, no self-hosted option",
+      "Visual builder deprecated (Workflows to Squads transition)",
+      "Limited native CRM/ERP connectors",
+      "Platform cost stacks on top of model costs",
+      "Team collaboration features minimal",
+      "Young company with limited enterprise case studies"
+    ],
+    "notableFeatures": [
+      "Squads multi-agent orchestration",
+      "Automated voice testing with hallucination detection",
+      "Outbound campaign management at scale",
+      "MCP server support",
+      "Custom SIP and warm transfers for enterprise telephony"
+    ]
+  },
+  "recentDevelopments": [
+    "Dec 2024: $20M Series A led by Bessemer at ~$130M valuation",
+    "2025: Grew from 120K to 500K+ developers",
+    "2025: 300M+ calls milestone",
+    "2025: Squads replacing deprecated Workflows",
+    "2025: CLI and MCP support added",
+    "2025: Evaluation system with scorecards launched",
+    "2025: SMS/chat expanding beyond voice-only"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://vapi.ai",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://vapi.ai/pricing",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://docs.vapi.ai/quickstart/introduction",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://docs.vapi.ai/changelog",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "high",
+  "scores": {
+    "total": 78,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 16.2,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 5,
+            "rationale": "API-native with 4,200+ config points. SDKs, CLI, MCP support. Exhaustive docs."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 3,
+            "rationale": "Dashboard UI available. Workflows deprecated in favor of Squads. Composer for quick creation."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 4,
+            "rationale": "1000+ pre-made templates. Quickstarts for phone and web calls."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 4,
+            "rationale": "Automated testing with simulated agents. A/B experiments. Evaluation scorecards."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 11.6,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 4,
+            "rationale": "Squads enable multi-agent with handoff between specialized agents."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 3,
+            "rationale": "Transfer call nodes for human escalation. Warm transfers. Limited structured approval."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 2,
+            "rationale": "API-first, single-developer oriented. Limited multi-user dashboard features."
+          },
+          {
+            "name": "Team Development",
+            "score": 2,
+            "rationale": "API-first, single-developer oriented. Limited multi-user dashboard features."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 17.2,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 5,
+            "rationale": "200+ integrations (STT, LLM, TTS) with BYOM support."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 5,
+            "rationale": "Native Twilio, custom SIP, Vapi numbers, SMS, web widget."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 3,
+            "rationale": "40+ app integrations. Relies on tool calling and Make/n8n/Zapier."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 4,
+            "rationale": "MCP support, CLI, GitHub integration, webhooks, OpenAI-compatible API."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 15.2,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 5,
+            "rationale": "SOC2, HIPAA, PCI covering healthcare, finance, payments."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 3,
+            "rationale": "SSO/RBAC on enterprise tier. Basic API key management on free tier."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 4,
+            "rationale": "Built-in AI guardrails per assistant. Configurable content safety."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 3,
+            "rationale": "14-day call history (free), custom retention (enterprise). Limited audit trail docs."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 17.4,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 5,
+            "rationale": "Scale to millions of calls. 300M+ processed. Elastic infrastructure."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 4,
+            "rationale": "Advanced analytics, call insights, structured outputs. Observability stack support."
+          },
+          {
+            "name": "Cost Management",
+            "score": 3,
+            "rationale": "Usage-based but $0.05/min platform + model costs stack up. Competitor criticism on hidden costs."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 5,
+            "rationale": "500K+ developers. 250K+ community. 13K+ support topics. Strong for 2023 startup."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "Vapi scores 72/100. Builder Experience (14) world-class API but visual builder in flux. Deployment (14) massive scale but cloud-only. Integration (14) deep models/telephony, sparse business tools. Governance (12) strong compliance, basic RBAC. Collaboration (10) and Ecosystem (8) weakest — minimal team features, young company.",
+  "competence": "Voice Agent Platform",
+  "targetUser": "Developers building AI phone/voice agents",
+  "marketIntelligence": {
+    "communityBuzz": [
+      "Voice agents are booming — r/AIVoice_Agents actively discussing Vapi and competitors",
+      "500K+ developer community growing rapidly",
+      "Platform cost (/bin/zsh.05/min) on top of model costs is a frequent pricing complaint",
+      "Squads replacing deprecated Workflows — transition causing some user friction",
+      "SOC2/HIPAA/PCI compliance praised for enabling regulated industry deployments"
+    ],
+    "metrics": [
+      {
+        "metric": "Developers",
+        "value": "500K+",
+        "source": "Vapi"
+      },
+      {
+        "metric": "Calls Processed",
+        "value": "300M+",
+        "source": "Vapi"
+      },
+      {
+        "metric": "Deployed Assistants",
+        "value": "2.5M+",
+        "source": "Vapi"
+      },
+      {
+        "metric": "Model Integrations",
+        "value": "200+",
+        "source": "Docs"
+      },
+      {
+        "metric": "Uptime SLA",
+        "value": "99.99%",
+        "source": "Enterprise"
+      },
+      {
+        "metric": "Config Points",
+        "value": "4,200+",
+        "source": "API"
+      }
+    ],
+    "funding": {
+      "total": "$20M",
+      "lastRound": "Series A",
+      "valuation": "~$130M",
+      "investors": [
+        "Bessemer Venture Partners",
+        "Y Combinator"
+      ]
+    }
+  },
+  "supportedCUJs": ["voice-telephony", "customer-support", "sales-outreach"],
+  "walkthrough": {
+    "title": "How Vapi Works: Build a Voice Agent in Minutes",
+    "steps": [
+      {
+        "image": "/screenshots/vapi/dashboard.png",
+        "title": "Create Your Voice Assistant",
+        "description": "From the Vapi Dashboard, create a new assistant with natural language instructions, select your STT/LLM/TTS models from 200+ options, and configure the voice persona."
+      },
+      {
+        "title": "Connect Telephony",
+        "description": "Assign a phone number (Vapi, Twilio, or custom SIP), configure inbound/outbound calling, set up voicemail detection and warm transfers to human agents."
+      },
+      {
+        "title": "Add Tools & Knowledge",
+        "description": "Use tool calling to connect your CRM, calendar, and business APIs. Upload knowledge base docs so the agent can answer company-specific questions during calls."
+      },
+      {
+        "title": "Test & Deploy",
+        "description": "Test with the built-in call simulator using automated voice agents. Run A/B experiments on prompts and voices. Deploy to production with 99.99% uptime SLA."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "jlV8fJKFXpM",
+      "title": "Vapi AI: Create Voice Agents in Minutes (2025 Tutorial)",
+      "channel": "Income Stream Surfers"
+    },
+    {
+      "videoId": "gPEg2v3lCIo",
+      "title": "This AI Voice Agent Sounds TOO Real (Vapi Demo)",
+      "channel": "All About AI"
+    }
+  ]
+}

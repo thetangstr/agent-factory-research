@@ -1,0 +1,325 @@
+{
+  "name": "AutoGen (Microsoft)",
+  "slug": "autogen",
+  "category": "open-source",
+  "subcategory": "multi-agent-orchestration",
+  "description": "AutoGen is Microsoft Research's open-source framework for building multi-agent AI systems through structured conversations. The 0.4 rewrite introduced event-driven async architecture with group chat, swarm, nested conversations, and Magentic-One multi-agent teams. Azure AI Agent Service and Copilot Studio provide enterprise paths.",
+  "oneLiner": "Microsoft Research's multi-agent conversation framework with Azure enterprise integration and visual Studio UI.",
+  "founded": "2023",
+  "funding": "Backed by Microsoft Research. No external VC — fully Microsoft-funded.",
+  "pricing": "Open Source (MIT, free); Azure AI Agent Service (consumption-based); Copilot Studio ($200/user/mo)",
+  "website": "https://microsoft.github.io/autogen/",
+  "githubRepo": "microsoft/autogen",
+  "githubStars": 38000,
+  "screenshots": [
+    {
+      "path": "/screenshots/autogen/agent-config.png",
+      "alt": "AutoGen Studio — agent configuration with role and model settings",
+      "screen": "agent-config"
+    },
+    {
+      "path": "/screenshots/autogen/workflow-session.png",
+      "alt": "AutoGen Studio — multi-agent workflow session with conversation view",
+      "screen": "workflow-session"
+    },
+    {
+      "path": "/screenshots/autogen/drag-drop-canvas.png",
+      "alt": "AutoGen Studio — drag-and-drop canvas for agent skill assignment",
+      "screen": "visual-canvas"
+    },
+    {
+      "path": "/screenshots/autogen/profiling.png",
+      "alt": "AutoGen Studio — agent execution profiling and performance visualization",
+      "screen": "profiling"
+    }
+  ],
+  "capabilities": [
+    "Multi-agent conversations (group chat, nested, sequential, swarm)",
+    "UserProxyAgent for first-class HITL",
+    "Code execution with Docker sandboxing",
+    "Function calling and tool use",
+    "AutoGen Studio visual workflow builder",
+    "AutoGen Bench evaluation framework",
+    "Magentic-One multi-agent team",
+    "Swarm orchestration pattern",
+    "Async event-driven architecture (0.4+)",
+    "Multi-LLM support (OpenAI, Azure, Anthropic, local)",
+    "RAG via retrieval-augmented agent pattern",
+    "Azure AI Agent Service integration",
+    "Copilot Studio integration",
+    "Nested conversations for hierarchical workflows"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "Code-first Python: define agents with system messages, LLM configs, tool registrations, compose into conversations. AutoGen Studio provides browser-based visual builder for drag-and-drop prototyping. 0.4 rewrite introduced AgentChat high-level API and Core runtime. Enterprise users build through Azure AI Agent Service or Copilot Studio.",
+    "strengths": [
+      "Pioneered multi-agent conversation paradigm",
+      "UserProxyAgent makes HITL first-class",
+      "Code execution provides powerful grounding",
+      "Microsoft backing ensures long-term viability",
+      "AutoGen Studio lowers prototyping barrier",
+      "Strong academic foundation",
+      "Flexible topologies — group chat, sequential, nested, swarm"
+    ],
+    "weaknesses": [
+      "0.2 to 0.4 breaking rewrite fragmented community",
+      "Multi-turn conversations are token-expensive",
+      "No production monitoring or cost tracking in OSS",
+      "Limited pre-built connectors",
+      "AutoGen Studio is prototyping, not production",
+      "No RBAC or compliance in OSS",
+      "Steep learning curve for advanced patterns"
+    ],
+    "notableFeatures": [
+      "Magentic-One: multi-agent team (Orchestrator, WebSurfer, FileSurfer, Coder, ComputerTerminal)",
+      "AutoGen Studio: visual builder for multi-agent workflows",
+      "AutoGen Bench: standardized agent evaluation",
+      "Swarm: lightweight agent handoff protocol",
+      "Nested conversations for modular decomposition",
+      "Azure AI Agent Service bridge to enterprise"
+    ]
+  },
+  "recentDevelopments": [
+    "2025 Q4: AutoGen 0.4 stable with AgentChat and Core runtime",
+    "2025 Q3: Magentic-One v2 for web and coding tasks",
+    "2025 Q2: Azure AI Agent Service GA with Azure compliance",
+    "2025 Q1: Swarm orchestration pattern added",
+    "2025 Q1: AutoGen Studio 2.0 with improved visual builder",
+    "2024 Q4: AutoGen 0.4 preview — complete async rewrite"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://github.com/microsoft/autogen",
+      "accessedAt": "2026-04-04",
+      "type": "github"
+    },
+    {
+      "url": "https://microsoft.github.io/autogen/",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-agent-service",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "medium",
+  "scores": {
+    "total": 62,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 12,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 3,
+            "rationale": "Code-first Python SDK. 0.4 improved API but breaking changes. Studio for visual prototyping."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 3,
+            "rationale": "Studio visualizes conversations and tools. AutoGen Bench for evaluation. Interactive debugging limited."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 3,
+            "rationale": "Comprehensive with notebooks. 0.2-to-0.4 transition created parallel doc confusion."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 3,
+            "rationale": "Studio enables rapid prototyping. Code changes require restart. No hot-reload."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 14,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 5,
+            "rationale": "Category-defining. Group chat, two-agent, sequential, nested, swarm, Magentic-One. Dynamic spawning."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 4,
+            "rationale": "UserProxyAgent is first-class participant. Natural handoff. Configurable intervention."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 2,
+            "rationale": "No collaborative features in OSS. Studio is single-user."
+          },
+          {
+            "name": "Team Development",
+            "score": 2,
+            "rationale": "Notebooks as examples. Studio has samples. No template marketplace."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 12.2,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 3,
+            "rationale": "Limited pre-built connectors. Azure unlocks Microsoft ecosystem."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 4,
+            "rationale": "OpenAI function calling. Tool use patterns. Early MCP exploration. OpenAPI via Azure."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 3,
+            "rationale": "Basic in OSS. Azure AD and managed identity via Azure AI Agent Service."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 2,
+            "rationale": "Basic RAG agent pattern. No sophisticated data pipeline or knowledge management."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 10.8,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 3,
+            "rationale": "Configurable termination and max rounds. Docker sandboxing. No ML-powered guardrails."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 4,
+            "rationale": "UserProxyAgent provides native human approval. One of strongest HITL in OSS."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 2,
+            "rationale": "Conversation logs but no tamper-proof storage. Azure inherits compliance."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 1,
+            "rationale": "No RBAC in OSS. Studio has basic user management. Enterprise needs Azure."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 13.4,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 4,
+            "rationale": "Runs anywhere Python does. Azure for managed cloud. Docker support. No K8s operator."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 3,
+            "rationale": "0.4 async supports concurrent agents. Azure handles scaling. OSS is single-process."
+          },
+          {
+            "name": "Cost Management",
+            "score": 2,
+            "rationale": "Studio has basic visualization. Azure Monitor available. No OSS production monitoring."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 4,
+            "rationale": "~38K GitHub stars, 450+ contributors. Large Discord. Academic citations. 0.4 rewrite fragmented community."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "AutoGen scores 64/100. Collaboration (13) is standout — category-defining multi-agent orchestration. Builder Experience (12) improved by Studio but 0.4 migration friction. Integration (12) relies on code execution. Governance (10) has strong HITL but weak RBAC. Ecosystem (6) reflects Microsoft backing but community fragmentation.",
+  "competence": "Multi-Agent Orchestration Framework",
+  "targetUser": "Researchers and developers building conversational multi-agent systems",
+  "marketIntelligence": {
+    "communityBuzz": [
+      "Reports of Microsoft shifting AutoGen to maintenance mode in favor of broader Agent Framework",
+      "0.2 to 0.4 rewrite fragmented the community — parallel docs causing confusion",
+      "Magentic-One gets attention but AutoGen Studio seen as prototyping tool, not production-ready",
+      "UserProxyAgent HITL pattern widely praised as best-in-class for human-agent collaboration",
+      "Azure AI Agent Service bridge seen as the real enterprise play"
+    ],
+    "metrics": [
+      {
+        "metric": "GitHub Stars",
+        "value": "38K+",
+        "source": "GitHub"
+      },
+      {
+        "metric": "Contributors",
+        "value": "450+",
+        "source": "GitHub"
+      },
+      {
+        "metric": "Status",
+        "value": "Reports of shift to maintenance mode",
+        "source": "Community"
+      },
+      {
+        "metric": "Enterprise Path",
+        "value": "Azure AI Agent Service GA",
+        "source": "Microsoft"
+      }
+    ],
+    "funding": {
+      "total": "Microsoft Research funded",
+      "lastRound": "Internal",
+      "valuation": "N/A (Microsoft subsidiary)"
+    }
+  },
+  "supportedCUJs": ["workflow-automation", "code-development", "data-extraction"],
+  "walkthrough": {
+    "title": "How AutoGen Works: Multi-Agent Conversations",
+    "steps": [
+      {
+        "image": "/screenshots/autogen/agent-config.png",
+        "title": "Configure Your Agents",
+        "description": "Define agents with system messages, LLM configs, and tool registrations. AutoGen Studio provides a visual interface for non-developers."
+      },
+      {
+        "image": "/screenshots/autogen/drag-drop-canvas.png",
+        "title": "Design the Conversation Flow",
+        "description": "Use the drag-and-drop canvas to assign skills and tools to agents. Define how agents interact: group chat, sequential, or nested conversations."
+      },
+      {
+        "image": "/screenshots/autogen/workflow-session.png",
+        "title": "Run Multi-Agent Sessions",
+        "description": "Launch your agent team and watch them collaborate through structured conversations. Human-in-the-loop via UserProxyAgent lets you intervene at any point."
+      },
+      {
+        "image": "/screenshots/autogen/profiling.png",
+        "title": "Profile & Evaluate",
+        "description": "Analyze agent performance with built-in profiling: see how often tools were used, code was executed, and where the conversation took unexpected turns."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "RLwyXRVvlNk",
+      "title": "AutoGen Full Course: Build AI Agent Teams",
+      "channel": "Samuel Chan"
+    },
+    {
+      "videoId": "V2qZ_lgxTzg",
+      "title": "AutoGen Studio: Build Multi-Agent Systems Visually",
+      "channel": "Sophia Yang"
+    }
+  ]
+}

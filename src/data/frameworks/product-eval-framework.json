@@ -1,0 +1,67 @@
+{
+  "name": "Agent Factory Evaluation Framework",
+  "version": "2.0",
+  "purpose": "Evaluate enterprise agent factory platforms — products that allow organizations to create, orchestrate, and operate custom AI agents to augment their workforce. Five dimensions map to the factory metaphor: Creation (factory floor), Orchestration (assembly line), Integration (supply chain), Governance (quality control), and Operations (factory management).",
+  "dimensions": [
+    {
+      "key": "CR",
+      "name": "Creation",
+      "weight": 20,
+      "description": "The Factory Floor — how agents are made. Evaluates how easily enterprise teams can define, configure, and spawn new AI agents. Covers the full builder spectrum from no-code visual tools to pro-code SDKs, template libraries, persona/role definition, debugging tools, and the time from zero to a working agent.",
+      "subCriteria": [
+        {"name": "Agent Builder UX", "weight": 6, "description": "Primary creation interface — visual builder, code SDK, natural language config, templates. Breadth of builder modalities and quality of each.", "rubric": {"1": "Code-only with no templates, boilerplate-heavy, 4+ hours to first agent", "3": "Visual builder OR good code SDK with templates. One modality works well. 30-120 min to first agent", "5": "Multi-modal: visual builder + code SDK + NL config + template marketplace. Under 10 min to first agent"}},
+        {"name": "Time-to-Value", "weight": 5, "description": "How fast can a team go from zero to a useful agent handling real work? Includes onboarding, setup, and first deployment.", "rubric": {"1": "Weeks of setup: complex infrastructure, custom code, manual integration. Expert-only", "3": "Days to first value: install/signup, configure, deploy with moderate effort", "5": "Hours or minutes: template-based deployment, instant preview, immediate production readiness"}},
+        {"name": "Debugging & Testing", "weight": 5, "description": "Tools for understanding agent behavior, diagnosing failures, running evaluations, and iterating on agent quality.", "rubric": {"1": "No built-in tools. Print statements and manual log inspection only", "3": "Trace visualization of reasoning steps and tool calls. Basic replay. Manual evaluation possible", "5": "Interactive debugging, automated regression testing, A/B testing, evaluation harnesses, CI/CD integrated"}},
+        {"name": "Documentation & Learning", "weight": 4, "description": "Quality of docs, tutorials, quickstarts, examples, and learning resources for agent builders.", "rubric": {"1": "Minimal or outdated docs. Must read source code", "3": "Complete API reference, tutorials, quickstart guide. Some gaps in advanced topics", "5": "Interactive tutorials, playground, video walkthroughs, certification program, 100+ examples"}}
+      ]
+    },
+    {
+      "key": "OR",
+      "name": "Orchestration",
+      "weight": 20,
+      "description": "The Assembly Line — how agents work together and with humans. Evaluates multi-agent coordination patterns, human-in-the-loop workflow design, task delegation, shared state management, and the quality of human-agent handoff. This is the core differentiator for 'agent factory' platforms vs single-agent tools.",
+      "subCriteria": [
+        {"name": "Multi-Agent Coordination", "weight": 6, "description": "Can agents work as a team? Covers conversation patterns, shared state, delegation, parallel/sequential/hierarchical execution, and dynamic agent spawning.", "rubric": {"1": "Single-agent only. No multi-agent support. External orchestration required", "3": "Sequential and parallel execution. Basic messaging and shared state. Supports 2-10 agents. Fixed patterns", "5": "Dynamic topologies, hundreds of agents, distributed state with consistency, fault-tolerant, visual workflow designer"}},
+        {"name": "Human-in-the-Loop Design", "weight": 6, "description": "How well does the platform design the collaboration between human operators and agents? Approval gates, handoff UX, evidence packets, adaptive autonomy.", "rubric": {"1": "No HITL mechanisms. Agents run autonomously with no intervention points", "3": "Configurable approval gates by action type. Context-rich handoff to humans. Exception-only routing", "5": "Intelligent routing, AI-assisted approvals, adaptive autonomy, evidence-packet handoffs, Board Operator dashboard"}},
+        {"name": "Workflow Templates", "weight": 4, "description": "Pre-built workflow patterns and reusable orchestration components that accelerate development.", "rubric": {"1": "No templates. Every workflow built from scratch", "3": "10-20 templates for common use cases. Basic customization", "5": "100+ production-tested templates, AI-assisted selection, enterprise governance, community marketplace"}},
+        {"name": "Team Development", "weight": 4, "description": "Support for teams building agents together: shared workspaces, version control, promotion pipelines.", "rubric": {"1": "Single-user only. No sharing or version control", "3": "Team workspaces with RBAC, Git integration, basic dev/prod separation", "5": "Real-time collaborative editing, code review workflows, CI/CD pipelines, inner-source agent marketplace"}}
+      ]
+    },
+    {
+      "key": "IN",
+      "name": "Integration",
+      "weight": 20,
+      "description": "The Supply Chain — how agents connect to enterprise systems and data. Evaluates native connectors, API ecosystem breadth, authentication handling, data pipeline and RAG capabilities, and support for emerging standards like MCP.",
+      "subCriteria": [
+        {"name": "Native Connectors", "weight": 6, "description": "Pre-built integrations with enterprise systems (CRM, ERP, ITSM, comms, databases). Breadth AND depth (read/write, not just read).", "rubric": {"1": "No pre-built connectors. All integrations built from scratch", "3": "20-50 native connectors covering major categories with read/write", "5": "200+ connectors with enterprise-grade depth, legacy adapters, connector development kit"}},
+        {"name": "API & Protocol Standards", "weight": 5, "description": "REST, GraphQL, MCP, OpenAI/Anthropic tool-use protocols, webhooks, event architecture.", "rubric": {"1": "Proprietary API only. No standard tool-use protocols. No MCP", "3": "REST API, major tool-use protocols, early MCP support, OpenAPI spec published", "5": "Full MCP ecosystem, universal tool-use translation, gRPC, GraphQL, standards contributor"}},
+        {"name": "Authentication & Access", "weight": 5, "description": "OAuth, SAML, SSO, credential management, secret rotation, per-agent access scoping for enterprise systems.", "rubric": {"1": "Raw API keys only. Plaintext credentials. No OAuth", "3": "OAuth 2.0 with refresh tokens, SAML, encrypted storage, basic per-agent scoping", "5": "Enterprise IAM, JIT provisioning, automated rotation, per-agent least-privilege, mutual TLS"}},
+        {"name": "Data Pipeline & RAG", "weight": 4, "description": "Knowledge bases, vector stores, document loaders, structured data connectors, context management.", "rubric": {"1": "No data pipeline. Agents operate only on prompt data", "3": "Functional RAG with multiple vector stores, common document loaders, configurable chunking", "5": "Multi-modal RAG, graph knowledge, real-time data fusion, terabyte-scale with sub-second retrieval"}}
+      ]
+    },
+    {
+      "key": "GV",
+      "name": "Governance",
+      "weight": 20,
+      "description": "Quality Control — how agents are trusted, audited, and controlled. Evaluates kill switches, guardrails, audit trails, compliance certifications, RBAC, and explainability. This is the #1 enterprise adoption blocker — platforms that nail governance win enterprise deals.",
+      "subCriteria": [
+        {"name": "Guardrails & Kill Switches", "weight": 6, "description": "Immediate halt capability, behavioral boundaries, action limits, input/output filtering, safety policies.", "rubric": {"1": "No kill switch or guardrails. Agents run unconstrained", "3": "Per-agent kill switch. Basic guardrails: input validation, output filtering, action limits", "5": "Multi-level kill switches, real-time behavioral monitoring, ML-powered guardrails, circuit breakers"}},
+        {"name": "Audit Trail & Compliance", "weight": 6, "description": "Tamper-proof execution logs, regulatory compliance (SOC2, HIPAA, GDPR, FedRAMP), data retention.", "rubric": {"1": "Minimal logging. No compliance certifications. Modifiable logs", "3": "Comprehensive audit trail, immutable storage, SOC2 in progress, queryable logs", "5": "Tamper-proof with cryptographic verification, multi-jurisdiction compliance, privacy-preserving audit"}},
+        {"name": "RBAC & Access Control", "weight": 4, "description": "Platform access governance: custom roles, team hierarchy, SSO, least-privilege enforcement.", "rubric": {"1": "No access control. Single shared admin account", "3": "Role-based access with customizable roles, team support, SSO integration", "5": "ABAC layered on RBAC, dynamic permissions, automated reviews, privileged access management"}},
+        {"name": "Explainability & Transparency", "weight": 4, "description": "Can stakeholders understand WHY an agent made a decision? Chain-of-thought visibility, reasoning traces, decision rationale.", "rubric": {"1": "Black box. No visibility into agent reasoning", "3": "Trace logs show reasoning steps and tool calls. Technical teams can follow the chain", "5": "Plain-language explanations, confidence scores, source citations, non-technical stakeholder reporting"}}
+      ]
+    },
+    {
+      "key": "OP",
+      "name": "Operations",
+      "weight": 20,
+      "description": "Factory Management — production readiness and ecosystem maturity. Evaluates deployment flexibility, scaling, monitoring, cost management, and the broader ecosystem (community, funding, stability, innovation). Enterprise buyers need confidence the factory will run reliably for years.",
+      "subCriteria": [
+        {"name": "Deployment Flexibility", "weight": 5, "description": "SaaS, self-hosted, hybrid, Kubernetes-native, air-gapped. Range of deployment options for enterprise requirements.", "rubric": {"1": "Single deployment mode only. No container support", "3": "Both cloud and self-hosted. Docker images. Basic K8s manifests", "5": "Full spectrum: managed SaaS multi-region, self-hosted Helm, K8s-native, serverless, FedRAMP support"}},
+        {"name": "Scaling & Monitoring", "weight": 5, "description": "Auto-scaling, concurrent agents, production dashboards, alerting, distributed tracing.", "rubric": {"1": "No scaling beyond single instance. No monitoring", "3": "Auto-scaling, dozens of concurrent agents. Built-in dashboard with key metrics and basic alerting", "5": "Hyperscale with thousands of agents, ML-powered anomaly detection, predictive alerting, enterprise observability"}},
+        {"name": "Cost Management", "weight": 4, "description": "Token/infra cost tracking, budget alerts, optimization recommendations, chargeback for multi-team.", "rubric": {"1": "No cost tracking. Manually calculate from LLM provider bills", "3": "Token/cost tracking per agent with trends. Budget alerts. Basic cost breakdown", "5": "Real-time tracking, predictive modeling, automated model selection, ROI tracking, chargeback"}},
+        {"name": "Ecosystem Maturity", "weight": 6, "description": "Community size, enterprise adoption, financial stability, pricing transparency, innovation velocity.", "rubric": {"1": "Minimal community. Unfunded or high abandonment risk. No enterprise customers", "3": "Growing community (5K+ stars or equivalent). Series A+. 10+ enterprise customers. Monthly releases", "5": "Industry-defining. Major tech backing or profitable. 200+ enterprise customers. Standards contributor"}}
+      ]
+    }
+  ]
+}

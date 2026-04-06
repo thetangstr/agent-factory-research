@@ -1,0 +1,261 @@
+{
+  "name": "10Web",
+  "slug": "10web",
+  "category": "use-case",
+  "subcategory": "dev-tools",
+  "description": "10Web is an AI-powered WordPress platform that generates complete websites from text prompts or reference URLs. It bundles managed hosting on Google Cloud, automated backups, PageSpeed optimization, and an AI Writing Assistant for ongoing editing. Targets SMBs, freelancers, and agencies.",
+  "oneLiner": "AI-powered WordPress platform that generates, hosts, and manages complete websites from a single text prompt.",
+  "founded": "2017",
+  "funding": "~$5.5M total disclosed (Series A $2M, 2022). Previously bootstrapped.",
+  "pricing": "Free trial; Personal $10/mo (1 site); Premium $15/mo (3 sites); Agency $23/mo (10 sites)",
+  "website": "https://10web.io",
+  "screenshots": [],
+  "capabilities": [
+    "AI website generation from text prompts",
+    "URL-based site recreation",
+    "Multi-page Elementor-based generation",
+    "AI Writing Assistant for content editing",
+    "Google Cloud managed WordPress hosting",
+    "Automated PageSpeed optimization (90+ scores)",
+    "Automated backups and one-click restore",
+    "Free SSL",
+    "WordPress migration tools",
+    "WooCommerce store generation",
+    "AI-generated images",
+    "Multi-site management",
+    "Agency white-label tools"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "Fully no-code. Enter business description or paste URL, select page types, AI generates complete Elementor-based WordPress site in 1-2 minutes. Customize in Elementor drag-and-drop editor with AI Assistant sidebar. Flow: Describe Business -> Choose Pages -> AI Generates -> Preview -> Edit -> Publish.",
+    "strengths": [
+      "Working website from a single prompt in under 5 minutes",
+      "Real contextual content, not lorem ipsum",
+      "Built on Elementor for familiar visual editing",
+      "Integrated hosting eliminates DevOps",
+      "URL-to-site recreation for migration/inspiration",
+      "Automated PageSpeed optimization"
+    ],
+    "weaknesses": [
+      "Not a general agent platform — purely vertical for WordPress",
+      "No API for AI generation capabilities",
+      "Generated content needs human review for accuracy",
+      "Locked into 10Web hosting",
+      "No enterprise governance or compliance",
+      "Limited to WordPress ecosystem"
+    ],
+    "notableFeatures": [
+      "URL-to-WordPress site recreation",
+      "AI Writing Assistant in Elementor",
+      "Automated PageSpeed optimization",
+      "One-click WordPress migration",
+      "WooCommerce AI store generation"
+    ]
+  },
+  "recentDevelopments": [
+    "2025 Q1: Enhanced multi-page generation with cross-page design coherence",
+    "2024 Q4: AI WooCommerce store generation",
+    "2024 Q3: AI Writing Assistant in Elementor",
+    "2024 Q1: URL-based site recreation feature",
+    "2023 Q4: 50,000 hosted websites milestone"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://10web.io",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://10web.io/ai-website-builder/",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://10web.io/pricing/",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "medium",
+  "scores": {
+    "total": 43,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 14,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 4,
+            "rationale": "Prompt-to-website in minutes. No coding required. Under 10 min to working site."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 2,
+            "rationale": "No AI debugging tools. Preview and edit in Elementor is the only feedback loop."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 4,
+            "rationale": "Good tutorials, video guides, knowledge base. Gentle learning curve."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 4,
+            "rationale": "Regenerate sections quickly. Edit with Elementor live preview. AI Assistant for content."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 5.2,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 1,
+            "rationale": "No multi-agent. Single-purpose generation tool."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 2,
+            "rationale": "Simple generate-then-edit. No structured handoff or reasoning visibility."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 1,
+            "rationale": "No collaborative AI features. Basic WordPress multi-user."
+          },
+          {
+            "name": "Team Development",
+            "score": 1,
+            "rationale": "No collaborative AI features. Basic WordPress multi-user."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 7.2,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 2,
+            "rationale": "WordPress ecosystem only. No CRM/ERP/database connectors."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 2,
+            "rationale": "No public API for AI builder. No MCP. Standard WordPress REST API only."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 2,
+            "rationale": "WordPress-level auth only. No enterprise IAM."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 1,
+            "rationale": "No RAG, vector stores, or data connectors. Prompt text and URLs only."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 7.6,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 2,
+            "rationale": "No AI-specific guardrails beyond underlying LLM safety filtering."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 3,
+            "rationale": "Natural HITL — nothing publishes without user action. Simple but effective."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 1,
+            "rationale": "No AI audit trail. No compliance certifications."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 1,
+            "rationale": "Basic dashboard roles. WordPress-level access. No enterprise RBAC."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 9,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 2,
+            "rationale": "SaaS-only on 10Web's Google Cloud. No self-hosted option."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 3,
+            "rationale": "Google Cloud auto-scaling. PageSpeed optimized. Adequate for SMB traffic."
+          },
+          {
+            "name": "Cost Management",
+            "score": 2,
+            "rationale": "Basic uptime and PageSpeed dashboards. No AI-specific observability."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 2,
+            "rationale": "50K+ hosted websites. WordPress community. No developer ecosystem for AI features."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "10Web scores 44/100. Builder Experience (14) is standout — prompt to site in minutes. Everything else is low: Deployment (9) SaaS-only, Integration (7) WordPress-only, Governance (5) no enterprise features, Collaboration (4) single-purpose, Ecosystem (5) modest. Excels vertically but not an agent factory.",
+  "competence": "Vertical AI Builder (WordPress)",
+  "targetUser": "SMBs and agencies generating WordPress sites with AI",
+  "supportedCUJs": ["content-generation"],
+  "walkthrough": {
+    "title": "How 10Web Works: AI Website Generation in Minutes",
+    "steps": [
+      {
+        "title": "Describe Your Business",
+        "description": "Enter a text description of your business — what you do, your target audience, and desired tone. Alternatively, paste a URL of a website you want to recreate or draw inspiration from."
+      },
+      {
+        "title": "Select Page Types",
+        "description": "Choose which pages to generate: Home, About, Services, Contact, Blog, Portfolio, Shop. The AI will create each page with contextually relevant content, not lorem ipsum placeholder text."
+      },
+      {
+        "title": "AI Generates Complete WordPress Site",
+        "description": "In 1-2 minutes, the AI generates a complete Elementor-based WordPress site with real content, images, and consistent cross-page design. Pages are immediately editable and responsive."
+      },
+      {
+        "title": "Customize in Visual Editor",
+        "description": "Use the Elementor drag-and-drop editor to customize any element. The AI Writing Assistant sidebar helps rewrite copy, generate new sections, and optimize content for SEO."
+      },
+      {
+        "title": "Publish on Managed Hosting",
+        "description": "Publish directly to 10Web's Google Cloud hosting with automated PageSpeed optimization (90+ scores), SSL, automated backups, and one-click restore. Site is live in seconds."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "5DJ2ofuaDhg",
+      "title": "10Web AI Builder Review: The Best AI Builder for WordPress",
+      "channel": "MMX"
+    },
+    {
+      "videoId": "00ud1d7JeqM",
+      "title": "10Web AI Website Builder Tutorial | Generate A WordPress with AI",
+      "channel": "Stewart Gauld"
+    }
+  ]
+}

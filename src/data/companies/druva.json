@@ -1,0 +1,244 @@
+{
+  "name": "Druva",
+  "slug": "druva",
+  "category": "use-case",
+  "subcategory": "security",
+  "description": "Cloud-native data protection SaaS with AI-driven autonomous recovery, ransomware detection, and backup automation. Protects endpoints, SaaS apps, cloud infra, and data centers. 250+ telecom operators. SOC2, HIPAA, FedRAMP compliant.",
+  "oneLiner": "Cloud-native data protection SaaS with AI-driven autonomous recovery, ransomware detection, and backup automation.",
+  "founded": "2008",
+  "funding": "$478M+ (unicorn at $2B valuation)",
+  "pricing": "Subscription per workload type. Enterprise contract. No published pricing.",
+  "website": "https://www.druva.com",
+  "screenshots": [],
+  "capabilities": [
+    "Cloud-native backup/recovery",
+    "AI ransomware detection",
+    "Autonomous recovery orchestration",
+    "Compliance reporting (SOC2, HIPAA, FedRAMP)",
+    "Predictive data loss prevention",
+    "Global deduplication",
+    "eDiscovery and legal hold",
+    "DR testing with sandbox recovery",
+    "Multi-cloud/hybrid support",
+    "AI backup policy optimization"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "Not an agent builder. Users configure backup policies via web console. AI surfaces as recommendations, anomaly alerts, and recovery suggestions within existing workflow.",
+    "strengths": [
+      "Cloud-native SaaS eliminates infra burden",
+      "Strong compliance (FedRAMP, SOC2, HIPAA)",
+      "AI anomaly detection for ransomware",
+      "Single control plane across all workloads",
+      "Petabyte-class proven scale"
+    ],
+    "weaknesses": [
+      "Not an agent factory — AI is embedded, not composable",
+      "No multi-agent orchestration",
+      "SaaS-only, no self-hosted",
+      "Pricing opacity",
+      "AI narrowly focused on backup/recovery"
+    ],
+    "notableFeatures": [
+      "Ransomware anomaly detection",
+      "Automated DR testing without production impact",
+      "AI backup policy recommendations"
+    ]
+  },
+  "recentDevelopments": [
+    "2025: Expanded AI anomaly detection",
+    "Autonomous recovery orchestration",
+    "FedRAMP authorization",
+    "Enhanced Salesforce and K8s backup",
+    "Exploring IPO"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://www.druva.com",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "medium",
+  "scores": {
+    "total": 69,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 14,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 3,
+            "rationale": "Policy configuration, not agent building."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 4,
+            "rationale": "Backup validation, recovery testing, detailed logs."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 4,
+            "rationale": "Comprehensive docs. Training programs."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 3,
+            "rationale": "Policy changes on next backup window."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 6.8,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 1,
+            "rationale": "Not an agent platform."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 2,
+            "rationale": "AI recommendations for human review."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 2,
+            "rationale": "Multi-admin with role separation."
+          },
+          {
+            "name": "Team Development",
+            "score": 2,
+            "rationale": "Pre-built backup policy templates."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 14.2,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 4,
+            "rationale": "M365, Google, Salesforce, AWS, Azure, VMware, K8s, NAS, Oracle, SQL."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 3,
+            "rationale": "REST API. Webhooks. No MCP."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 4,
+            "rationale": "SSO/SAML, OAuth, RBAC, MFA."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 3,
+            "rationale": "No RAG. Backup catalog and metadata queries."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 16.8,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 4,
+            "rationale": "Pause jobs, halt recovery. Ransomware guardrails."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 4,
+            "rationale": "Recovery needs approval. Role-based restrictions."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 5,
+            "rationale": "Tamper-proof logging. SOC2, HIPAA, FedRAMP. Legal hold."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 4,
+            "rationale": "Granular RBAC. Multi-tenant. Delegated admin."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 17,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 4,
+            "rationale": "SaaS-first. Cloud, on-prem, hybrid. FedRAMP."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 5,
+            "rationale": "Petabyte-scale. Multi-tenant enterprise."
+          },
+          {
+            "name": "Cost Management",
+            "score": 4,
+            "rationale": "Dashboards for health, storage, compliance. SIEM integration."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 4,
+            "rationale": "Thousands of enterprise customers. Gartner MQ leader."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "Druva scores 70/100. Deployment (17) and Governance (17) strong — carrier-grade SaaS with compliance. Integration (14) broad workloads. Builder (14) decent but not agent-focused. Collaboration (7) minimal. Ecosystem (1) scoring reflects agent-factory-specific evaluation.",
+  "competence": "AI-Powered Data Protection",
+  "targetUser": "IT teams automating backup, recovery, and ransomware defense",
+  "supportedCUJs": ["security-monitoring"],
+  "walkthrough": {
+    "title": "How Druva Works: AI-Driven Data Protection and Recovery",
+    "steps": [
+      {
+        "title": "Configure Backup Policies",
+        "description": "Define backup policies via the web console for endpoints, SaaS apps (M365, Google Workspace), cloud workloads (AWS, Azure), and data centers. Set RPO/RTO targets, retention rules, and compliance requirements (HIPAA, FedRAMP, SOC2)."
+      },
+      {
+        "title": "AI Detects Anomalies and Threats",
+        "description": "Druva's AI continuously monitors backup patterns for anomalies indicating ransomware, unusual data deletion, or insider threats. Machine learning models trained on global threat data flag suspicious activity before damage spreads."
+      },
+      {
+        "title": "Autonomous Recovery Orchestration",
+        "description": "When a threat is detected, Druva identifies the last clean backup, quarantines affected snapshots, and orchestrates recovery. For ransomware, it pinpoints the infection timeline and restores to the most recent clean state."
+      },
+      {
+        "title": "DR Testing with Sandbox Recovery",
+        "description": "Run disaster recovery drills by restoring to isolated sandbox environments. Validate recovery procedures without affecting production. Generate compliance reports showing DR readiness and audit trails."
+      },
+      {
+        "title": "Predictive Optimization",
+        "description": "AI analyzes backup patterns to optimize policies: recommend storage tiers, predict capacity needs, identify redundant backups, and suggest policy adjustments. Global deduplication reduces storage costs across the fleet."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "TU77a0KS9jM",
+      "title": "Dru AI Insights Demo",
+      "channel": "Druva"
+    },
+    {
+      "videoId": "wXb0_BQDAKE",
+      "title": "DruAI - Agentic Data Security",
+      "channel": "Druva"
+    }
+  ]
+}

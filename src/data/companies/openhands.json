@@ -1,0 +1,291 @@
+{
+  "name": "OpenHands",
+  "slug": "openhands",
+  "category": "open-source",
+  "subcategory": "autonomous-coding",
+  "description": "OpenHands (formerly OpenDevin) is an open-source autonomous AI software engineer that can modify code, execute terminal commands, browse the web, open pull requests, and collaborate with users on software development. It runs inside sandboxed Docker environments and supports any LLM via OpenRouter. 70K+ GitHub stars, 490+ contributors, MIT licensed.",
+  "oneLiner": "Open-source autonomous AI software engineer that writes code, runs commands, and opens pull requests in sandboxed environments.",
+  "founded": "2024",
+  "funding": "$18.8M Series A (2025)",
+  "pricing": "Open Source (MIT, free); OpenHands Cloud (hosted) with usage-based pricing",
+  "website": "https://openhands.dev",
+  "githubRepo": "All-Hands-AI/OpenHands",
+  "githubStars": 70000,
+  "screenshots": [],
+  "capabilities": [
+    "Autonomous code generation and modification",
+    "Terminal command execution in sandboxed Docker",
+    "Web browsing for research",
+    "GitHub issue resolution end-to-end",
+    "Pull request creation",
+    "Planning Mode (beta) for structured approach",
+    "Model-agnostic (Claude, GPT-4, Gemini, Llama via OpenRouter)",
+    "Kubernetes deployment support (v1.6.0)",
+    "File system navigation and code search",
+    "Test execution and iteration",
+    "MIT licensed open-source"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "Chat-based interface where users describe tasks or point to GitHub issue URLs. Agent reads the issue, plans an approach, writes code, runs tests, and opens a PR. Planning Mode (beta) adds a structured approval step before execution. Self-hosted via Docker or managed via OpenHands Cloud.",
+    "strengths": [
+      "70K+ GitHub stars — one of the most popular AI coding agents",
+      "Top SWE-bench performer for autonomous issue resolution",
+      "Strong Docker sandboxing for safe code execution",
+      "Model-agnostic — works with any LLM via OpenRouter",
+      "MIT licensed with active academic and industry community",
+      "Natural GitHub workflow — issues in, PRs out"
+    ],
+    "weaknesses": [
+      "Single-agent, code-only — not a general enterprise agent platform",
+      "No multi-agent orchestration",
+      "No enterprise system integrations (CRM, ERP, etc.)",
+      "No governance, compliance, or team features",
+      "Quality varies significantly by task complexity",
+      "No built-in monitoring or cost management"
+    ],
+    "notableFeatures": [
+      "Planning Mode beta — structured plan-then-execute with approval",
+      "End-to-end GitHub issue to PR workflow",
+      "Docker sandboxed execution environment",
+      "Kubernetes support (v1.6.0)",
+      "SWE-bench top performer"
+    ]
+  },
+  "recentDevelopments": [
+    "Mar 2026: v1.6.0 with Kubernetes support and Planning Mode beta",
+    "2025: Raised $18.8M Series A",
+    "2025: OpenHands Cloud launched for managed hosting",
+    "2024: Rebranded from OpenDevin to OpenHands under All-Hands-AI",
+    "2024: ICLR paper published on the platform architecture",
+    "2025-2026: Grew to 70K+ GitHub stars and 490+ contributors"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://openhands.dev",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://github.com/All-Hands-AI/OpenHands",
+      "accessedAt": "2026-04-04",
+      "type": "github"
+    },
+    {
+      "url": "https://arxiv.org/abs/2407.16741",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://nurevoflow.com/ai-builds/openhands",
+      "accessedAt": "2026-04-04",
+      "type": "news"
+    }
+  ],
+  "confidenceLevel": "high",
+  "scores": {
+    "total": 57,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 13.2,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 4,
+            "rationale": "Chat-based interface. Point at GitHub issue URL and agent works on fix. Natural interaction."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 3,
+            "rationale": "Docker-based setup. OpenHands Cloud simplifies but self-hosted requires Docker knowledge."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 3,
+            "rationale": "Custom instructions and model selection. Limited agent behavior customization beyond prompts."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 3,
+            "rationale": "Good docs for setup and basic usage. Academic paper provides technical depth. Community growing."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 6.4,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 1,
+            "rationale": "Single-agent only. No multi-agent orchestration."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 3,
+            "rationale": "Chat interaction and Planning Mode for approval. PR review as natural HITL checkpoint."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 1,
+            "rationale": "No team collaboration features. Individual developer tool."
+          },
+          {
+            "name": "Team Development",
+            "score": 1,
+            "rationale": "No team collaboration features. Individual developer tool."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 14.2,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 5,
+            "rationale": "Deep GitHub integration — reads issues, creates branches, opens PRs. Core workflow."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 3,
+            "rationale": "Terminal, file system, web browser. Can install and use any CLI tool. No pre-built connectors."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 2,
+            "rationale": "Not designed for enterprise system integration. Code-repo focused."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 4,
+            "rationale": "Model-agnostic via OpenRouter. Any compatible LLM works."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 10.8,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 5,
+            "rationale": "Docker isolation is excellent. All code runs in disposable containers."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 2,
+            "rationale": "No RBAC or team permissions. Single-user operation model."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 1,
+            "rationale": "No compliance certifications. OSS project, not enterprise SaaS."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 2,
+            "rationale": "Planning Mode provides approval gate. No content filtering or action limits."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 12.6,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 3,
+            "rationale": "Docker-based self-hosted. OpenHands Cloud for managed. K8s support added in v1.6.0."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 2,
+            "rationale": "Single-agent execution model. No built-in horizontal scaling or concurrent agent management."
+          },
+          {
+            "name": "Cost Management",
+            "score": 2,
+            "rationale": "Basic session logs. No production monitoring dashboard or alerting."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 5,
+            "rationale": "70K+ GitHub stars, 490+ contributors, 188+ academic/industry contributors. Massive for an OSS agent."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "OpenHands scores 52/100. Builder Experience (12) natural chat interaction but limited customization. Deployment (10) Docker/K8s but no scaling. Integration (10) deep GitHub but narrow beyond code. Governance (9) strong sandboxing but no enterprise features. Collaboration (5) and Ecosystem (6) weakest — single-agent developer tool.",
+  "competence": "Autonomous Coding Agent",
+  "targetUser": "Developers wanting AI to resolve GitHub issues and write code",
+  "marketIntelligence": {
+    "metrics": [
+      {
+        "metric": "GitHub Stars",
+        "value": "70K+",
+        "source": "GitHub"
+      },
+      {
+        "metric": "Contributors",
+        "value": "490+",
+        "source": "GitHub"
+      },
+      {
+        "metric": "SWE-bench Ranking",
+        "value": "Top performer",
+        "source": "Benchmarks"
+      }
+    ],
+    "funding": {
+      "total": "$18.8M",
+      "lastRound": "Series A",
+      "valuation": "Undisclosed"
+    }
+  },
+  "supportedCUJs": ["code-development"],
+  "walkthrough": {
+    "title": "How OpenHands Works: AI Software Engineer from Issue to PR",
+    "steps": [
+      {
+        "title": "Describe the Task or Point to an Issue",
+        "description": "In the chat interface, describe what you want built or paste a GitHub issue URL. OpenHands reads the issue, explores the codebase, and understands the context. Planning Mode (beta) shows you its approach before it starts coding."
+      },
+      {
+        "title": "Agent Plans and Writes Code",
+        "description": "The agent creates a plan, then writes code in a sandboxed Docker environment. It navigates the file system, reads existing code for context, and generates new code that fits the project's patterns and conventions."
+      },
+      {
+        "title": "Run Tests and Iterate",
+        "description": "OpenHands executes terminal commands to run tests, lint checks, and builds. When tests fail, it reads the error output, diagnoses the issue, and iterates on the code until tests pass."
+      },
+      {
+        "title": "Open a Pull Request",
+        "description": "Once the implementation is complete and tests pass, the agent creates a GitHub PR with a descriptive title, detailed description of changes, and test results. All changes are contained in the sandboxed environment."
+      },
+      {
+        "title": "Review and Collaborate",
+        "description": "Review the PR in your normal workflow. Ask OpenHands follow-up questions or request changes via the chat interface. The agent iterates based on review feedback. Self-host via Docker or use OpenHands Cloud for managed access."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "oB4JR98KRAA",
+      "title": "OpenHands: Open-source AI Software Development Agents",
+      "channel": "OpenHands"
+    },
+    {
+      "videoId": "oV9tAkS2Xic",
+      "title": "OpenHands + Devstral = A Fully Local Coding Agent",
+      "channel": "OpenHands"
+    }
+  ]
+}

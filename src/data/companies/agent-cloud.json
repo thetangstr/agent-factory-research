@@ -1,0 +1,260 @@
+{
+  "name": "Agent Cloud",
+  "slug": "agent-cloud",
+  "category": "open-source",
+  "subcategory": "data-connected-agents",
+  "description": "Agent Cloud is an open-source platform by RNA Digital for building RAG-first, data-connected AI agents. Core differentiator is datasource-first architecture: connect databases, cloud storage, APIs, web scrapers, then build agents grounded in that data. Qdrant vector DB, CrewAI multi-agent support, Airbyte for 300+ connectors.",
+  "oneLiner": "Open-source platform for building RAG-first, data-connected AI agents with visual web UI and multi-datasource pipelines.",
+  "founded": "2023",
+  "funding": "Bootstrapped by RNA Digital (Sydney-based consultancy). No announced VC rounds.",
+  "pricing": "Open Source (AGPL v3, free self-hosted); Cloud SaaS with free/paid tiers; Enterprise custom",
+  "website": "https://www.agentcloud.dev",
+  "githubRepo": "rnadigital/agentcloud",
+  "githubStars": 1200,
+  "screenshots": [],
+  "capabilities": [
+    "RAG-first agent architecture",
+    "Multi-datasource connectivity (PostgreSQL, MySQL, MongoDB, S3, GCS)",
+    "Airbyte integration for 300+ connectors",
+    "Configurable embedding and chunking",
+    "Qdrant vector database",
+    "Multi-LLM support (OpenAI, Anthropic, Google, Ollama)",
+    "Web-based agent builder UI",
+    "Multi-agent crews via CrewAI",
+    "Tool/function calling",
+    "Chat-based interaction",
+    "Docker Compose self-hosted deployment",
+    "Cloud SaaS option",
+    "File processing (PDF, CSV, DOCX)"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "Web-based admin UI: (1) Connect datasources — select type, configure connection, set embedding/chunking. (2) Create agent — name, model, prompt, attach datasources/tools. (3) Optionally create crew with multiple agents. (4) Chat via built-in interface. Functional but admin-panel aesthetic.",
+    "strengths": [
+      "Data-first: datasource config is first-class, not afterthought",
+      "Low RAG barrier: connect data and chat in minutes without code",
+      "Docker Compose self-hosting is genuinely simple",
+      "Multi-LLM flexibility per agent",
+      "Airbyte expands to 300+ data sources",
+      "Open-source transparency"
+    ],
+    "weaknesses": [
+      "UI functional but not polished",
+      "No visual workflow editor",
+      "No debugging or trace tools",
+      "No version control or rollback",
+      "Minimal governance/security",
+      "Small community",
+      "AGPL v3 may deter some enterprises"
+    ],
+    "notableFeatures": [
+      "Datasource-first architecture with visual connection wizard",
+      "Configurable RAG pipeline per datasource",
+      "CrewAI multi-agent crews via web UI",
+      "Airbyte connector ecosystem (300+ sources)",
+      "Multi-provider LLM support including Ollama local models"
+    ]
+  },
+  "recentDevelopments": [
+    "2025: Continued active development on agent and datasource features",
+    "2025: Added LLM providers and embedding models",
+    "2025: Improved Airbyte integration",
+    "2024: Launched Agent Cloud Cloud (hosted SaaS)",
+    "2024: Multi-agent crew support via CrewAI",
+    "2024: Expanded file processing (PDF, DOCX, CSV)"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://github.com/rnadigital/agentcloud",
+      "accessedAt": "2026-04-04",
+      "type": "github"
+    },
+    {
+      "url": "https://www.agentcloud.dev",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "medium",
+  "scores": {
+    "total": 46,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 11,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 3,
+            "rationale": "Web UI guides datasource connection, agent config, deployment. Functional, not polished."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 2,
+            "rationale": "Chat testing and session history. No trace visualization or testing framework."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 3,
+            "rationale": "README and docs cover setup. Docker Compose makes self-hosting easy. Gaps on production."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 3,
+            "rationale": "Config changes apply immediately. No version control or rollback."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 7.6,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 3,
+            "rationale": "CrewAI integration for multi-agent crews. Not native orchestration."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 2,
+            "rationale": "Chat interaction only. No structured handoff or evidence packets."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 1,
+            "rationale": "Basic org/team model. No Git integration or version control."
+          },
+          {
+            "name": "Team Development",
+            "score": 1,
+            "rationale": "No pre-built templates. Configure from scratch."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 12,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 4,
+            "rationale": "Standout: native DB/file/web connectors + Airbyte for 300+ sources. Above average for OSS."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 2,
+            "rationale": "REST API for platform ops. No MCP or standardized tool protocols."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 2,
+            "rationale": "Basic OAuth for datasources. No SAML or per-agent scoping."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 4,
+            "rationale": "Standout. Full RAG pipeline: connect -> load -> chunk -> embed -> retrieve. Configurable."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 6,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 1,
+            "rationale": "No kill switches, guardrails, or behavioral boundaries."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 2,
+            "rationale": "Chat provides implicit oversight. No configurable approval workflows."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 2,
+            "rationale": "Conversation history stored. No immutable logs or compliance certs."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 1,
+            "rationale": "Basic team model. No RBAC or per-resource access."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 9,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 3,
+            "rationale": "Docker Compose self-hosted. Cloud SaaS. No K8s operator or air-gapped support."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 2,
+            "rationale": "Single-instance by default. No horizontal scaling or auto-scaling built in."
+          },
+          {
+            "name": "Cost Management",
+            "score": 2,
+            "rationale": "Basic app logs. No monitoring dashboards or alerting."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 2,
+            "rationale": "~1.2K GitHub stars. Small growing community. Limited coverage."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "Agent Cloud scores 47/100. Integration Depth (12) standout with native connectors + RAG pipeline. Builder (11) functional web UI. Deployment (8), Governance (6), Collaboration (7) limited. Ecosystem (3) reflects bootstrapped funding and small community.",
+  "competence": "RAG-First Agent Platform",
+  "targetUser": "Teams building data-connected agents with enterprise data sources",
+  "supportedCUJs": ["data-extraction", "workflow-automation"],
+  "walkthrough": {
+    "title": "How Agent Cloud Works: Build RAG-First Data Agents",
+    "steps": [
+      {
+        "title": "Connect Your Data Sources",
+        "description": "Start by connecting your data: PostgreSQL, MySQL, MongoDB, S3, Google Cloud Storage, or any of 300+ sources via Airbyte. Agent Cloud's data-first architecture means every agent is grounded in your real data from the start."
+      },
+      {
+        "title": "Configure Embedding and Vectorization",
+        "description": "Choose embedding models, configure chunking strategies, and set up the Qdrant vector database. Documents are automatically processed, chunked, and indexed for semantic retrieval."
+      },
+      {
+        "title": "Build Agents in the Web UI",
+        "description": "Use the visual web interface to create agents. Select LLM providers (OpenAI, Anthropic, Google, Ollama for local models), assign tools, connect knowledge bases, and configure agent behavior."
+      },
+      {
+        "title": "Orchestrate Multi-Agent Crews",
+        "description": "Compose agents into multi-agent crews using the built-in CrewAI integration. Define roles, assign tasks, and configure communication patterns between agents."
+      },
+      {
+        "title": "Deploy Self-Hosted or Cloud",
+        "description": "Deploy via Docker Compose for self-hosted environments or use Agent Cloud's managed SaaS. Chat with your agents through the web interface, iterate on configurations, and monitor performance."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "45rzDxdGg7s",
+      "title": "Agentcloud Demo v0.0.1",
+      "channel": "RNA Digital"
+    },
+    {
+      "videoId": "POLdnrjsy9c",
+      "title": "Agent Cloud Introduction + RAG Google Bigquery!",
+      "channel": "RNA Digital"
+    }
+  ]
+}

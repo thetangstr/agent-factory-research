@@ -1,0 +1,192 @@
+[
+  {
+    "id": "customer-support",
+    "name": "Customer Support & Ticket Resolution",
+    "description": "AI agents that triage, route, and autonomously resolve customer support tickets across channels (chat, email, phone). Includes FAQ answering, sentiment detection, escalation routing, and resolution tracking.",
+    "category": "Customer-Facing",
+    "keyCapabilities": [
+      "Natural language understanding",
+      "Knowledge base retrieval (RAG)",
+      "Ticket classification and routing",
+      "Sentiment analysis",
+      "Human-in-the-loop escalation",
+      "Multi-channel support (chat, email, voice)"
+    ],
+    "exampleWorkflows": [
+      "Auto-classify incoming ticket, search knowledge base, draft response, route to specialist if confidence < threshold",
+      "Monitor customer sentiment during conversation, auto-escalate to human agent when frustration detected",
+      "Resolve password reset / account access issues end-to-end via system integrations"
+    ]
+  },
+  {
+    "id": "it-helpdesk",
+    "name": "IT Helpdesk & Employee Support",
+    "description": "AI agents that automate internal IT service desk operations: password resets, software provisioning, access requests, onboarding/offboarding, and IT troubleshooting across Slack, Teams, and email.",
+    "category": "Internal Operations",
+    "keyCapabilities": [
+      "Enterprise system integration (Okta, ServiceNow, Jira)",
+      "Automated provisioning and access management",
+      "Conversational interface (Slack/Teams)",
+      "Approval workflow orchestration",
+      "Knowledge base search",
+      "Ticket auto-resolution"
+    ],
+    "exampleWorkflows": [
+      "Employee requests software access via Slack -> agent verifies role permissions -> provisions license -> confirms in thread",
+      "New hire onboarding: auto-create accounts, assign security groups, schedule orientation, provision equipment",
+      "IT troubleshooting: diagnose VPN issue via guided questions, apply known fix, escalate if unresolved"
+    ]
+  },
+  {
+    "id": "code-development",
+    "name": "Code Generation & Software Engineering",
+    "description": "AI agents that write, review, test, debug, and deploy code autonomously. Includes issue-to-PR workflows, dependency management, code review, documentation generation, and CI/CD integration.",
+    "category": "Developer Tools",
+    "keyCapabilities": [
+      "Code generation from natural language",
+      "Terminal command execution",
+      "Test writing and execution",
+      "Pull request creation and review",
+      "Dependency management",
+      "Sandboxed execution environments"
+    ],
+    "exampleWorkflows": [
+      "Read GitHub issue -> plan implementation -> write code -> run tests -> open PR with description",
+      "Monitor dependencies for security vulnerabilities -> generate patched PR with migration notes",
+      "Review incoming PR for bugs, style issues, and security vulnerabilities -> post inline comments"
+    ]
+  },
+  {
+    "id": "data-extraction",
+    "name": "Data Research & Web Extraction",
+    "description": "AI agents that autonomously browse the web, extract structured data, compile research reports, and monitor competitive intelligence. Includes web scraping, form filling, and citation-grounded research.",
+    "category": "Research & Intelligence",
+    "keyCapabilities": [
+      "Autonomous web browsing",
+      "Structured data extraction from unstructured pages",
+      "Citation-grounded research",
+      "Competitive intelligence monitoring",
+      "Multi-step web navigation",
+      "Batch extraction at scale"
+    ],
+    "exampleWorkflows": [
+      "Define target schema (company name, funding, headcount) -> agent scrapes 500 company pages -> returns structured CSV",
+      "Daily competitive monitoring: check competitor pricing pages, changelog, job postings -> summarize changes",
+      "Multi-step research: search academic papers, extract methods and results, compile literature review with citations"
+    ]
+  },
+  {
+    "id": "voice-telephony",
+    "name": "Voice & Phone Agent",
+    "description": "AI agents that handle inbound and outbound phone calls with natural voice interaction. Includes appointment scheduling, lead qualification, customer support calls, and live call transfer with context.",
+    "category": "Customer-Facing",
+    "keyCapabilities": [
+      "Natural voice synthesis and understanding",
+      "Sub-second latency for real-time conversation",
+      "Appointment scheduling with calendar integration",
+      "Live call transfer with context handoff",
+      "Multi-language support",
+      "CRM integration for call logging"
+    ],
+    "exampleWorkflows": [
+      "Inbound call -> identify caller from CRM -> qualify need -> schedule appointment or transfer to sales rep",
+      "Outbound campaign: call leads from list -> qualify interest -> book demo -> log results in CRM",
+      "After-hours support: answer product questions from knowledge base -> create ticket if unresolved -> send summary email"
+    ]
+  },
+  {
+    "id": "workflow-automation",
+    "name": "Multi-Step Workflow Automation",
+    "description": "AI agents that orchestrate complex multi-step business processes across systems. Includes trigger-based automation, multi-agent coordination, approval workflows, and cross-system data movement.",
+    "category": "Business Operations",
+    "keyCapabilities": [
+      "Multi-step process orchestration",
+      "Cross-system integration (CRM, ERP, email)",
+      "Trigger-based automation (schedule, webhook, event)",
+      "Multi-agent coordination and delegation",
+      "Approval gates and human-in-the-loop",
+      "Conditional branching and error handling"
+    ],
+    "exampleWorkflows": [
+      "New deal closed in CRM -> generate contract -> send for e-sign -> provision account -> notify CS team -> schedule onboarding",
+      "Invoice received via email -> extract line items -> match to PO -> route for approval -> process payment -> update ERP",
+      "Multi-agent research crew: researcher gathers data, analyst evaluates, writer drafts report, reviewer approves"
+    ]
+  },
+  {
+    "id": "devops-infra",
+    "name": "DevOps & Infrastructure Management",
+    "description": "AI agents specialized in Kubernetes operations, cloud infrastructure management, deployment automation, and incident response. Includes cluster diagnostics, Helm management, and monitoring integration.",
+    "category": "Developer Tools",
+    "keyCapabilities": [
+      "Kubernetes cluster management",
+      "Infrastructure-as-code generation",
+      "Deployment pipeline automation",
+      "Incident diagnosis and remediation",
+      "Monitoring and alerting integration",
+      "GitOps workflow support"
+    ],
+    "exampleWorkflows": [
+      "Alert fires in Prometheus -> agent diagnoses root cause via kubectl -> applies known remediation -> verifies recovery",
+      "Developer requests new service deployment -> agent generates Helm chart -> applies to staging -> runs smoke tests -> promotes to prod",
+      "Cluster health check: scan for resource bottlenecks, expired certificates, deprecated APIs -> generate remediation plan"
+    ]
+  },
+  {
+    "id": "sales-outreach",
+    "name": "Sales Prospecting & Lead Qualification",
+    "description": "AI agents that research prospects, personalize outreach, qualify leads, and manage sales pipelines. Includes account research, email drafting, meeting scheduling, and CRM updates.",
+    "category": "Revenue Operations",
+    "keyCapabilities": [
+      "Prospect research and enrichment",
+      "Personalized email/message drafting",
+      "Lead scoring and qualification",
+      "Meeting scheduling automation",
+      "CRM pipeline management",
+      "Follow-up sequence automation"
+    ],
+    "exampleWorkflows": [
+      "New lead enters CRM -> research company and contact -> draft personalized email -> send -> track opens -> schedule follow-up",
+      "Qualify inbound leads via conversational AI -> score based on BANT criteria -> route hot leads to AE -> nurture others",
+      "Pre-meeting prep: research prospect company, recent news, mutual connections -> generate briefing doc for sales rep"
+    ]
+  },
+  {
+    "id": "security-monitoring",
+    "name": "Security Monitoring & Threat Response",
+    "description": "AI agents that monitor for security threats, detect anomalies, enforce policies, and respond to incidents. Includes prompt injection detection, data loss prevention, ransomware detection, and compliance monitoring.",
+    "category": "Security & Compliance",
+    "keyCapabilities": [
+      "Real-time threat detection",
+      "Anomaly detection and alerting",
+      "Policy enforcement and guardrails",
+      "Incident response automation",
+      "Compliance monitoring and reporting",
+      "Data loss prevention"
+    ],
+    "exampleWorkflows": [
+      "Monitor AI agent inputs for prompt injection attempts -> block malicious inputs -> log incident -> alert security team",
+      "Detect unusual data access patterns -> freeze affected accounts -> initiate forensic analysis -> generate incident report",
+      "Continuous compliance scanning: check configurations against policy baselines -> auto-remediate drift -> generate audit report"
+    ]
+  },
+  {
+    "id": "content-generation",
+    "name": "Content & Document Generation",
+    "description": "AI agents that generate websites, marketing content, reports, and documentation. Includes website generation, content writing, document formatting, and brand-consistent asset creation.",
+    "category": "Creative & Marketing",
+    "keyCapabilities": [
+      "Long-form content generation",
+      "Website and page generation",
+      "Template-based document creation",
+      "Brand voice and style consistency",
+      "Multi-format output (web, PDF, docs)",
+      "Content optimization and SEO"
+    ],
+    "exampleWorkflows": [
+      "Enter business description -> AI generates complete multi-page website with real content -> customize in visual editor -> publish",
+      "Marketing brief -> agent generates blog post, social media posts, email campaign -> review -> schedule for publication",
+      "Generate quarterly business report from data sources -> format with charts -> apply brand template -> distribute to stakeholders"
+    ]
+  }
+]

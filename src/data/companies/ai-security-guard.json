@@ -1,0 +1,244 @@
+{
+  "name": "AI Security Guard",
+  "slug": "ai-security-guard",
+  "category": "use-case",
+  "subcategory": "security",
+  "description": "Real-time AI agent input/output security scanning platform. Detects and blocks prompt injection, data exfiltration, jailbreaking, and adversarial inputs before they reach LLMs. Sits as middleware between users/agents and the AI model, acting as a firewall for agentic systems.",
+  "oneLiner": "Real-time AI agent security scanning with prompt injection detection, data leak prevention, and policy enforcement.",
+  "founded": "2024",
+  "funding": "Seed-stage (~$5-15M estimated)",
+  "pricing": "Usage-based per scan. Free tier for evaluation. Enterprise custom pricing.",
+  "website": "https://www.aisecurityguard.com",
+  "screenshots": [],
+  "capabilities": [
+    "Real-time prompt injection detection",
+    "PII/sensitive data scanning",
+    "Content policy enforcement",
+    "Toxicity filtering",
+    "Multi-turn jailbreak detection",
+    "Custom threat patterns",
+    "Inline middleware (sub-100ms)",
+    "Scan audit logging",
+    "SDK for LLM providers and agent frameworks",
+    "Batch historical analysis"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "Not agent builder. Integrate SDK, configure policies via web console: select threat categories, set thresholds, define custom patterns.",
+    "strengths": [
+      "Addresses critical gap in enterprise agent security",
+      "Middleware fits any agent framework",
+      "Low-latency inline scanning",
+      "Comprehensive scan audit logging",
+      "Growing market demand"
+    ],
+    "weaknesses": [
+      "Early-stage with limited track record",
+      "Narrow scope: security only",
+      "Compliance certs in progress",
+      "Limited integration beyond LLM interception",
+      "False positive/negative rates are industry challenge"
+    ],
+    "notableFeatures": [
+      "Prompt injection detection via specialized ML",
+      "Multi-turn jailbreak detection across conversation context",
+      "Customizable PII scanning per jurisdiction"
+    ]
+  },
+  "recentDevelopments": [
+    "2025: Real-time prompt injection detection launched",
+    "SDK integrations for LangChain, CrewAI, OpenAI/Anthropic",
+    "Multi-turn conversation analysis",
+    "Custom policy builder for enterprises",
+    "Growing partnerships with agent platform vendors"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://www.aisecurityguard.com",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "low",
+  "scores": {
+    "total": 55,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 12,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 3,
+            "rationale": "Policy config via web console. Not agent builder."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 3,
+            "rationale": "Policy testing with samples. Scan result inspector."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 3,
+            "rationale": "API docs and integration guides. Early-stage depth."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 3,
+            "rationale": "Policy changes immediate. No staged rollout."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 5.2,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 1,
+            "rationale": "Not orchestration. Security scanning service."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 2,
+            "rationale": "Flagged threat review as basic human interaction."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 1,
+            "rationale": "Single-team policy management."
+          },
+          {
+            "name": "Team Development",
+            "score": 1,
+            "rationale": "Some pre-built policy templates."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 11.2,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 3,
+            "rationale": "SDKs for OpenAI, Anthropic, LangChain, CrewAI. Webhooks."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 3,
+            "rationale": "REST API. Python/JS SDKs. Early MCP. No gRPC."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 3,
+            "rationale": "API keys. SSO on enterprise. Basic."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 2,
+            "rationale": "No data pipeline. Operates on individual inputs."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 14.4,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 5,
+            "rationale": "THIS IS the guardrails product. Real-time blocking. Policy enforcement."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 3,
+            "rationale": "Flagged inputs routed for review. Basic quarantine."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 3,
+            "rationale": "Scan logs comprehensive. Compliance certs in progress."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 3,
+            "rationale": "Basic admin/viewer roles. Team management in enterprise."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 11.8,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 3,
+            "rationale": "Cloud scanning service. SDK for inline. On-prem may be available."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 4,
+            "rationale": "High-throughput, low-latency by design. Auto-scaling."
+          },
+          {
+            "name": "Cost Management",
+            "score": 3,
+            "rationale": "Threat dashboards, scan metrics, policy match rates."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 2,
+            "rationale": "Early-stage. Small customer base. Growing AI security visibility."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "AI Security Guard scores 55/100. Governance (14) is standout — guardrails ARE the product. Builder (12) and Deployment (12) decent for focused tool. Collaboration (5) and Ecosystem (1) minimal — point solution, not platform.",
+  "competence": "Agent Security & Guardrails",
+  "targetUser": "Security teams protecting AI agent deployments from attacks",
+  "supportedCUJs": ["security-monitoring"],
+  "walkthrough": {
+    "title": "How AI Security Guard Works: Real-Time AI Agent Firewall",
+    "steps": [
+      {
+        "title": "Integrate the SDK",
+        "description": "Add the AI Security Guard SDK to your agent framework or LLM pipeline. It sits as middleware between users/agents and the AI model — all inputs and outputs pass through the scanning layer with sub-100ms latency."
+      },
+      {
+        "title": "Configure Threat Policies",
+        "description": "Use the web console to select which threat categories to monitor: prompt injection, PII/data leakage, jailbreak attempts, toxicity, and custom patterns. Set sensitivity thresholds per category and define block vs. alert behavior."
+      },
+      {
+        "title": "Real-Time Input Scanning",
+        "description": "Every prompt and agent input is scanned in real-time before reaching the LLM. Multi-turn jailbreak detection catches sophisticated attacks that span multiple messages. Malicious inputs are blocked and logged."
+      },
+      {
+        "title": "Output Monitoring and DLP",
+        "description": "Agent outputs are scanned for sensitive data leakage (PII, credentials, internal data), policy violations, and harmful content. Sensitive data is redacted or blocked before reaching the end user."
+      },
+      {
+        "title": "Audit and Incident Response",
+        "description": "All scans are logged with full context for audit and compliance. Security dashboards show threat trends, blocked attempts, and policy effectiveness. Alerts integrate with SIEM and incident response workflows."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "5ZA1lTxTH3c",
+      "title": "Securing AI Agents: How to Prevent Hidden Prompt Injection Attacks",
+      "channel": "IBM Technology"
+    },
+    {
+      "videoId": "fhbf-vRQoyo",
+      "title": "Why Prompt Injection Guardrails Fail in Browser Agents",
+      "channel": "Lasso Security"
+    }
+  ]
+}

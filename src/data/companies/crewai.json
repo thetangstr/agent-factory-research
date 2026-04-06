@@ -1,0 +1,336 @@
+{
+  "name": "CrewAI",
+  "slug": "crewai",
+  "category": "open-source",
+  "subcategory": "multi-agent-orchestration",
+  "description": "CrewAI is an open-source Python framework for orchestrating autonomous AI agents that work together as a 'crew' to accomplish complex tasks. It popularized the role-based agent paradigm where each agent is assigned a specific role, goal, and backstory. In 2024-2025, CrewAI Inc launched CrewAI+ (formerly Enterprise), a hosted platform with a visual UI for building and deploying crews.",
+  "oneLiner": "Open-source multi-agent orchestration framework with role-based crews and an enterprise hosted platform.",
+  "founded": "2023",
+  "funding": "Series A: $18M led by Insight Partners (2024). Total ~$22M.",
+  "pricing": "Open Source (MIT, free); Free tier on CrewAI+ platform; Enterprise tier with custom pricing.",
+  "website": "https://www.crewai.com",
+  "githubRepo": "crewAIInc/crewAI",
+  "githubStars": 27000,
+  "screenshots": [
+    {
+      "path": "/screenshots/crewai/studio-overview.png",
+      "alt": "CrewAI Studio — visual crew builder overview with agent configuration",
+      "screen": "studio-overview"
+    },
+    {
+      "path": "/screenshots/crewai/studio-canvas.png",
+      "alt": "CrewAI Studio — drag-and-drop visual canvas for crew orchestration",
+      "screen": "visual-canvas"
+    },
+    {
+      "path": "/screenshots/crewai/studio-execution.png",
+      "alt": "CrewAI Studio — crew execution view with agent activity monitoring",
+      "screen": "execution-view"
+    },
+    {
+      "path": "/screenshots/crewai/studio-prompt.png",
+      "alt": "CrewAI Studio — AI-assisted prompt builder for agent configuration",
+      "screen": "prompt-builder"
+    },
+    {
+      "path": "/screenshots/crewai/agent-factory.png",
+      "alt": "CrewAI Studio v2 — agent factory with drag-and-drop tools and tasks",
+      "screen": "agent-factory"
+    }
+  ],
+  "capabilities": [
+    "Role-based agent definition",
+    "Sequential and hierarchical process types",
+    "Task delegation between agents",
+    "50+ built-in tools",
+    "LangChain/LlamaIndex tool compatibility",
+    "MCP protocol support",
+    "Multi-LLM support via LiteLLM",
+    "Memory systems (short-term, long-term, entity)",
+    "YAML declarative crew configuration",
+    "CLI scaffolding (crewai create)",
+    "Human-in-the-loop task approval",
+    "Structured output parsing (Pydantic)",
+    "CrewAI+ visual crew builder",
+    "Enterprise monitoring dashboards"
+  ],
+  "uxAnalysis": {
+    "builderFlow": "Code-first Python approach. Agents defined with role/goal/backstory/tools. Tasks have descriptions and expected outputs. Crew ties agents and tasks with a process type. YAML config externalizes settings. CLI scaffolds projects. CrewAI+ adds visual drag-and-drop builder.",
+    "strengths": [
+      "Intuitive API — basic crew in under 20 lines of Python",
+      "Role-based paradigm maps naturally to division of labor",
+      "YAML configs allow non-code iteration",
+      "Broad LLM provider support via LiteLLM",
+      "Large active community with abundant examples",
+      "CrewAI+ visual builder lowers bar for non-developers"
+    ],
+    "weaknesses": [
+      "Debugging multi-agent interactions is challenging",
+      "No built-in testing framework for crews",
+      "Error cascading between agents is opaque",
+      "Sequential execution limits parallel performance",
+      "API breaking changes between versions",
+      "Enterprise governance is thin in open-source",
+      "Cost visibility requires external tooling"
+    ],
+    "notableFeatures": [
+      "Hierarchical process with automatic manager agent",
+      "Agent delegation — agents autonomously delegate subtasks",
+      "YAML-based GitOps-friendly crew configuration",
+      "Multi-LLM crews with different models per agent",
+      "Flows orchestration primitive for event-driven execution"
+    ]
+  },
+  "recentDevelopments": [
+    "2025 Q1: Added MCP protocol support",
+    "2025 Q1: CrewAI Enterprise rebranded to CrewAI+ with visual builder",
+    "2024 Q4: Raised $18M Series A led by Insight Partners",
+    "2024 Q3: Launched CrewAI Enterprise platform",
+    "2024 Q3: Introduced Flows — event-driven crew execution",
+    "2024 Q2: Reached 15K+ GitHub stars, 50K+ Discord members"
+  ],
+  "lastResearched": "2026-04-04",
+  "dataSources": [
+    {
+      "url": "https://github.com/crewAIInc/crewAI",
+      "accessedAt": "2026-04-04",
+      "type": "github"
+    },
+    {
+      "url": "https://docs.crewai.com",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    },
+    {
+      "url": "https://www.crewai.com",
+      "accessedAt": "2026-04-04",
+      "type": "docs"
+    }
+  ],
+  "confidenceLevel": "medium",
+  "scores": {
+    "total": 63,
+    "dimensions": [
+      {
+        "key": "CR",
+        "name": "Creation",
+        "score": 13.4,
+        "subCriteria": [
+          {
+            "name": "Agent Builder UX",
+            "score": 4,
+            "rationale": "Intuitive Python API. YAML configs. CLI scaffolding. Low barrier to first crew."
+          },
+          {
+            "name": "Time-to-Value",
+            "score": 4,
+            "rationale": "YAML configs allow non-code changes. Hot-reload. CrewAI+ adds visual editor."
+          },
+          {
+            "name": "Debugging & Testing",
+            "score": 3,
+            "rationale": "Good docs with quickstarts and concept guides. Some gaps in advanced patterns."
+          },
+          {
+            "name": "Documentation & Learning",
+            "score": 2,
+            "rationale": "Verbose mode helps but no dedicated debugging tools or testing framework."
+          }
+        ]
+      },
+      {
+        "key": "OR",
+        "name": "Orchestration",
+        "score": 13.2,
+        "subCriteria": [
+          {
+            "name": "Multi-Agent Coordination",
+            "score": 4,
+            "rationale": "Core strength — sequential, hierarchical, delegation patterns."
+          },
+          {
+            "name": "Human-in-the-Loop Design",
+            "score": 3,
+            "rationale": "Basic task-level approval. Limited async capabilities."
+          },
+          {
+            "name": "Workflow Templates",
+            "score": 2,
+            "rationale": "Enterprise adds workspaces. OSS is single-developer focused."
+          },
+          {
+            "name": "Team Development",
+            "score": 4,
+            "rationale": "Structured output passing, shared memory, delegation between agents."
+          }
+        ]
+      },
+      {
+        "key": "IN",
+        "name": "Integration",
+        "score": 15,
+        "subCriteria": [
+          {
+            "name": "Native Connectors",
+            "score": 4,
+            "rationale": "50+ tools in crewai-tools. Active expansion. Community contributions."
+          },
+          {
+            "name": "API & Protocol Standards",
+            "score": 4,
+            "rationale": "All major providers via LiteLLM. Different agents can use different LLMs."
+          },
+          {
+            "name": "Authentication & Access",
+            "score": 3,
+            "rationale": "LangChain/LlamaIndex compatible. MCP support. Limited enterprise connectors."
+          },
+          {
+            "name": "Data Pipeline & RAG",
+            "score": 4,
+            "rationale": "Clean API via decorators or BaseTool. Well-documented. Low barrier."
+          }
+        ]
+      },
+      {
+        "key": "GV",
+        "name": "Governance",
+        "score": 9.2,
+        "subCriteria": [
+          {
+            "name": "Guardrails & Kill Switches",
+            "score": 2,
+            "rationale": "No RBAC in OSS. Enterprise adds team roles."
+          },
+          {
+            "name": "Audit Trail & Compliance",
+            "score": 3,
+            "rationale": "Human input flag at task level. Enterprise adds approval chains."
+          },
+          {
+            "name": "RBAC & Access Control",
+            "score": 2,
+            "rationale": "Execution logs but no structured audit. Not compliance-ready."
+          },
+          {
+            "name": "Explainability & Transparency",
+            "score": 2,
+            "rationale": "No PII detection or encryption by default."
+          }
+        ]
+      },
+      {
+        "key": "OP",
+        "name": "Operations",
+        "score": 12.2,
+        "subCriteria": [
+          {
+            "name": "Deployment Flexibility",
+            "score": 3,
+            "rationale": "Runs anywhere Python does. CrewAI+ provides managed hosting. No K8s operator."
+          },
+          {
+            "name": "Scaling & Monitoring",
+            "score": 2,
+            "rationale": "No horizontal scaling. Single-process model. Enterprise helps but limited."
+          },
+          {
+            "name": "Cost Management",
+            "score": 3,
+            "rationale": "Enterprise platform has dashboards. OSS has basic logging and callbacks."
+          },
+          {
+            "name": "Ecosystem Maturity",
+            "score": 4,
+            "rationale": "~27K GitHub stars. 50K+ Discord. Very active community."
+          }
+        ]
+      }
+    ]
+  },
+  "scoringRationale": "CrewAI scores 62/100. Builder Experience (12) is a standout — intuitive API and YAML configs. Integration Depth (13) is strongest with broad connector and LLM support. Governance (8) and Ecosystem maturity (8) are weakest — enterprise features still maturing.",
+  "competence": "Multi-Agent Orchestration Framework",
+  "targetUser": "Developers building role-based agent teams",
+  "marketIntelligence": {
+    "communityBuzz": [
+      "Wins on accessibility — lowest barrier to entry per community consensus",
+      "Role-based metaphor resonates with non-ML engineers and business teams",
+      "CrewAI+ visual builder generating positive early feedback",
+      "API breaking changes between versions frustrate production users",
+      "Active Discord (50K+) but some complaints about documentation gaps"
+    ],
+    "metrics": [
+      {
+        "metric": "GitHub Stars",
+        "value": "27K+",
+        "source": "GitHub"
+      },
+      {
+        "metric": "Discord Members",
+        "value": "50K+",
+        "source": "Discord"
+      },
+      {
+        "metric": "Built-in Tools",
+        "value": "50+",
+        "source": "crewai-tools"
+      },
+      {
+        "metric": "LLM Providers",
+        "value": "All major via LiteLLM",
+        "source": "Docs"
+      }
+    ],
+    "funding": {
+      "total": "$22M",
+      "lastRound": "Series A ($18M)",
+      "valuation": "Undisclosed",
+      "investors": [
+        "Insight Partners"
+      ]
+    }
+  },
+  "supportedCUJs": ["workflow-automation", "code-development", "data-extraction", "sales-outreach"],
+  "walkthrough": {
+    "title": "How CrewAI Works: Build an Agent Crew in Minutes",
+    "steps": [
+      {
+        "image": "/screenshots/crewai/studio-overview.png",
+        "title": "Define Your Agents",
+        "description": "Create agents with specific roles, goals, and backstories. Each agent gets tools and an LLM model. CrewAI Studio lets you do this visually or via YAML."
+      },
+      {
+        "image": "/screenshots/crewai/studio-canvas.png",
+        "title": "Orchestrate the Crew",
+        "description": "Connect agents into a crew using the drag-and-drop canvas. Define tasks, set process type (sequential or hierarchical), and configure delegation patterns."
+      },
+      {
+        "image": "/screenshots/crewai/studio-execution.png",
+        "title": "Execute & Monitor",
+        "description": "Run your crew and watch agents collaborate in real-time. Monitor execution progress, view intermediate outputs, and track token usage across the workflow."
+      },
+      {
+        "image": "/screenshots/crewai/studio-prompt.png",
+        "title": "Iterate with AI-Assisted Prompts",
+        "description": "Use the built-in AI assistant to refine agent prompts and task descriptions. Test different configurations and compare outputs across runs."
+      },
+      {
+        "image": "/screenshots/crewai/agent-factory.png",
+        "title": "Scale with the Agent Factory",
+        "description": "CrewAI Studio v2 provides a full agent factory: manage agent repositories, assign tools and integrations, and deploy crews to production with one click."
+      }
+    ]
+  },
+  "youtubeReviews": [
+    {
+      "videoId": "sPzc6hMg7So",
+      "title": "CrewAI Crash Course for Beginners",
+      "channel": "Tech With Tim"
+    },
+    {
+      "videoId": "tnejrr-0a94",
+      "title": "Build Anything with CrewAI Multi-Agent Systems",
+      "channel": "Matt Williams"
+    }
+  ]
+}
