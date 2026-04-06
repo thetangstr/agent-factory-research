@@ -1,16 +1,15 @@
 import { getFrameworkByName } from "@/lib/data";
 
 const dimColors: Record<string, { color: string; bg: string; border: string }> = {
-  BX: { color: "#4527a0", bg: "#ede7f6", border: "#b39ddb" },
-  DO: { color: "#3f51b5", bg: "#e8eaf6", border: "#9fa8da" },
-  ID: { color: "#0277bd", bg: "#e1f5fe", border: "#81d4fa" },
-  GS: { color: "#c0392b", bg: "#fce8e6", border: "#f4b8b4" },
-  CM: { color: "#b45309", bg: "#fef3e2", border: "#fcd29b" },
-  EM: { color: "#1e8a3c", bg: "#e6f4ea", border: "#b7dfbf" },
+  CR: { color: "#4527a0", bg: "#ede7f6", border: "#b39ddb" },
+  OR: { color: "#3f51b5", bg: "#e8eaf6", border: "#9fa8da" },
+  IN: { color: "#0277bd", bg: "#e1f5fe", border: "#81d4fa" },
+  GV: { color: "#c0392b", bg: "#fce8e6", border: "#f4b8b4" },
+  OP: { color: "#1e8a3c", bg: "#e6f4ea", border: "#b7dfbf" },
 };
 
 export default function ProductEvalPage() {
-  const framework = getFrameworkByName("Product Evaluation");
+  const framework = getFrameworkByName("Agent Factory");
 
   return (
     <div
@@ -40,7 +39,7 @@ export default function ProductEvalPage() {
             style={{ color: "var(--md-sys-color-on-surface-variant)" }}
           >
             {framework?.purpose ??
-              "6-dimension framework for scoring enterprise agent factory platform capabilities and maturity"}
+              "5-dimension framework for scoring enterprise agent factory platform capabilities and maturity"}
           </p>
           {framework && (
             <div

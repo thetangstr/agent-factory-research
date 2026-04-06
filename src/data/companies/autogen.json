@@ -6,7 +6,7 @@
   "description": "AutoGen is Microsoft Research's open-source framework for building multi-agent AI systems through structured conversations. The 0.4 rewrite introduced event-driven async architecture with group chat, swarm, nested conversations, and Magentic-One multi-agent teams. Azure AI Agent Service and Copilot Studio provide enterprise paths.",
   "oneLiner": "Microsoft Research's multi-agent conversation framework with Azure enterprise integration and visual Studio UI.",
   "founded": "2023",
-  "funding": "Backed by Microsoft Research. No external VC — fully Microsoft-funded.",
+  "funding": "Backed by Microsoft Research. No external VC \u2014 fully Microsoft-funded.",
   "pricing": "Open Source (MIT, free); Azure AI Agent Service (consumption-based); Copilot Studio ($200/user/mo)",
   "website": "https://microsoft.github.io/autogen/",
   "githubRepo": "microsoft/autogen",
@@ -14,22 +14,22 @@
   "screenshots": [
     {
       "path": "/screenshots/autogen/agent-config.png",
-      "alt": "AutoGen Studio — agent configuration with role and model settings",
+      "alt": "AutoGen Studio \u2014 agent configuration with role and model settings",
       "screen": "agent-config"
     },
     {
       "path": "/screenshots/autogen/workflow-session.png",
-      "alt": "AutoGen Studio — multi-agent workflow session with conversation view",
+      "alt": "AutoGen Studio \u2014 multi-agent workflow session with conversation view",
       "screen": "workflow-session"
     },
     {
       "path": "/screenshots/autogen/drag-drop-canvas.png",
-      "alt": "AutoGen Studio — drag-and-drop canvas for agent skill assignment",
+      "alt": "AutoGen Studio \u2014 drag-and-drop canvas for agent skill assignment",
       "screen": "visual-canvas"
     },
     {
       "path": "/screenshots/autogen/profiling.png",
-      "alt": "AutoGen Studio — agent execution profiling and performance visualization",
+      "alt": "AutoGen Studio \u2014 agent execution profiling and performance visualization",
       "screen": "profiling"
     }
   ],
@@ -58,7 +58,7 @@
       "Microsoft backing ensures long-term viability",
       "AutoGen Studio lowers prototyping barrier",
       "Strong academic foundation",
-      "Flexible topologies — group chat, sequential, nested, swarm"
+      "Flexible topologies \u2014 group chat, sequential, nested, swarm"
     ],
     "weaknesses": [
       "0.2 to 0.4 breaking rewrite fragmented community",
@@ -84,7 +84,7 @@
     "2025 Q2: Azure AI Agent Service GA with Azure compliance",
     "2025 Q1: Swarm orchestration pattern added",
     "2025 Q1: AutoGen Studio 2.0 with improved visual builder",
-    "2024 Q4: AutoGen 0.4 preview — complete async rewrite"
+    "2024 Q4: AutoGen 0.4 preview \u2014 complete async rewrite"
   ],
   "lastResearched": "2026-04-04",
   "dataSources": [
@@ -245,13 +245,13 @@
       }
     ]
   },
-  "scoringRationale": "AutoGen scores 64/100. Collaboration (13) is standout — category-defining multi-agent orchestration. Builder Experience (12) improved by Studio but 0.4 migration friction. Integration (12) relies on code execution. Governance (10) has strong HITL but weak RBAC. Ecosystem (6) reflects Microsoft backing but community fragmentation.",
+  "scoringRationale": "AutoGen scores 64/100. Collaboration (13) is standout \u2014 category-defining multi-agent orchestration. Builder Experience (12) improved by Studio but 0.4 migration friction. Integration (12) relies on code execution. Governance (10) has strong HITL but weak RBAC. Ecosystem (6) reflects Microsoft backing but community fragmentation.",
   "competence": "Multi-Agent Orchestration Framework",
   "targetUser": "Researchers and developers building conversational multi-agent systems",
   "marketIntelligence": {
     "communityBuzz": [
       "Reports of Microsoft shifting AutoGen to maintenance mode in favor of broader Agent Framework",
-      "0.2 to 0.4 rewrite fragmented the community — parallel docs causing confusion",
+      "0.2 to 0.4 rewrite fragmented the community \u2014 parallel docs causing confusion",
       "Magentic-One gets attention but AutoGen Studio seen as prototyping tool, not production-ready",
       "UserProxyAgent HITL pattern widely praised as best-in-class for human-agent collaboration",
       "Azure AI Agent Service bridge seen as the real enterprise play"
@@ -284,27 +284,31 @@
       "valuation": "N/A (Microsoft subsidiary)"
     }
   },
-  "supportedCUJs": ["workflow-automation", "code-development", "data-extraction"],
+  "supportedCUJs": [
+    "workflow-automation",
+    "code-development",
+    "data-extraction"
+  ],
   "walkthrough": {
     "title": "How AutoGen Works: Multi-Agent Conversations",
     "steps": [
       {
-        "image": "/screenshots/autogen/agent-config.png",
+        "image": "/screenshots/autogen/step-1.png",
         "title": "Configure Your Agents",
         "description": "Define agents with system messages, LLM configs, and tool registrations. AutoGen Studio provides a visual interface for non-developers."
       },
       {
-        "image": "/screenshots/autogen/drag-drop-canvas.png",
+        "image": "/screenshots/autogen/step-2.png",
         "title": "Design the Conversation Flow",
         "description": "Use the drag-and-drop canvas to assign skills and tools to agents. Define how agents interact: group chat, sequential, or nested conversations."
       },
       {
-        "image": "/screenshots/autogen/workflow-session.png",
+        "image": "/screenshots/autogen/step-3.png",
         "title": "Run Multi-Agent Sessions",
         "description": "Launch your agent team and watch them collaborate through structured conversations. Human-in-the-loop via UserProxyAgent lets you intervene at any point."
       },
       {
-        "image": "/screenshots/autogen/profiling.png",
+        "image": "/screenshots/autogen/step-4.png",
         "title": "Profile & Evaluate",
         "description": "Analyze agent performance with built-in profiling: see how often tools were used, code was executed, and where the conversation took unexpected turns."
       }

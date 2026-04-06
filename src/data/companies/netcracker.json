@@ -200,7 +200,7 @@
       }
     ]
   },
-  "scoringRationale": "Netcracker scores 72/100. Ecosystem (19) and Deployment (17) and Governance (17) are strengths — carrier-grade with NEC backing. Integration (16) deep within telecom. Builder (13) and Collaboration (10) limited by enterprise telecom UX patterns.",
+  "scoringRationale": "Netcracker scores 72/100. Ecosystem (19) and Deployment (17) and Governance (17) are strengths \u2014 carrier-grade with NEC backing. Integration (16) deep within telecom. Builder (13) and Collaboration (10) limited by enterprise telecom UX patterns.",
   "competence": "Industry-Specific Agent Platform (Telecom)",
   "targetUser": "Telecom operators automating BSS/OSS with governed AI agents",
   "marketIntelligence": {
@@ -227,29 +227,37 @@
       "valuation": "Part of NEC (~$25B+ market cap)"
     }
   },
-  "supportedCUJs": ["customer-support", "workflow-automation"],
+  "supportedCUJs": [
+    "customer-support",
+    "workflow-automation"
+  ],
   "walkthrough": {
     "title": "How Netcracker Works: AI-Powered Telecom Operations",
     "steps": [
       {
         "title": "Configure AI Agents Within BSS/OSS",
-        "description": "Deploy AI agents within Netcracker's telecom-specific BSS/OSS platform. Select from pre-built templates aligned to TMF/eTOM standards for billing, provisioning, fault management, and customer care."
+        "description": "Deploy AI agents within Netcracker's telecom-specific BSS/OSS platform. Select from pre-built templates aligned to TMF/eTOM standards for billing, provisioning, fault management, and customer care.",
+        "image": "/screenshots/netcracker/step-1.png"
       },
       {
         "title": "Agent Handles Customer Complaints",
-        "description": "When a customer contacts support, the AI agent accesses their complete service history, billing records, and network status. It diagnoses issues (billing disputes, service outages, plan changes) and resolves autonomously or routes to specialists."
+        "description": "When a customer contacts support, the AI agent accesses their complete service history, billing records, and network status. It diagnoses issues (billing disputes, service outages, plan changes) and resolves autonomously or routes to specialists.",
+        "image": "/screenshots/netcracker/step-2.png"
       },
       {
         "title": "Network Fault Diagnosis",
-        "description": "AI agents monitor network telemetry, detect faults, and correlate alarms across the infrastructure. Predictive maintenance models forecast equipment failures before they cause outages, enabling proactive intervention."
+        "description": "AI agents monitor network telemetry, detect faults, and correlate alarms across the infrastructure. Predictive maintenance models forecast equipment failures before they cause outages, enabling proactive intervention.",
+        "image": "/screenshots/netcracker/step-3.png"
       },
       {
         "title": "Governed Automation with Audit Trails",
-        "description": "Every agent action is logged with full audit trails for regulatory compliance. HITL approval gates protect high-value operations (billing adjustments, service provisioning). Regulatory guardrails enforce telecom-specific rules."
+        "description": "Every agent action is logged with full audit trails for regulatory compliance. HITL approval gates protect high-value operations (billing adjustments, service provisioning). Regulatory guardrails enforce telecom-specific rules.",
+        "image": "/screenshots/netcracker/step-4.png"
       },
       {
         "title": "Revenue Assurance and Fraud Detection",
-        "description": "AI agents monitor billing streams for revenue leakage, detect SIM swap fraud and subscription abuse, and flag anomalous usage patterns. Automated remediation reduces fraud losses while maintaining subscriber trust."
+        "description": "AI agents monitor billing streams for revenue leakage, detect SIM swap fraud and subscription abuse, and flag anomalous usage patterns. Automated remediation reduces fraud losses while maintaining subscriber trust.",
+        "image": "/screenshots/netcracker/step-5.png"
       }
     ]
   },

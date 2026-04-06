@@ -10,6 +10,7 @@ import {
   Route,
   Grid3X3,
   Sparkles,
+  RefreshCw,
 } from "lucide-react";
 
 const navItems = [
@@ -21,6 +22,7 @@ const navItems = [
   { href: "/markets", label: "Markets", icon: TrendingUp },
   { href: "/assess", label: "Assess", icon: Sparkles },
   { href: "/cuj", label: "CUJ Map", icon: Route },
+  { href: "/refresh", label: "Refresh", icon: RefreshCw },
 ];
 
 export default function Navbar() {

@@ -36,7 +36,7 @@
       "Automated PageSpeed optimization"
     ],
     "weaknesses": [
-      "Not a general agent platform — purely vertical for WordPress",
+      "Not a general agent platform \u2014 purely vertical for WordPress",
       "No API for AI generation capabilities",
       "Generated content needs human review for accuracy",
       "Locked into 10Web hosting",
@@ -174,7 +174,7 @@
           {
             "name": "Audit Trail & Compliance",
             "score": 3,
-            "rationale": "Natural HITL — nothing publishes without user action. Simple but effective."
+            "rationale": "Natural HITL \u2014 nothing publishes without user action. Simple but effective."
           },
           {
             "name": "RBAC & Access Control",
@@ -217,32 +217,39 @@
       }
     ]
   },
-  "scoringRationale": "10Web scores 44/100. Builder Experience (14) is standout — prompt to site in minutes. Everything else is low: Deployment (9) SaaS-only, Integration (7) WordPress-only, Governance (5) no enterprise features, Collaboration (4) single-purpose, Ecosystem (5) modest. Excels vertically but not an agent factory.",
+  "scoringRationale": "10Web scores 44/100. Builder Experience (14) is standout \u2014 prompt to site in minutes. Everything else is low: Deployment (9) SaaS-only, Integration (7) WordPress-only, Governance (5) no enterprise features, Collaboration (4) single-purpose, Ecosystem (5) modest. Excels vertically but not an agent factory.",
   "competence": "Vertical AI Builder (WordPress)",
   "targetUser": "SMBs and agencies generating WordPress sites with AI",
-  "supportedCUJs": ["content-generation"],
+  "supportedCUJs": [
+    "content-generation"
+  ],
   "walkthrough": {
     "title": "How 10Web Works: AI Website Generation in Minutes",
     "steps": [
       {
         "title": "Describe Your Business",
-        "description": "Enter a text description of your business — what you do, your target audience, and desired tone. Alternatively, paste a URL of a website you want to recreate or draw inspiration from."
+        "description": "Enter a text description of your business \u2014 what you do, your target audience, and desired tone. Alternatively, paste a URL of a website you want to recreate or draw inspiration from.",
+        "image": "/screenshots/10web/step-1.png"
       },
       {
         "title": "Select Page Types",
-        "description": "Choose which pages to generate: Home, About, Services, Contact, Blog, Portfolio, Shop. The AI will create each page with contextually relevant content, not lorem ipsum placeholder text."
+        "description": "Choose which pages to generate: Home, About, Services, Contact, Blog, Portfolio, Shop. The AI will create each page with contextually relevant content, not lorem ipsum placeholder text.",
+        "image": "/screenshots/10web/step-2.png"
       },
       {
         "title": "AI Generates Complete WordPress Site",
-        "description": "In 1-2 minutes, the AI generates a complete Elementor-based WordPress site with real content, images, and consistent cross-page design. Pages are immediately editable and responsive."
+        "description": "In 1-2 minutes, the AI generates a complete Elementor-based WordPress site with real content, images, and consistent cross-page design. Pages are immediately editable and responsive.",
+        "image": "/screenshots/10web/step-3.png"
       },
       {
         "title": "Customize in Visual Editor",
-        "description": "Use the Elementor drag-and-drop editor to customize any element. The AI Writing Assistant sidebar helps rewrite copy, generate new sections, and optimize content for SEO."
+        "description": "Use the Elementor drag-and-drop editor to customize any element. The AI Writing Assistant sidebar helps rewrite copy, generate new sections, and optimize content for SEO.",
+        "image": "/screenshots/10web/step-4.png"
       },
       {
         "title": "Publish on Managed Hosting",
-        "description": "Publish directly to 10Web's Google Cloud hosting with automated PageSpeed optimization (90+ scores), SSL, automated backups, and one-click restore. Site is live in seconds."
+        "description": "Publish directly to 10Web's Google Cloud hosting with automated PageSpeed optimization (90+ scores), SSL, automated backups, and one-click restore. Site is live in seconds.",
+        "image": "/screenshots/10web/step-5.png"
       }
     ]
   },

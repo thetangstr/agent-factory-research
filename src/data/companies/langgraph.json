@@ -13,17 +13,17 @@
   "screenshots": [
     {
       "path": "/screenshots/langgraph/graph-visualization.png",
-      "alt": "LangGraph Studio — graph visualization with node execution and state inspection",
+      "alt": "LangGraph Studio \u2014 graph visualization with node execution and state inspection",
       "screen": "graph-builder"
     },
     {
       "path": "/screenshots/langgraph/project-selection.png",
-      "alt": "LangGraph Studio — project selection and agent deployment management",
+      "alt": "LangGraph Studio \u2014 project selection and agent deployment management",
       "screen": "project-management"
     },
     {
       "path": "/screenshots/langgraph/studio-overview.png",
-      "alt": "LangGraph Studio — IDE overview with agent development environment",
+      "alt": "LangGraph Studio \u2014 IDE overview with agent development environment",
       "screen": "studio-overview"
     }
   ],
@@ -47,7 +47,7 @@
   "uxAnalysis": {
     "builderFlow": "Code-first Python/TypeScript. Define StateGraph with typed state schema, add nodes (functions/sub-graphs), connect with edges (including conditional). Compile into runnable with streaming. LangGraph Studio renders graph topology for visual debugging, state inspection, HITL testing. Deploy via Platform CLI.",
     "strengths": [
-      "Most flexible agent framework — graph abstraction supports any workflow pattern",
+      "Most flexible agent framework \u2014 graph abstraction supports any workflow pattern",
       "First-class state persistence eliminates hardest production problems",
       "Human-in-the-loop deeply integrated, not bolted on",
       "LangSmith observability is best-in-class for LLM apps",
@@ -56,7 +56,7 @@
       "Very active community and rapid development"
     ],
     "weaknesses": [
-      "Steep learning curve — graph abstraction, state reducers, checkpoints require study",
+      "Steep learning curve \u2014 graph abstraction, state reducers, checkpoints require study",
       "No low-code/no-code builder for non-technical users",
       "Historical API breaking changes create upgrade friction",
       "Enterprise governance less mature than dedicated platforms",
@@ -64,11 +64,11 @@
       "LangChain ecosystem breadth can cause paradox-of-choice confusion"
     ],
     "notableFeatures": [
-      "LangGraph Studio — visual graph debugging with real-time state inspection",
-      "Checkpointers — time-travel debugging, memory, crash recovery",
-      "Multi-agent patterns — supervisor, hierarchical, swarm with inter-agent communication",
-      "Streaming modes — token, event, values, updates simultaneously",
-      "Sub-graphs — composable nested graphs with encapsulated state"
+      "LangGraph Studio \u2014 visual graph debugging with real-time state inspection",
+      "Checkpointers \u2014 time-travel debugging, memory, crash recovery",
+      "Multi-agent patterns \u2014 supervisor, hierarchical, swarm with inter-agent communication",
+      "Streaming modes \u2014 token, event, values, updates simultaneously",
+      "Sub-graphs \u2014 composable nested graphs with encapsulated state"
     ]
   },
   "recentDevelopments": [
@@ -244,13 +244,13 @@
       }
     ]
   },
-  "scoringRationale": "LangGraph scores 76/100. Builder Experience (19) is standout — excellent SDK, Studio debugger, LangSmith evaluation. Deployment (16) solid with multiple modes. Integration (15) broadest ecosystem. Governance (11) and Collaboration (7) are weakest — enterprise features and non-technical access need maturation.",
+  "scoringRationale": "LangGraph scores 76/100. Builder Experience (19) is standout \u2014 excellent SDK, Studio debugger, LangSmith evaluation. Deployment (16) solid with multiple modes. Integration (15) broadest ecosystem. Governance (11) and Collaboration (7) are weakest \u2014 enterprise features and non-technical access need maturation.",
   "competence": "Multi-Agent Orchestration Framework",
   "targetUser": "Developers building complex stateful agent workflows",
   "marketIntelligence": {
     "communityBuzz": [
       "62% of developers building stateful agentic workflows chose LangGraph in 2026 dev survey",
-      "Most battle-tested for production — consistent recommendation on r/LLMDevs",
+      "Most battle-tested for production \u2014 consistent recommendation on r/LLMDevs",
       "LangGraph vs CrewAI vs AutoGen is the most actively debated comparison topic in agent dev communities",
       "Praised for flexibility but steep learning curve is the #1 complaint",
       "Graph-based approach seen as most principled architecture by senior engineers"
@@ -286,22 +286,27 @@
       ]
     }
   },
-  "supportedCUJs": ["workflow-automation", "code-development", "customer-support", "data-extraction"],
+  "supportedCUJs": [
+    "workflow-automation",
+    "code-development",
+    "customer-support",
+    "data-extraction"
+  ],
   "walkthrough": {
     "title": "How LangGraph Works: From Code to Production Agent",
     "steps": [
       {
-        "image": "/screenshots/langgraph/project-selection.png",
+        "image": "/screenshots/langgraph/step-1.png",
         "title": "Select Your Agent Project",
         "description": "Open LangGraph Studio and select your agent project. Studio auto-detects your graph configuration and renders the topology."
       },
       {
-        "image": "/screenshots/langgraph/graph-visualization.png",
+        "image": "/screenshots/langgraph/step-2.png",
         "title": "Visualize & Debug the Graph",
         "description": "See your agent's execution flow in real-time. Each node shows its state, and you can step through execution, inspect variables, and edit state mid-run."
       },
       {
-        "image": "/screenshots/langgraph/studio-overview.png",
+        "image": "/screenshots/langgraph/step-3.png",
         "title": "Deploy to Production",
         "description": "Use LangGraph Platform to deploy your agent to Cloud, BYOC, or self-hosted infrastructure. Manage versions, aliases, and scaling from one control plane."
       }

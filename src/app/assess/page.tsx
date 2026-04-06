@@ -95,17 +95,62 @@ const FUNCTION_CATEGORIES = [
   },
 ];
 
+const SOFTWARE_SUITES = [
+  {
+    category: "CRM & Sales",
+    tools: ["Salesforce", "HubSpot", "Dynamics 365", "Pipedrive", "Zoho CRM"],
+  },
+  {
+    category: "ERP",
+    tools: ["SAP", "Oracle", "NetSuite", "Sage", "Odoo"],
+  },
+  {
+    category: "IT & Support",
+    tools: ["ServiceNow", "Jira", "Zendesk", "Freshdesk", "PagerDuty"],
+  },
+  {
+    category: "Healthcare",
+    tools: ["Epic", "Cerner", "Athenahealth", "MEDITECH"],
+  },
+  {
+    category: "Cloud & Infra",
+    tools: ["AWS", "Azure", "GCP", "IBM Cloud"],
+  },
+  {
+    category: "Collaboration",
+    tools: ["Slack", "Microsoft Teams", "Google Workspace", "Zoom"],
+  },
+  {
+    category: "Finance & HR",
+    tools: ["Workday", "QuickBooks", "Xero", "ADP", "BambooHR", "Gusto"],
+  },
+  {
+    category: "Engineering",
+    tools: ["GitHub", "GitLab", "Jenkins", "Datadog", "Splunk"],
+  },
+  {
+    category: "Project & Ops",
+    tools: ["Asana", "Monday.com", "Smartsheet", "Procore", "Airtable"],
+  },
+  {
+    category: "Data & Analytics",
+    tools: ["Snowflake", "Databricks", "Tableau", "Power BI", "Looker"],
+  },
+];
+
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
 /* ------------------------------------------------------------------ */
 
 interface FormData {
   companyName: string;
+  companyUrl: string;
   industry: string;
   employeeRange: string;
   revenueRange: string;
   description: string;
-  currentSystems: string;
+  currentSystems: string[];
+  customSystems: string;
   automationLevel: string;
   challenges: string;
   selectedFunctions: string[];
@@ -117,11 +162,13 @@ interface FormData {
 
 const INITIAL_FORM: FormData = {
   companyName: "",
+  companyUrl: "",
   industry: "",
   employeeRange: "",
   revenueRange: "",
   description: "",
-  currentSystems: "",
+  currentSystems: [],
+  customSystems: "",
   automationLevel: "",
   challenges: "",
   selectedFunctions: [],
@@ -163,8 +210,17 @@ export default function AssessPage() {
     }));
   };
 
+  const toggleSystem = (tool: string) => {
+    setForm((prev) => ({
+      ...prev,
+      currentSystems: prev.currentSystems.includes(tool)
+        ? prev.currentSystems.filter((t) => t !== tool)
+        : [...prev.currentSystems, tool],
+    }));
+  };
+
   const canNext = (): boolean => {
-    if (step === 1) return !!form.companyName && !!form.industry;
+    if (step === 1) return !!form.companyName && !!form.industry && !!form.companyUrl;
     if (step === 2) return !!form.automationLevel;
     if (step === 3) return true; // functions optional (all = broad scan)
     return true;
@@ -185,6 +241,8 @@ export default function AssessPage() {
         body: JSON.stringify({
           ...form,
           industrySlug: toSlug(form.industry),
+          currentSystems: [...form.currentSystems, form.customSystems].filter(Boolean).join(", "),
+          companyUrl: form.companyUrl || undefined,
         }),
         signal: abortRef.current.signal,
       });
@@ -288,7 +346,7 @@ export default function AssessPage() {
               style={{ background: "#ffffff", border: "1px solid var(--md-sys-color-outline)", boxShadow: "var(--elevation-1)" }}
             >
               {step === 1 && <Step1 form={form} update={update} />}
-              {step === 2 && <Step2 form={form} update={update} />}
+              {step === 2 && <Step2 form={form} update={update} toggleSystem={toggleSystem} />}
               {step === 3 && <Step3 form={form} toggleFunction={toggleFunction} />}
               {step === 4 && <Step4 form={form} update={update} />}
 
@@ -408,6 +466,7 @@ function Step1({ form, update }: { form: FormData; update: <K extends keyof Form
 
       <div className="grid md:grid-cols-2 gap-4">
         <Field label="Company Name *" value={form.companyName} onChange={(v) => update("companyName", v)} placeholder="e.g. MKThink" />
+        <Field label="Company Website or LinkedIn *" value={form.companyUrl} onChange={(v) => update("companyUrl", v)} placeholder="https://www.mkthink.com" />
         <div>
           <label className="block text-xs font-medium mb-1.5" style={{ color: "var(--md-sys-color-on-surface)" }}>Industry *</label>
           <select
@@ -441,14 +500,59 @@ function Step1({ form, update }: { form: FormData; update: <K extends keyof Form
   );
 }
 
-function Step2({ form, update }: { form: FormData; update: <K extends keyof FormData>(k: K, v: FormData[K]) => void }) {
+function Step2({ form, update, toggleSystem }: { form: FormData; update: <K extends keyof FormData>(k: K, v: FormData[K]) => void; toggleSystem: (tool: string) => void }) {
   return (
     <div>
       <h2 className="text-base font-semibold mb-1" style={{ color: "var(--md-sys-color-on-surface)" }}>Current Operations</h2>
-      <p className="text-xs mb-5" style={{ color: "var(--md-sys-color-on-surface-muted)" }}>Help us understand their current tech and pain points.</p>
+      <p className="text-xs mb-5" style={{ color: "var(--md-sys-color-on-surface-muted)" }}>Help us understand their current tech stack and pain points.</p>
 
       <div className="space-y-4">
-        <Field label="Key Systems & Tools" value={form.currentSystems} onChange={(v) => update("currentSystems", v)} placeholder="e.g. Salesforce, SAP, Epic EHR, Jira, custom CRM..." multiline />
+        {/* Software suite bubbles */}
+        <div>
+          <label className="block text-xs font-medium mb-2" style={{ color: "var(--md-sys-color-on-surface)" }}>
+            Key Systems & Tools
+            {form.currentSystems.length > 0 && (
+              <span className="ml-2 font-normal" style={{ color: "var(--md-sys-color-primary)" }}>
+                ({form.currentSystems.length} selected)
+              </span>
+            )}
+          </label>
+          <div className="space-y-3">
+            {SOFTWARE_SUITES.map((group) => (
+              <div key={group.category}>
+                <div className="text-[10px] font-bold uppercase tracking-wide mb-1.5" style={{ color: "var(--md-sys-color-on-surface-muted)" }}>
+                  {group.category}
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {group.tools.map((tool) => (
+                    <button
+                      key={tool}
+                      onClick={() => toggleSystem(tool)}
+                      className="px-2.5 py-1.5 rounded-full text-xs font-medium transition-all"
+                      style={{
+                        background: form.currentSystems.includes(tool) ? "var(--md-sys-color-primary)" : "transparent",
+                        color: form.currentSystems.includes(tool) ? "#ffffff" : "var(--md-sys-color-on-surface-variant)",
+                        border: form.currentSystems.includes(tool) ? "1px solid var(--md-sys-color-primary)" : "1px solid var(--md-sys-color-outline-variant)",
+                      }}
+                    >
+                      {tool}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* Other / custom systems */}
+          <div className="mt-3">
+            <input
+              value={form.customSystems}
+              onChange={(e) => update("customSystems", e.target.value)}
+              placeholder="Other systems not listed above (comma-separated)"
+              className="w-full px-3 py-2 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-indigo-200"
+              style={{ border: "1px solid var(--md-sys-color-outline)", color: "var(--md-sys-color-on-surface)", background: "#ffffff" }}
+            />
+          </div>
+        </div>
 
         <div>
           <label className="block text-xs font-medium mb-2" style={{ color: "var(--md-sys-color-on-surface)" }}>Current Automation Level *</label>

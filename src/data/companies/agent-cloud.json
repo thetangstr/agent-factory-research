@@ -28,7 +28,7 @@
     "File processing (PDF, CSV, DOCX)"
   ],
   "uxAnalysis": {
-    "builderFlow": "Web-based admin UI: (1) Connect datasources — select type, configure connection, set embedding/chunking. (2) Create agent — name, model, prompt, attach datasources/tools. (3) Optionally create crew with multiple agents. (4) Chat via built-in interface. Functional but admin-panel aesthetic.",
+    "builderFlow": "Web-based admin UI: (1) Connect datasources \u2014 select type, configure connection, set embedding/chunking. (2) Create agent \u2014 name, model, prompt, attach datasources/tools. (3) Optionally create crew with multiple agents. (4) Chat via built-in interface. Functional but admin-panel aesthetic.",
     "strengths": [
       "Data-first: datasource config is first-class, not afterthought",
       "Low RAG barrier: connect data and chat in minutes without code",
@@ -219,29 +219,37 @@
   "scoringRationale": "Agent Cloud scores 47/100. Integration Depth (12) standout with native connectors + RAG pipeline. Builder (11) functional web UI. Deployment (8), Governance (6), Collaboration (7) limited. Ecosystem (3) reflects bootstrapped funding and small community.",
   "competence": "RAG-First Agent Platform",
   "targetUser": "Teams building data-connected agents with enterprise data sources",
-  "supportedCUJs": ["data-extraction", "workflow-automation"],
+  "supportedCUJs": [
+    "data-extraction",
+    "workflow-automation"
+  ],
   "walkthrough": {
     "title": "How Agent Cloud Works: Build RAG-First Data Agents",
     "steps": [
       {
         "title": "Connect Your Data Sources",
-        "description": "Start by connecting your data: PostgreSQL, MySQL, MongoDB, S3, Google Cloud Storage, or any of 300+ sources via Airbyte. Agent Cloud's data-first architecture means every agent is grounded in your real data from the start."
+        "description": "Start by connecting your data: PostgreSQL, MySQL, MongoDB, S3, Google Cloud Storage, or any of 300+ sources via Airbyte. Agent Cloud's data-first architecture means every agent is grounded in your real data from the start.",
+        "image": "/screenshots/agent-cloud/step-1.png"
       },
       {
         "title": "Configure Embedding and Vectorization",
-        "description": "Choose embedding models, configure chunking strategies, and set up the Qdrant vector database. Documents are automatically processed, chunked, and indexed for semantic retrieval."
+        "description": "Choose embedding models, configure chunking strategies, and set up the Qdrant vector database. Documents are automatically processed, chunked, and indexed for semantic retrieval.",
+        "image": "/screenshots/agent-cloud/step-2.png"
       },
       {
         "title": "Build Agents in the Web UI",
-        "description": "Use the visual web interface to create agents. Select LLM providers (OpenAI, Anthropic, Google, Ollama for local models), assign tools, connect knowledge bases, and configure agent behavior."
+        "description": "Use the visual web interface to create agents. Select LLM providers (OpenAI, Anthropic, Google, Ollama for local models), assign tools, connect knowledge bases, and configure agent behavior.",
+        "image": "/screenshots/agent-cloud/step-3.png"
       },
       {
         "title": "Orchestrate Multi-Agent Crews",
-        "description": "Compose agents into multi-agent crews using the built-in CrewAI integration. Define roles, assign tasks, and configure communication patterns between agents."
+        "description": "Compose agents into multi-agent crews using the built-in CrewAI integration. Define roles, assign tasks, and configure communication patterns between agents.",
+        "image": "/screenshots/agent-cloud/step-4.png"
       },
       {
         "title": "Deploy Self-Hosted or Cloud",
-        "description": "Deploy via Docker Compose for self-hosted environments or use Agent Cloud's managed SaaS. Chat with your agents through the web interface, iterate on configurations, and monitor performance."
+        "description": "Deploy via Docker Compose for self-hosted environments or use Agent Cloud's managed SaaS. Chat with your agents through the web interface, iterate on configurations, and monitor performance.",
+        "image": "/screenshots/agent-cloud/step-5.png"
       }
     ]
   },

@@ -223,29 +223,37 @@
       ]
     }
   },
-  "supportedCUJs": ["data-extraction", "sales-outreach"],
+  "supportedCUJs": [
+    "data-extraction",
+    "sales-outreach"
+  ],
   "walkthrough": {
     "title": "How Perplexity Computer Works: Citation-Grounded Web Research",
     "steps": [
       {
         "title": "Define Your Research Task",
-        "description": "Describe what you need in natural language: 'Find the top 20 AI startups that raised Series A in Q1 2026, including funding amount, lead investor, and product description.' The agent plans a multi-step web research strategy."
+        "description": "Describe what you need in natural language: 'Find the top 20 AI startups that raised Series A in Q1 2026, including funding amount, lead investor, and product description.' The agent plans a multi-step web research strategy.",
+        "image": "/screenshots/perplexity-computer/step-1.png"
       },
       {
         "title": "Agent Browses the Live Web",
-        "description": "Using computer-use capabilities, the agent autonomously navigates websites, search engines, and databases. It handles dynamic JavaScript pages, pagination, and login-gated content where credentials are provided."
+        "description": "Using computer-use capabilities, the agent autonomously navigates websites, search engines, and databases. It handles dynamic JavaScript pages, pagination, and login-gated content where credentials are provided.",
+        "image": "/screenshots/perplexity-computer/step-2.png"
       },
       {
         "title": "Extract and Structure Data",
-        "description": "As the agent browses, it extracts relevant data into your specified schema. Every data point is citation-grounded — linked back to the source URL and page where it was found."
+        "description": "As the agent browses, it extracts relevant data into your specified schema. Every data point is citation-grounded \u2014 linked back to the source URL and page where it was found.",
+        "image": "/screenshots/perplexity-computer/step-3.png"
       },
       {
         "title": "Compile Research Output",
-        "description": "The agent compiles findings into structured formats (JSON, markdown tables, reports) with full source attribution. Cross-references multiple sources to validate accuracy and flags conflicting information."
+        "description": "The agent compiles findings into structured formats (JSON, markdown tables, reports) with full source attribution. Cross-references multiple sources to validate accuracy and flags conflicting information.",
+        "image": "/screenshots/perplexity-computer/step-4.png"
       },
       {
         "title": "API Integration for Scale",
-        "description": "Use the API for batch research jobs, recurring competitive intelligence monitoring, and integration into data pipelines. Enterprise tier provides higher rate limits and priority processing."
+        "description": "Use the API for batch research jobs, recurring competitive intelligence monitoring, and integration into data pipelines. Enterprise tier provides higher rate limits and priority processing.",
+        "image": "/screenshots/perplexity-computer/step-5.png"
       }
     ]
   },

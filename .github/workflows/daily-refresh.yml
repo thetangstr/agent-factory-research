@@ -1,0 +1,83 @@
+name: Daily Research Refresh
+
+on:
+  schedule:
+    # Run daily at 6:17 AM UTC (off the :00 mark to avoid congestion)
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "Run specific stage (refresh/discover/score/screenshot/validate)"
+        required: false
+        type: string
+      company:
+        description: "Target a specific company slug"
+        required: false
+        type: string
+      dry_run:
+        description: "Preview changes without writing files"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          pip install playwright
+          playwright install chromium
+
+      - name: Run refresh pipeline
+        env:
+          REFRESH_LLM_BASE_URL: ${{ secrets.REFRESH_LLM_BASE_URL }}
+          REFRESH_LLM_MODEL: ${{ secrets.REFRESH_LLM_MODEL }}
+          REFRESH_LLM_API_KEY: ${{ secrets.REFRESH_LLM_API_KEY }}
+          REFRESH_SEARCH_PROVIDER: ${{ secrets.REFRESH_SEARCH_PROVIDER }}
+          REFRESH_SEARCH_API_KEY: ${{ secrets.REFRESH_SEARCH_API_KEY }}
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.stage }}" ]; then ARGS="$ARGS --stage ${{ inputs.stage }}"; fi
+          if [ -n "${{ inputs.company }}" ]; then ARGS="$ARGS --company ${{ inputs.company }}"; fi
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          npx tsx scripts/refresh/index.ts $ARGS
+
+      - name: Build site
+        run: npm run build
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/companies/ public/screenshots/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: daily research refresh $(date +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Upload refresh log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: refresh-log
+          path: state/refresh-log-*.md
+          retention-days: 30

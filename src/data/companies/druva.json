@@ -32,7 +32,7 @@
       "Petabyte-class proven scale"
     ],
     "weaknesses": [
-      "Not an agent factory — AI is embedded, not composable",
+      "Not an agent factory \u2014 AI is embedded, not composable",
       "No multi-agent orchestration",
       "SaaS-only, no self-hosted",
       "Pricing opacity",
@@ -200,32 +200,39 @@
       }
     ]
   },
-  "scoringRationale": "Druva scores 70/100. Deployment (17) and Governance (17) strong — carrier-grade SaaS with compliance. Integration (14) broad workloads. Builder (14) decent but not agent-focused. Collaboration (7) minimal. Ecosystem (1) scoring reflects agent-factory-specific evaluation.",
+  "scoringRationale": "Druva scores 70/100. Deployment (17) and Governance (17) strong \u2014 carrier-grade SaaS with compliance. Integration (14) broad workloads. Builder (14) decent but not agent-focused. Collaboration (7) minimal. Ecosystem (1) scoring reflects agent-factory-specific evaluation.",
   "competence": "AI-Powered Data Protection",
   "targetUser": "IT teams automating backup, recovery, and ransomware defense",
-  "supportedCUJs": ["security-monitoring"],
+  "supportedCUJs": [
+    "security-monitoring"
+  ],
   "walkthrough": {
     "title": "How Druva Works: AI-Driven Data Protection and Recovery",
     "steps": [
       {
         "title": "Configure Backup Policies",
-        "description": "Define backup policies via the web console for endpoints, SaaS apps (M365, Google Workspace), cloud workloads (AWS, Azure), and data centers. Set RPO/RTO targets, retention rules, and compliance requirements (HIPAA, FedRAMP, SOC2)."
+        "description": "Define backup policies via the web console for endpoints, SaaS apps (M365, Google Workspace), cloud workloads (AWS, Azure), and data centers. Set RPO/RTO targets, retention rules, and compliance requirements (HIPAA, FedRAMP, SOC2).",
+        "image": "/screenshots/druva/step-1.png"
       },
       {
         "title": "AI Detects Anomalies and Threats",
-        "description": "Druva's AI continuously monitors backup patterns for anomalies indicating ransomware, unusual data deletion, or insider threats. Machine learning models trained on global threat data flag suspicious activity before damage spreads."
+        "description": "Druva's AI continuously monitors backup patterns for anomalies indicating ransomware, unusual data deletion, or insider threats. Machine learning models trained on global threat data flag suspicious activity before damage spreads.",
+        "image": "/screenshots/druva/step-2.png"
       },
       {
         "title": "Autonomous Recovery Orchestration",
-        "description": "When a threat is detected, Druva identifies the last clean backup, quarantines affected snapshots, and orchestrates recovery. For ransomware, it pinpoints the infection timeline and restores to the most recent clean state."
+        "description": "When a threat is detected, Druva identifies the last clean backup, quarantines affected snapshots, and orchestrates recovery. For ransomware, it pinpoints the infection timeline and restores to the most recent clean state.",
+        "image": "/screenshots/druva/step-3.png"
       },
       {
         "title": "DR Testing with Sandbox Recovery",
-        "description": "Run disaster recovery drills by restoring to isolated sandbox environments. Validate recovery procedures without affecting production. Generate compliance reports showing DR readiness and audit trails."
+        "description": "Run disaster recovery drills by restoring to isolated sandbox environments. Validate recovery procedures without affecting production. Generate compliance reports showing DR readiness and audit trails.",
+        "image": "/screenshots/druva/step-4.png"
       },
       {
         "title": "Predictive Optimization",
-        "description": "AI analyzes backup patterns to optimize policies: recommend storage tiers, predict capacity needs, identify redundant backups, and suggest policy adjustments. Global deduplication reduces storage costs across the fleet."
+        "description": "AI analyzes backup patterns to optimize policies: recommend storage tiers, predict capacity needs, identify redundant backups, and suggest policy adjustments. Global deduplication reduces storage costs across the fleet.",
+        "image": "/screenshots/druva/step-5.png"
       }
     ]
   },

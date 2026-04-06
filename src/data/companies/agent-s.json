@@ -29,13 +29,13 @@
     "strengths": [
       "Novel hierarchical planning advances GUI agent capabilities",
       "State-of-the-art OSWorld benchmark (~34.5%)",
-      "Works with any desktop app — no app-specific integration",
+      "Works with any desktop app \u2014 no app-specific integration",
       "Cross-platform macOS/Linux/Windows",
       "Apache 2.0 open source",
       "Self-experience retrieval enables learning from past tasks"
     ],
     "weaknesses": [
-      "~34.5% success rate — not production-ready",
+      "~34.5% success rate \u2014 not production-ready",
       "No enterprise features (auth, RBAC, audit, compliance)",
       "GUI interaction is slow and fragile to UI changes",
       "No HITL controls or kill switches",
@@ -217,29 +217,37 @@
   "scoringRationale": "Agent S scores 34/100. Research tool, not an enterprise platform. Builder Experience (7) requires Python expertise. Deployment (4) single-machine only. Integration (7) GUI-only. Governance (4) no controls. Collaboration (7) Manager-Worker pattern. Ecosystem (5) early-stage research.",
   "competence": "Desktop/Computer Use Agent",
   "targetUser": "Researchers exploring autonomous GUI interaction",
-  "supportedCUJs": ["workflow-automation", "data-extraction"],
+  "supportedCUJs": [
+    "workflow-automation",
+    "data-extraction"
+  ],
   "walkthrough": {
     "title": "How Agent S Works: Autonomous Desktop GUI Control",
     "steps": [
       {
         "title": "Set Up the Environment",
-        "description": "Clone the repo, install Python 3.10+ dependencies, and configure platform-specific accessibility libraries (macOS Accessibility API, Linux AT-SPI, Windows UI Automation). Set your LLM API key (GPT-4o, Claude, or open-source models)."
+        "description": "Clone the repo, install Python 3.10+ dependencies, and configure platform-specific accessibility libraries (macOS Accessibility API, Linux AT-SPI, Windows UI Automation). Set your LLM API key (GPT-4o, Claude, or open-source models).",
+        "image": "/screenshots/agent-s/step-1.png"
       },
       {
         "title": "Define a Task in Natural Language",
-        "description": "Describe what you want the agent to do: 'Open the spreadsheet, copy Q3 revenue figures, create a chart in Slides, and email the presentation to the team.' The agent decomposes this into hierarchical sub-tasks."
+        "description": "Describe what you want the agent to do: 'Open the spreadsheet, copy Q3 revenue figures, create a chart in Slides, and email the presentation to the team.' The agent decomposes this into hierarchical sub-tasks.",
+        "image": "/screenshots/agent-s/step-2.png"
       },
       {
         "title": "Manager-Worker Planning",
-        "description": "The Manager agent creates a high-level plan using Experience-Augmented Hierarchical Planning. It retrieves relevant past trajectories and web knowledge to inform the strategy. Worker agents execute individual UI actions."
+        "description": "The Manager agent creates a high-level plan using Experience-Augmented Hierarchical Planning. It retrieves relevant past trajectories and web knowledge to inform the strategy. Worker agents execute individual UI actions.",
+        "image": "/screenshots/agent-s/step-3.png"
       },
       {
         "title": "Autonomous GUI Interaction",
-        "description": "Worker agents capture screenshots, parse accessibility trees, and interact with desktop applications — clicking buttons, typing text, navigating menus. Each action is logged as a trajectory for future learning."
+        "description": "Worker agents capture screenshots, parse accessibility trees, and interact with desktop applications \u2014 clicking buttons, typing text, navigating menus. Each action is logged as a trajectory for future learning.",
+        "image": "/screenshots/agent-s/step-4.png"
       },
       {
         "title": "Results and Trajectory Logging",
-        "description": "The agent reports task completion status with screenshots of the final state. All trajectories are stored for self-experience retrieval, improving performance on similar future tasks. Evaluate on OSWorld benchmark (~34.5%)."
+        "description": "The agent reports task completion status with screenshots of the final state. All trajectories are stored for self-experience retrieval, improving performance on similar future tasks. Evaluate on OSWorld benchmark (~34.5%).",
+        "image": "/screenshots/agent-s/step-5.png"
       }
     ]
   },

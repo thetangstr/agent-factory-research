@@ -1,0 +1,6 @@
+{
+  "discoveryEnabled": true,
+  "maxNewCompaniesPerRun": 3,
+  "screenshotsEnabled": true,
+  "discoveryExclude": []
+}

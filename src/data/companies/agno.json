@@ -33,14 +33,14 @@
     "strengths": [
       "Exceptionally clean minimal Python API",
       "Fastest agent instantiation (~10,000x vs LangGraph)",
-      "23+ model providers — true model-agnostic",
+      "23+ model providers \u2014 true model-agnostic",
       "100+ cookbook examples for diverse use cases",
       "Lightweight with minimal dependencies",
       "Built-in Agentic RAG elevates retrieval",
       "Intuitive multi-agent team orchestration"
     ],
     "weaknesses": [
-      "No visual/no-code builder — code-only",
+      "No visual/no-code builder \u2014 code-only",
       "No kill switches, guardrails, or approval gates built in",
       "Cloud is monitoring-only, not managed execution",
       "Sparse enterprise features (SSO, compliance, RBAC)",
@@ -229,15 +229,15 @@
       }
     ]
   },
-  "scoringRationale": "Agno scores 62/100. Builder Experience (18) is standout — cleanest Python API, best docs, fastest iteration. Collaboration (15) strong with multi-agent teams and 100+ templates. Ecosystem (16) high innovation pace. Governance (9) and Deployment (12) need enterprise hardening.",
+  "scoringRationale": "Agno scores 62/100. Builder Experience (18) is standout \u2014 cleanest Python API, best docs, fastest iteration. Collaboration (15) strong with multi-agent teams and 100+ templates. Ecosystem (16) high innovation pace. Governance (9) and Deployment (12) need enterprise hardening.",
   "competence": "Lightweight Agent Framework",
   "targetUser": "Python developers wanting fast, minimal agent creation",
   "marketIntelligence": {
     "communityBuzz": [
-      "Rebrand from Phidata to Agno generating fresh interest — 20K+ GitHub stars",
+      "Rebrand from Phidata to Agno generating fresh interest \u2014 20K+ GitHub stars",
       "10,000x faster instantiation benchmark gets attention but questioned methodology",
       "Praised as cleanest Python API in the agent framework space",
-      "Seed-stage funding concerns — can they compete long-term with well-funded competitors?"
+      "Seed-stage funding concerns \u2014 can they compete long-term with well-funded competitors?"
     ],
     "metrics": [
       {
@@ -272,29 +272,38 @@
       "valuation": "Undisclosed"
     }
   },
-  "supportedCUJs": ["workflow-automation", "code-development", "data-extraction"],
+  "supportedCUJs": [
+    "workflow-automation",
+    "code-development",
+    "data-extraction"
+  ],
   "walkthrough": {
     "title": "How Agno Works: Build a Multimodal Agent in 5 Lines",
     "steps": [
       {
         "title": "Install and Import",
-        "description": "pip install agno. Import Agent, configure your model provider (OpenAI, Anthropic, Google, Groq, Ollama — 23+ supported). A basic agent is 3-5 lines of Python with zero boilerplate."
+        "description": "pip install agno. Import Agent, configure your model provider (OpenAI, Anthropic, Google, Groq, Ollama \u2014 23+ supported). A basic agent is 3-5 lines of Python with zero boilerplate.",
+        "image": "/screenshots/agno/step-1.png"
       },
       {
         "title": "Add Tools and Knowledge",
-        "description": "Attach pre-built tools (40+ available: web search, SQL, S3, email, Slack, GitHub) and knowledge bases (PDF, URL, CSV, JSON). The agent gets Agentic RAG with intelligent retrieval and grounding."
+        "description": "Attach pre-built tools (40+ available: web search, SQL, S3, email, Slack, GitHub) and knowledge bases (PDF, URL, CSV, JSON). The agent gets Agentic RAG with intelligent retrieval and grounding.",
+        "image": "/screenshots/agno/step-2.png"
       },
       {
         "title": "Configure Agent Team",
-        "description": "Compose multiple agents into a Team with a leader. Choose orchestration mode: coordinate (parallel execution), route (delegate to specialist), or collaborate (sequential handoff). Each agent can use a different LLM."
+        "description": "Compose multiple agents into a Team with a leader. Choose orchestration mode: coordinate (parallel execution), route (delegate to specialist), or collaborate (sequential handoff). Each agent can use a different LLM.",
+        "image": "/screenshots/agno/step-3.png"
       },
       {
         "title": "Run and Observe",
-        "description": "Execute with agent.run() or agent.print_response(). Enable show_tool_calls to see reasoning traces. Structured outputs via Pydantic models ensure type-safe results. Async execution available for high concurrency."
+        "description": "Execute with agent.run() or agent.print_response(). Enable show_tool_calls to see reasoning traces. Structured outputs via Pydantic models ensure type-safe results. Async execution available for high concurrency.",
+        "image": "/screenshots/agno/step-4.png"
       },
       {
         "title": "Monitor on Agno Cloud",
-        "description": "Connect to Agno Cloud playground for session replay, monitoring, and debugging. View conversation histories, tool call traces, and agent performance metrics. Available on Free, Pro, or Enterprise tiers."
+        "description": "Connect to Agno Cloud playground for session replay, monitoring, and debugging. View conversation histories, tool call traces, and agent performance metrics. Available on Free, Pro, or Enterprise tiers.",
+        "image": "/screenshots/agno/step-5.png"
       }
     ]
   },

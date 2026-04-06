@@ -200,32 +200,39 @@
       }
     ]
   },
-  "scoringRationale": "AI Security Guard scores 55/100. Governance (14) is standout — guardrails ARE the product. Builder (12) and Deployment (12) decent for focused tool. Collaboration (5) and Ecosystem (1) minimal — point solution, not platform.",
+  "scoringRationale": "AI Security Guard scores 55/100. Governance (14) is standout \u2014 guardrails ARE the product. Builder (12) and Deployment (12) decent for focused tool. Collaboration (5) and Ecosystem (1) minimal \u2014 point solution, not platform.",
   "competence": "Agent Security & Guardrails",
   "targetUser": "Security teams protecting AI agent deployments from attacks",
-  "supportedCUJs": ["security-monitoring"],
+  "supportedCUJs": [
+    "security-monitoring"
+  ],
   "walkthrough": {
     "title": "How AI Security Guard Works: Real-Time AI Agent Firewall",
     "steps": [
       {
         "title": "Integrate the SDK",
-        "description": "Add the AI Security Guard SDK to your agent framework or LLM pipeline. It sits as middleware between users/agents and the AI model — all inputs and outputs pass through the scanning layer with sub-100ms latency."
+        "description": "Add the AI Security Guard SDK to your agent framework or LLM pipeline. It sits as middleware between users/agents and the AI model \u2014 all inputs and outputs pass through the scanning layer with sub-100ms latency.",
+        "image": "/screenshots/ai-security-guard/step-1.png"
       },
       {
         "title": "Configure Threat Policies",
-        "description": "Use the web console to select which threat categories to monitor: prompt injection, PII/data leakage, jailbreak attempts, toxicity, and custom patterns. Set sensitivity thresholds per category and define block vs. alert behavior."
+        "description": "Use the web console to select which threat categories to monitor: prompt injection, PII/data leakage, jailbreak attempts, toxicity, and custom patterns. Set sensitivity thresholds per category and define block vs. alert behavior.",
+        "image": "/screenshots/ai-security-guard/step-2.png"
       },
       {
         "title": "Real-Time Input Scanning",
-        "description": "Every prompt and agent input is scanned in real-time before reaching the LLM. Multi-turn jailbreak detection catches sophisticated attacks that span multiple messages. Malicious inputs are blocked and logged."
+        "description": "Every prompt and agent input is scanned in real-time before reaching the LLM. Multi-turn jailbreak detection catches sophisticated attacks that span multiple messages. Malicious inputs are blocked and logged.",
+        "image": "/screenshots/ai-security-guard/step-3.png"
       },
       {
         "title": "Output Monitoring and DLP",
-        "description": "Agent outputs are scanned for sensitive data leakage (PII, credentials, internal data), policy violations, and harmful content. Sensitive data is redacted or blocked before reaching the end user."
+        "description": "Agent outputs are scanned for sensitive data leakage (PII, credentials, internal data), policy violations, and harmful content. Sensitive data is redacted or blocked before reaching the end user.",
+        "image": "/screenshots/ai-security-guard/step-4.png"
       },
       {
         "title": "Audit and Incident Response",
-        "description": "All scans are logged with full context for audit and compliance. Security dashboards show threat trends, blocked attempts, and policy effectiveness. Alerts integrate with SIEM and incident response workflows."
+        "description": "All scans are logged with full context for audit and compliance. Security dashboards show threat trends, blocked attempts, and policy effectiveness. Alerts integrate with SIEM and incident response workflows.",
+        "image": "/screenshots/ai-security-guard/step-5.png"
       }
     ]
   },

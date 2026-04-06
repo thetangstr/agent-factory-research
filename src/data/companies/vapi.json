@@ -13,7 +13,7 @@
   "screenshots": [
     {
       "path": "/screenshots/vapi/dashboard.png",
-      "alt": "Vapi Dashboard — voice agent management and configuration interface",
+      "alt": "Vapi Dashboard \u2014 voice agent management and configuration interface",
       "screen": "dashboard"
     }
   ],
@@ -41,10 +41,10 @@
   "uxAnalysis": {
     "builderFlow": "Dual-track: developers use REST API (4,200+ config points) with SDKs and CLI. Product teams use Dashboard UI. Create agent by defining instructions/tools, selecting models (200+ STT/LLM/TTS options), integrating data via tools, then testing with built-in calling and evaluation. Squads for multi-agent. 1000+ templates for rapid prototyping.",
     "strengths": [
-      "4,200+ config points — unmatched API flexibility",
-      "Sub-500ms voice latency — natural conversations",
+      "4,200+ config points \u2014 unmatched API flexibility",
+      "Sub-500ms voice latency \u2014 natural conversations",
       "200+ model integrations with BYOM",
-      "300M+ calls, 99.99% uptime — production-proven",
+      "300M+ calls, 99.99% uptime \u2014 production-proven",
       "Automated testing with simulated voice agents",
       "SOC2/HIPAA/PCI for regulated industries",
       "500K+ developer community"
@@ -238,15 +238,15 @@
       }
     ]
   },
-  "scoringRationale": "Vapi scores 72/100. Builder Experience (14) world-class API but visual builder in flux. Deployment (14) massive scale but cloud-only. Integration (14) deep models/telephony, sparse business tools. Governance (12) strong compliance, basic RBAC. Collaboration (10) and Ecosystem (8) weakest — minimal team features, young company.",
+  "scoringRationale": "Vapi scores 72/100. Builder Experience (14) world-class API but visual builder in flux. Deployment (14) massive scale but cloud-only. Integration (14) deep models/telephony, sparse business tools. Governance (12) strong compliance, basic RBAC. Collaboration (10) and Ecosystem (8) weakest \u2014 minimal team features, young company.",
   "competence": "Voice Agent Platform",
   "targetUser": "Developers building AI phone/voice agents",
   "marketIntelligence": {
     "communityBuzz": [
-      "Voice agents are booming — r/AIVoice_Agents actively discussing Vapi and competitors",
+      "Voice agents are booming \u2014 r/AIVoice_Agents actively discussing Vapi and competitors",
       "500K+ developer community growing rapidly",
       "Platform cost (/bin/zsh.05/min) on top of model costs is a frequent pricing complaint",
-      "Squads replacing deprecated Workflows — transition causing some user friction",
+      "Squads replacing deprecated Workflows \u2014 transition causing some user friction",
       "SOC2/HIPAA/PCI compliance praised for enabling regulated industry deployments"
     ],
     "metrics": [
@@ -291,26 +291,33 @@
       ]
     }
   },
-  "supportedCUJs": ["voice-telephony", "customer-support", "sales-outreach"],
+  "supportedCUJs": [
+    "voice-telephony",
+    "customer-support",
+    "sales-outreach"
+  ],
   "walkthrough": {
     "title": "How Vapi Works: Build a Voice Agent in Minutes",
     "steps": [
       {
-        "image": "/screenshots/vapi/dashboard.png",
+        "image": "/screenshots/vapi/step-1.png",
         "title": "Create Your Voice Assistant",
         "description": "From the Vapi Dashboard, create a new assistant with natural language instructions, select your STT/LLM/TTS models from 200+ options, and configure the voice persona."
       },
       {
         "title": "Connect Telephony",
-        "description": "Assign a phone number (Vapi, Twilio, or custom SIP), configure inbound/outbound calling, set up voicemail detection and warm transfers to human agents."
+        "description": "Assign a phone number (Vapi, Twilio, or custom SIP), configure inbound/outbound calling, set up voicemail detection and warm transfers to human agents.",
+        "image": "/screenshots/vapi/step-2.png"
       },
       {
         "title": "Add Tools & Knowledge",
-        "description": "Use tool calling to connect your CRM, calendar, and business APIs. Upload knowledge base docs so the agent can answer company-specific questions during calls."
+        "description": "Use tool calling to connect your CRM, calendar, and business APIs. Upload knowledge base docs so the agent can answer company-specific questions during calls.",
+        "image": "/screenshots/vapi/step-3.png"
       },
       {
         "title": "Test & Deploy",
-        "description": "Test with the built-in call simulator using automated voice agents. Run A/B experiments on prompts and voices. Deploy to production with 99.99% uptime SLA."
+        "description": "Test with the built-in call simulator using automated voice agents. Run A/B experiments on prompts and voices. Deploy to production with 99.99% uptime SLA.",
+        "image": "/screenshots/vapi/step-4.png"
       }
     ]
   },

@@ -40,7 +40,7 @@
       "Competitive per-minute pricing for SMBs"
     ],
     "weaknesses": [
-      "No pro-code SDK — advanced users hit customization ceilings",
+      "No pro-code SDK \u2014 advanced users hit customization ceilings",
       "Cloud-only, no self-hosted option",
       "No SOC2 or HIPAA compliance",
       "Single-agent-per-call, no multi-agent orchestration",
@@ -218,7 +218,7 @@
       }
     ]
   },
-  "scoringRationale": "Synthflow scores 52/100. Builder Experience (16) is standout — intuitive no-code with templates. Deployment (9) cloud-only. Integration (12) solid CRM/telephony but no MCP. Governance (8) no SOC2, basic RBAC. Collaboration (7) single-agent. Ecosystem (10) early-stage growing.",
+  "scoringRationale": "Synthflow scores 52/100. Builder Experience (16) is standout \u2014 intuitive no-code with templates. Deployment (9) cloud-only. Integration (12) solid CRM/telephony but no MCP. Governance (8) no SOC2, basic RBAC. Collaboration (7) single-agent. Ecosystem (10) early-stage growing.",
   "competence": "Voice Agent Platform",
   "targetUser": "SMBs and agencies deploying AI phone agents without code",
   "marketIntelligence": {
@@ -240,29 +240,38 @@
       "valuation": "Undisclosed"
     }
   },
-  "supportedCUJs": ["voice-telephony", "customer-support", "sales-outreach"],
+  "supportedCUJs": [
+    "voice-telephony",
+    "customer-support",
+    "sales-outreach"
+  ],
   "walkthrough": {
     "title": "How Synthflow Works: Build a Voice Agent for Phone Calls",
     "steps": [
       {
         "title": "Select a Template or Create Custom Agent",
-        "description": "Choose from pre-built templates — receptionist, lead qualifier, appointment scheduler, support agent — or start from scratch. Configure the agent's persona: voice, language (20+ options), personality traits."
+        "description": "Choose from pre-built templates \u2014 receptionist, lead qualifier, appointment scheduler, support agent \u2014 or start from scratch. Configure the agent's persona: voice, language (20+ options), personality traits.",
+        "image": "/screenshots/synthflow-ai/step-1.png"
       },
       {
         "title": "Build Conversation Flow",
-        "description": "Use the visual node editor to define conversation paths. Add conditional branches based on caller responses, sentiment triggers for auto-transfer, and knowledge base lookups for product questions."
+        "description": "Use the visual node editor to define conversation paths. Add conditional branches based on caller responses, sentiment triggers for auto-transfer, and knowledge base lookups for product questions.",
+        "image": "/screenshots/synthflow-ai/step-2.png"
       },
       {
         "title": "Connect Telephony and Integrations",
-        "description": "Link your phone numbers via Twilio, Vonage, or SIP. Connect CRM (HubSpot, Salesforce, GoHighLevel), Google Calendar for appointment booking, and Zapier/Make for custom automations."
+        "description": "Link your phone numbers via Twilio, Vonage, or SIP. Connect CRM (HubSpot, Salesforce, GoHighLevel), Google Calendar for appointment booking, and Zapier/Make for custom automations.",
+        "image": "/screenshots/synthflow-ai/step-3.png"
       },
       {
         "title": "Test with Built-in Call Simulator",
-        "description": "Make test calls directly from the builder. Listen to the agent's voice responses, test conversation branches, verify CRM updates, and review call transcripts. Iterate until the agent handles edge cases naturally."
+        "description": "Make test calls directly from the builder. Listen to the agent's voice responses, test conversation branches, verify CRM updates, and review call transcripts. Iterate until the agent handles edge cases naturally.",
+        "image": "/screenshots/synthflow-ai/step-4.png"
       },
       {
         "title": "Deploy and Monitor Calls",
-        "description": "Assign the agent to phone numbers for inbound or outbound campaigns. Monitor live calls, review recordings and transcripts, track sentiment analytics, and manage costs via the per-minute dashboard."
+        "description": "Assign the agent to phone numbers for inbound or outbound campaigns. Monitor live calls, review recordings and transcripts, track sentiment analytics, and manage costs via the per-minute dashboard.",
+        "image": "/screenshots/synthflow-ai/step-5.png"
       }
     ]
   },

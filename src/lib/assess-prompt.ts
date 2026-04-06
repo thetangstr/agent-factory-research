@@ -105,7 +105,7 @@ Categorize ALL opportunities into four quadrants:
 - Frame everything as a professional proposal that a salesperson can share with the prospect`;
 }
 
-export function buildUserPrompt(input: AssessmentInput): string {
+export function buildUserPrompt(input: AssessmentInput, companyWebContent?: string): string {
   const parts = [
     `# Customer Assessment Request`,
     ``,
@@ -115,6 +115,19 @@ export function buildUserPrompt(input: AssessmentInput): string {
     `- **Size:** ${input.employeeRange} employees`,
     `- **Revenue:** ${input.revenueRange}`,
     `- **Description:** ${input.description}`,
+  ];
+
+  if (companyWebContent) {
+    parts.push(
+      ``,
+      `## Company Website Research`,
+      `The following is content extracted from the company's website. Use this to understand what the company actually does, their services, clients, and positioning:`,
+      ``,
+      companyWebContent,
+    );
+  }
+
+  parts.push(
     ``,
     `## Current Operations`,
     `- **Key Systems:** ${input.currentSystems || "Not specified"}`,
@@ -132,8 +145,8 @@ export function buildUserPrompt(input: AssessmentInput): string {
     `- **Timeline:** ${input.timeline}`,
     `- **Pilot Budget:** ${input.budgetRange}`,
     ``,
-    `Please produce a comprehensive Agent Readiness Assessment for this customer, grounded in the research data provided.`,
-  ];
+    `Please produce a comprehensive Agent Readiness Assessment for this customer, grounded in BOTH the company website research AND the research data provided. Be specific to what this company actually does — reference their real services, clients, and market position.`,
+  );
 
   return parts.join("\n");
 }

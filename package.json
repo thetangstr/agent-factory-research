@@ -7,12 +7,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "validate": "npx tsx src/lib/validate-data.ts"
+    "validate": "npx tsx src/lib/validate-data.ts",
+    "refresh": "npx tsx scripts/refresh/index.ts",
+    "refresh:dry-run": "npx tsx scripts/refresh/index.ts --dry-run",
+    "refresh:company": "npx tsx scripts/refresh/index.ts --company"
   },
   "dependencies": {
+    "@auth/drizzle-adapter": "^1.11.1",
+    "@vercel/postgres": "^0.10.0",
+    "drizzle-orm": "^0.45.2",
     "fuse.js": "^7.3.0",
     "lucide-react": "^1.7.0",
     "next": "16.2.2",
+    "next-auth": "^5.0.0-beta.30",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "recharts": "^3.8.1",
@@ -23,6 +30,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.2.2",
     "tailwindcss": "^4",

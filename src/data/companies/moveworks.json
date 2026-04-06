@@ -30,20 +30,20 @@
     "strengths": [
       "100+ native enterprise connectors with deep read/write",
       "60%+ autonomous IT ticket resolution at scale",
-      "NL interface via Slack/Teams — meets employees where they work",
+      "NL interface via Slack/Teams \u2014 meets employees where they work",
       "ServiceNow acquisition provides unmatched stability and distribution",
       "Purpose-built for enterprise support with strong out-of-box value"
     ],
     "weaknesses": [
       "Agent Studio is config tool more than visual programming",
       "Closed ecosystem, no MCP, limited open standards",
-      "Pricing opacity — enterprise-only, no self-serve evaluation",
-      "Weak multi-agent — routing not true collaboration",
-      "Developer experience secondary — no Git workflows, limited debugging",
+      "Pricing opacity \u2014 enterprise-only, no self-serve evaluation",
+      "Weak multi-agent \u2014 routing not true collaboration",
+      "Developer experience secondary \u2014 no Git workflows, limited debugging",
       "Post-acquisition roadmap uncertainty"
     ],
     "notableFeatures": [
-      "MoveLM — proprietary LLM fine-tuned on hundreds of millions of enterprise interactions",
+      "MoveLM \u2014 proprietary LLM fine-tuned on hundreds of millions of enterprise interactions",
       "Agent Studio no-code builder with templates",
       "Creator Studio API platform for custom workflows",
       "Reasoning Engine for multi-step agentic orchestration",
@@ -218,15 +218,15 @@
       }
     ]
   },
-  "scoringRationale": "Moveworks scores 67/100. Integration (16) leads with unmatched connector breadth. Governance (15) solid enterprise compliance. Builder (14), Deployment (14), Ecosystem (14) are solid enterprise-grade. Collaboration (10) weakest — multi-agent nascent, team dev underdeveloped.",
+  "scoringRationale": "Moveworks scores 67/100. Integration (16) leads with unmatched connector breadth. Governance (15) solid enterprise compliance. Builder (14), Deployment (14), Ecosystem (14) are solid enterprise-grade. Collaboration (10) weakest \u2014 multi-agent nascent, team dev underdeveloped.",
   "competence": "Enterprise IT/Support Automation",
   "targetUser": "IT and HR teams automating employee support at scale",
   "marketIntelligence": {
     "communityBuzz": [
       "ServiceNow acquisition (.5B) seen as validation of enterprise agent category",
       "60%+ autonomous IT ticket resolution rate frequently cited as benchmark",
-      "Post-acquisition roadmap uncertainty — will Moveworks maintain identity under ServiceNow?",
-      "Pricing opacity criticized — enterprise-only with no self-serve evaluation path"
+      "Post-acquisition roadmap uncertainty \u2014 will Moveworks maintain identity under ServiceNow?",
+      "Pricing opacity criticized \u2014 enterprise-only with no self-serve evaluation path"
     ],
     "metrics": [
       {
@@ -267,29 +267,38 @@
       ]
     }
   },
-  "supportedCUJs": ["it-helpdesk", "customer-support", "workflow-automation"],
+  "supportedCUJs": [
+    "it-helpdesk",
+    "customer-support",
+    "workflow-automation"
+  ],
   "walkthrough": {
     "title": "How Moveworks Works: Autonomous IT Ticket Resolution",
     "steps": [
       {
         "title": "Employee Submits Request via Slack or Teams",
-        "description": "An employee types a natural language request in Slack or Teams — 'I need access to Salesforce' or 'My VPN isn't working.' Moveworks intercepts the message and begins processing."
+        "description": "An employee types a natural language request in Slack or Teams \u2014 'I need access to Salesforce' or 'My VPN isn't working.' Moveworks intercepts the message and begins processing.",
+        "image": "/screenshots/moveworks/step-1.png"
       },
       {
         "title": "Reasoning Engine Classifies and Routes",
-        "description": "The Reasoning Engine uses MoveLM (fine-tuned on hundreds of millions of enterprise interactions) to classify the request, determine intent, and identify which enterprise systems are needed to fulfill it."
+        "description": "The Reasoning Engine uses MoveLM (fine-tuned on hundreds of millions of enterprise interactions) to classify the request, determine intent, and identify which enterprise systems are needed to fulfill it.",
+        "image": "/screenshots/moveworks/step-2.png"
       },
       {
         "title": "Agent Executes Across Enterprise Systems",
-        "description": "The agent connects to 100+ enterprise systems (ServiceNow, Okta, Workday, Jira) to execute the request. For access provisioning, it checks role permissions, creates the ticket, provisions the license, and confirms back to the employee."
+        "description": "The agent connects to 100+ enterprise systems (ServiceNow, Okta, Workday, Jira) to execute the request. For access provisioning, it checks role permissions, creates the ticket, provisions the license, and confirms back to the employee.",
+        "image": "/screenshots/moveworks/step-3.png"
       },
       {
         "title": "Escalation and Human Handoff",
-        "description": "When confidence is below threshold or manager approval is required, the agent routes to the right human with full context. The human sees the agent's reasoning, proposed action, and supporting evidence."
+        "description": "When confidence is below threshold or manager approval is required, the agent routes to the right human with full context. The human sees the agent's reasoning, proposed action, and supporting evidence.",
+        "image": "/screenshots/moveworks/step-4.png"
       },
       {
         "title": "Analytics and Continuous Learning",
-        "description": "Employee Experience Insights dashboard tracks resolution rates (60%+ autonomous), response times, satisfaction scores, and topic trends. Each interaction improves the model for future requests."
+        "description": "Employee Experience Insights dashboard tracks resolution rates (60%+ autonomous), response times, satisfaction scores, and topic trends. Each interaction improves the model for future requests.",
+        "image": "/screenshots/moveworks/step-5.png"
       }
     ]
   },

@@ -29,7 +29,7 @@
   "uxAnalysis": {
     "builderFlow": "Select a template or start from scratch. Visual builder presents a flowchart canvas with trigger, AI, and action nodes. Configure each node via side panel with natural language instructions, variable mappings, and credentials. Test in real-time with sample inputs. Toggle on to deploy instantly. Template to live agent in under 5 minutes.",
     "strengths": [
-      "Fastest time-to-deploy — functional agents in under 2 minutes from templates",
+      "Fastest time-to-deploy \u2014 functional agents in under 2 minutes from templates",
       "Visual builder intuitive for non-technical business users",
       "Natural language configuration removes prompt engineering expertise",
       "3,000+ integrations cover most enterprise stacks",
@@ -38,17 +38,17 @@
       "Live testing creates tight feedback loop"
     ],
     "weaknesses": [
-      "Cloud-only — no self-hosted option",
+      "Cloud-only \u2014 no self-hosted option",
       "Credit-based pricing unpredictable at high volume",
       "No MCP or open tool-use protocol",
       "Limited observability and monitoring",
-      "Opaque LLM reasoning — no chain-of-thought visibility",
+      "Opaque LLM reasoning \u2014 no chain-of-thought visibility",
       "Limited cross-session memory",
       "Basic RBAC compared to enterprise platforms",
       "No open-source components"
     ],
     "notableFeatures": [
-      "Societies of Lindies — multi-agent collaboration and delegation",
+      "Societies of Lindies \u2014 multi-agent collaboration and delegation",
       "AI phone agent for inbound/outbound calls",
       "One-click template deployment",
       "Knowledge base with RAG grounding",
@@ -121,7 +121,7 @@
           {
             "name": "Multi-Agent Coordination",
             "score": 4,
-            "rationale": "Societies of Lindies — agents collaborate, delegate, share context. Strong differentiator."
+            "rationale": "Societies of Lindies \u2014 agents collaborate, delegate, share context. Strong differentiator."
           },
           {
             "name": "Human-in-the-Loop Design",
@@ -223,13 +223,13 @@
       }
     ]
   },
-  "scoringRationale": "Lindy scores 72/100. Builder Experience (15) is standout — best no-code visual builder with templates and NL config. Integration (14) excellent breadth. Collaboration (12) strong with Societies of Lindies. Deployment (11), Governance (10), Ecosystem (10) need maturation for enterprise.",
+  "scoringRationale": "Lindy scores 72/100. Builder Experience (15) is standout \u2014 best no-code visual builder with templates and NL config. Integration (14) excellent breadth. Collaboration (12) strong with Societies of Lindies. Deployment (11), Governance (10), Ecosystem (10) need maturation for enterprise.",
   "competence": "No-Code Agent Builder",
   "targetUser": "Business operators automating support, sales, HR workflows without code",
   "marketIntelligence": {
     "communityBuzz": [
-      "Getting TikTok coverage — @onetechnations showing Lindy Agent automation (675 views)",
-      "Lindy 3.0 Agent Builder praised for vibe-coding approach — describe what you want in English",
+      "Getting TikTok coverage \u2014 @onetechnations showing Lindy Agent automation (675 views)",
+      "Lindy 3.0 Agent Builder praised for vibe-coding approach \u2014 describe what you want in English",
       "Societies of Lindies multi-agent feature generating positive buzz",
       "Credit-based pricing criticized as unpredictable at scale",
       "7,000+ integrations via Pipedream partnership expanding connector breadth"
@@ -262,29 +262,39 @@
       ]
     }
   },
-  "supportedCUJs": ["workflow-automation", "customer-support", "sales-outreach", "it-helpdesk"],
+  "supportedCUJs": [
+    "workflow-automation",
+    "customer-support",
+    "sales-outreach",
+    "it-helpdesk"
+  ],
   "walkthrough": {
     "title": "How Lindy.ai Works: Create an AI Employee in Minutes",
     "steps": [
       {
         "title": "Choose a Template or Start from Scratch",
-        "description": "Browse 50+ pre-built templates for customer support, recruiting, sales, scheduling, and operations. Or describe your agent's purpose in plain English to start from scratch."
+        "description": "Browse 50+ pre-built templates for customer support, recruiting, sales, scheduling, and operations. Or describe your agent's purpose in plain English to start from scratch.",
+        "image": "/screenshots/lindy-ai/step-1.png"
       },
       {
         "title": "Configure the Workflow Visually",
-        "description": "Use the drag-and-drop flowchart canvas to build your agent's logic. Add trigger nodes (email, Slack, webhook, schedule), AI reasoning nodes, and action nodes. Configure each via a side panel with natural language instructions."
+        "description": "Use the drag-and-drop flowchart canvas to build your agent's logic. Add trigger nodes (email, Slack, webhook, schedule), AI reasoning nodes, and action nodes. Configure each via a side panel with natural language instructions.",
+        "image": "/screenshots/lindy-ai/step-2.png"
       },
       {
         "title": "Connect Integrations",
-        "description": "Wire up 3,000+ integrations including Salesforce, HubSpot, Gmail, Slack, Zoom, and Notion. Each integration provides read/write actions your agent can use in its workflow."
+        "description": "Wire up 3,000+ integrations including Salesforce, HubSpot, Gmail, Slack, Zoom, and Notion. Each integration provides read/write actions your agent can use in its workflow.",
+        "image": "/screenshots/lindy-ai/step-3.png"
       },
       {
         "title": "Test with Live Data",
-        "description": "Run your agent with sample inputs directly in the builder. See real-time execution traces showing which nodes fired, what the AI decided, and what actions were taken. Iterate until the workflow handles edge cases correctly."
+        "description": "Run your agent with sample inputs directly in the builder. See real-time execution traces showing which nodes fired, what the AI decided, and what actions were taken. Iterate until the workflow handles edge cases correctly.",
+        "image": "/screenshots/lindy-ai/step-4.png"
       },
       {
         "title": "Deploy and Orchestrate Societies",
-        "description": "Toggle your agent on to deploy instantly. Create 'Societies of Lindies' where multiple agents collaborate — one handles triage, another drafts responses, a third escalates to humans. Monitor execution logs and credit usage from the dashboard."
+        "description": "Toggle your agent on to deploy instantly. Create 'Societies of Lindies' where multiple agents collaborate \u2014 one handles triage, another drafts responses, a third escalates to humans. Monitor execution logs and credit usage from the dashboard.",
+        "image": "/screenshots/lindy-ai/step-5.png"
       }
     ]
   },

@@ -2,7 +2,7 @@
   "name": "Amazon Bedrock AgentCore",
   "slug": "bedrock-agentcore",
   "category": "enterprise",
-  "description": "AWS's fully managed infrastructure service for building, deploying, and scaling AI agents in production. Provides enterprise-grade runtime including identity management, memory, code execution, tool orchestration, guardrails, and observability — all integrated within the AWS ecosystem.",
+  "description": "AWS's fully managed infrastructure service for building, deploying, and scaling AI agents in production. Provides enterprise-grade runtime including identity management, memory, code execution, tool orchestration, guardrails, and observability \u2014 all integrated within the AWS ecosystem.",
   "oneLiner": "AWS's managed infrastructure layer for deploying, scaling, and governing production AI agents across the enterprise.",
   "founded": "2023",
   "funding": "AWS (Amazon subsidiary)",
@@ -11,22 +11,22 @@
   "screenshots": [
     {
       "path": "/screenshots/bedrock-agentcore/agent-builder.png",
-      "alt": "AWS Bedrock — agent builder console with name, model, and instruction setup",
+      "alt": "AWS Bedrock \u2014 agent builder console with name, model, and instruction setup",
       "screen": "agent-builder"
     },
     {
       "path": "/screenshots/bedrock-agentcore/model-instructions.png",
-      "alt": "AWS Bedrock — model selection and agent instructions configuration",
+      "alt": "AWS Bedrock \u2014 model selection and agent instructions configuration",
       "screen": "model-config"
     },
     {
       "path": "/screenshots/bedrock-agentcore/guardrails-config.png",
-      "alt": "AWS Bedrock — guardrails configuration with denied topics setup",
+      "alt": "AWS Bedrock \u2014 guardrails configuration with denied topics setup",
       "screen": "guardrails"
     },
     {
       "path": "/screenshots/bedrock-agentcore/knowledge-base.png",
-      "alt": "AWS Bedrock — knowledge base S3 data source configuration",
+      "alt": "AWS Bedrock \u2014 knowledge base S3 data source configuration",
       "screen": "knowledge-base"
     }
   ],
@@ -61,10 +61,10 @@
       "Configurable guardrails (content, PII, grounding)"
     ],
     "weaknesses": [
-      "Form-driven builder UX — no visual workflow editor for agents",
+      "Form-driven builder UX \u2014 no visual workflow editor for agents",
       "Limited agent templates",
       "Multi-agent collaboration is new and hierarchical-only",
-      "No MCP protocol support — AWS-proprietary tool-use",
+      "No MCP protocol support \u2014 AWS-proprietary tool-use",
       "HITL is API-only with no approval UI",
       "Complex pricing hard to predict",
       "Strong vendor lock-in to AWS",
@@ -252,16 +252,16 @@
       }
     ]
   },
-  "scoringRationale": "Bedrock scores 78/100. Polarized profile: Deployment (22) and Governance (22) are near-best-in-class. Ecosystem (19) strong via AWS stability and enterprise base. Integration (20) deep within AWS. Builder Experience (12) and Collaboration (13) are weak — form-heavy UX and nascent multi-agent support.",
+  "scoringRationale": "Bedrock scores 78/100. Polarized profile: Deployment (22) and Governance (22) are near-best-in-class. Ecosystem (19) strong via AWS stability and enterprise base. Integration (20) deep within AWS. Builder Experience (12) and Collaboration (13) are weak \u2014 form-heavy UX and nascent multi-agent support.",
   "competence": "Enterprise Agent Infrastructure",
   "targetUser": "Enterprise teams deploying governed agents on AWS",
   "marketIntelligence": {
     "communityBuzz": [
       "Gartner predicts 40% of enterprise apps will embed AI agents by end of 2026",
       "AWS ecosystem integration is unmatched but vendor lock-in concerns persist",
-      "Builder UX criticized as form-heavy — developers want visual graph editors not console wizards",
+      "Builder UX criticized as form-heavy \u2014 developers want visual graph editors not console wizards",
       "Guardrails feature praised as most mature in the enterprise space",
-      "Multi-agent collaboration is new and hierarchical-only — trailing open-source frameworks"
+      "Multi-agent collaboration is new and hierarchical-only \u2014 trailing open-source frameworks"
     ],
     "metrics": [
       {
@@ -291,27 +291,32 @@
       "valuation": "Part of $2T+ Amazon"
     }
   },
-  "supportedCUJs": ["workflow-automation", "customer-support", "it-helpdesk", "security-monitoring"],
+  "supportedCUJs": [
+    "workflow-automation",
+    "customer-support",
+    "it-helpdesk",
+    "security-monitoring"
+  ],
   "walkthrough": {
     "title": "How Bedrock AgentCore Works: Enterprise Agent Deployment on AWS",
     "steps": [
       {
-        "image": "/screenshots/bedrock-agentcore/agent-builder.png",
+        "image": "/screenshots/bedrock-agentcore/step-1.png",
         "title": "Create Your Agent",
         "description": "Use the AWS Console wizard to name your agent, provide natural language instructions, and define its purpose. Select from multiple foundation models."
       },
       {
-        "image": "/screenshots/bedrock-agentcore/model-instructions.png",
+        "image": "/screenshots/bedrock-agentcore/step-2.png",
         "title": "Configure Model & Instructions",
         "description": "Choose your foundation model (Claude, Llama, Titan, Mistral), write agent instructions, and configure action groups with OpenAPI schemas or Lambda functions."
       },
       {
-        "image": "/screenshots/bedrock-agentcore/guardrails-config.png",
+        "image": "/screenshots/bedrock-agentcore/step-3.png",
         "title": "Set Up Guardrails",
         "description": "Configure content filtering, PII redaction, and denied topic policies. Guardrails evaluate agent inputs and outputs in real-time to prevent unsafe behavior."
       },
       {
-        "image": "/screenshots/bedrock-agentcore/knowledge-base.png",
+        "image": "/screenshots/bedrock-agentcore/step-4.png",
         "title": "Connect Knowledge Bases",
         "description": "Attach S3 data sources, configure chunking and embedding models, and create a managed RAG pipeline that grounds your agent in enterprise data."
       }
