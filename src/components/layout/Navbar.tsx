@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { href: "/", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/matrix", label: "Matrix", icon: Grid3X3 },
   { href: "/companies", label: "Companies", icon: Building2 },
   { href: "/frameworks/pact", label: "WACT 4.0", icon: Layers },
@@ -25,8 +25,12 @@ const navItems = [
   { href: "/refresh", label: "Refresh", icon: RefreshCw },
 ];
 
+const PUBLIC_PATHS = ["/", "/login"];
+
 export default function Navbar() {
   const pathname = usePathname();
+
+  if (PUBLIC_PATHS.includes(pathname)) return null;
 
   return (
     <nav
@@ -43,7 +47,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link
-            href="/"
+            href="/dashboard"
             className="flex items-center gap-2.5 flex-shrink-0"
             style={{ textDecoration: "none" }}
           >
@@ -73,7 +77,7 @@ export default function Navbar() {
             {navItems.map((item) => {
               const isActive =
                 pathname === item.href ||
-                (item.href !== "/" && pathname.startsWith(item.href));
+                (item.href !== "/dashboard" && pathname.startsWith(item.href));
               const Icon = item.icon;
 
               return (
