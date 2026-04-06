@@ -200,7 +200,7 @@
       }
     ]
   },
-  "scoringRationale": "Netcracker scores 72/100. Ecosystem (19) and Deployment (17) and Governance (17) are strengths \u2014 carrier-grade with NEC backing. Integration (16) deep within telecom. Builder (13) and Collaboration (10) limited by enterprise telecom UX patterns.",
+  "scoringRationale": "Netcracker scores 72/100. Ecosystem (19) and Deployment (17) and Governance (17) are strengths — carrier-grade with NEC backing. Integration (16) deep within telecom. Builder (13) and Collaboration (10) limited by enterprise telecom UX patterns.",
   "competence": "Industry-Specific Agent Platform (Telecom)",
   "targetUser": "Telecom operators automating BSS/OSS with governed AI agents",
   "marketIntelligence": {
@@ -232,31 +232,31 @@
     "workflow-automation"
   ],
   "walkthrough": {
-    "title": "How Netcracker Works: AI-Powered Telecom Operations",
+    "title": "Telecom Customer Complaint Resolution with AI Agents",
     "steps": [
       {
         "title": "Configure AI Agents Within BSS/OSS",
-        "description": "Deploy AI agents within Netcracker's telecom-specific BSS/OSS platform. Select from pre-built templates aligned to TMF/eTOM standards for billing, provisioning, fault management, and customer care.",
+        "description": "Deploy Netcracker's AI agents within your existing telecom stack — CRM, billing, network management, and order systems. Agents are pre-trained on telecom-specific ontologies and workflows, with deep integration into Netcracker's Digital BSS/OSS suite.",
         "image": "/screenshots/netcracker/step-1.png"
       },
       {
-        "title": "Agent Handles Customer Complaints",
-        "description": "When a customer contacts support, the AI agent accesses their complete service history, billing records, and network status. It diagnoses issues (billing disputes, service outages, plan changes) and resolves autonomously or routes to specialists.",
+        "title": "Agent Handles Incoming Customer Complaint",
+        "description": "A customer reports billing discrepancies and network drops. The AI agent analyzes the complaint, cross-references billing records in the CRM, checks network fault logs in the OSS, and identifies a provisioning error as the root cause.",
         "image": "/screenshots/netcracker/step-2.png"
       },
       {
-        "title": "Network Fault Diagnosis",
-        "description": "AI agents monitor network telemetry, detect faults, and correlate alarms across the infrastructure. Predictive maintenance models forecast equipment failures before they cause outages, enabling proactive intervention.",
+        "title": "Network Fault Diagnosis and Resolution",
+        "description": "For network-related issues, the agent queries network monitoring systems, runs diagnostic checks, and correlates symptoms with known fault patterns. It identifies affected infrastructure and initiates remediation — adjusting configurations or dispatching a fix.",
         "image": "/screenshots/netcracker/step-3.png"
       },
       {
         "title": "Governed Automation with Audit Trails",
-        "description": "Every agent action is logged with full audit trails for regulatory compliance. HITL approval gates protect high-value operations (billing adjustments, service provisioning). Regulatory guardrails enforce telecom-specific rules.",
+        "description": "Every agent action is logged with full audit trails for regulatory compliance. Configurable governance rules control what agents can do autonomously vs. what requires human approval. SOX and telecom regulatory requirements are built in.",
         "image": "/screenshots/netcracker/step-4.png"
       },
       {
         "title": "Revenue Assurance and Fraud Detection",
-        "description": "AI agents monitor billing streams for revenue leakage, detect SIM swap fraud and subscription abuse, and flag anomalous usage patterns. Automated remediation reduces fraud losses while maintaining subscriber trust.",
+        "description": "AI agents continuously monitor billing streams for revenue leakage, usage anomalies, and fraud patterns. When discrepancies are found, agents auto-correct billing errors and flag suspicious activity for investigation.",
         "image": "/screenshots/netcracker/step-5.png"
       }
     ]

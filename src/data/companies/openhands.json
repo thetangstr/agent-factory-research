@@ -28,15 +28,15 @@
   "uxAnalysis": {
     "builderFlow": "Chat-based interface where users describe tasks or point to GitHub issue URLs. Agent reads the issue, plans an approach, writes code, runs tests, and opens a PR. Planning Mode (beta) adds a structured approval step before execution. Self-hosted via Docker or managed via OpenHands Cloud.",
     "strengths": [
-      "70K+ GitHub stars \u2014 one of the most popular AI coding agents",
+      "70K+ GitHub stars — one of the most popular AI coding agents",
       "Top SWE-bench performer for autonomous issue resolution",
       "Strong Docker sandboxing for safe code execution",
-      "Model-agnostic \u2014 works with any LLM via OpenRouter",
+      "Model-agnostic — works with any LLM via OpenRouter",
       "MIT licensed with active academic and industry community",
-      "Natural GitHub workflow \u2014 issues in, PRs out"
+      "Natural GitHub workflow — issues in, PRs out"
     ],
     "weaknesses": [
-      "Single-agent, code-only \u2014 not a general enterprise agent platform",
+      "Single-agent, code-only — not a general enterprise agent platform",
       "No multi-agent orchestration",
       "No enterprise system integrations (CRM, ERP, etc.)",
       "No governance, compliance, or team features",
@@ -44,7 +44,7 @@
       "No built-in monitoring or cost management"
     ],
     "notableFeatures": [
-      "Planning Mode beta \u2014 structured plan-then-execute with approval",
+      "Planning Mode beta — structured plan-then-execute with approval",
       "End-to-end GitHub issue to PR workflow",
       "Docker sandboxed execution environment",
       "Kubernetes support (v1.6.0)",
@@ -148,7 +148,7 @@
           {
             "name": "Native Connectors",
             "score": 5,
-            "rationale": "Deep GitHub integration \u2014 reads issues, creates branches, opens PRs. Core workflow."
+            "rationale": "Deep GitHub integration — reads issues, creates branches, opens PRs. Core workflow."
           },
           {
             "name": "API & Protocol Standards",
@@ -223,7 +223,7 @@
       }
     ]
   },
-  "scoringRationale": "OpenHands scores 52/100. Builder Experience (12) natural chat interaction but limited customization. Deployment (10) Docker/K8s but no scaling. Integration (10) deep GitHub but narrow beyond code. Governance (9) strong sandboxing but no enterprise features. Collaboration (5) and Ecosystem (6) weakest \u2014 single-agent developer tool.",
+  "scoringRationale": "OpenHands scores 52/100. Builder Experience (12) natural chat interaction but limited customization. Deployment (10) Docker/K8s but no scaling. Integration (10) deep GitHub but narrow beyond code. Governance (9) strong sandboxing but no enterprise features. Collaboration (5) and Ecosystem (6) weakest — single-agent developer tool.",
   "competence": "Autonomous Coding Agent",
   "targetUser": "Developers wanting AI to resolve GitHub issues and write code",
   "marketIntelligence": {
@@ -254,31 +254,31 @@
     "code-development"
   ],
   "walkthrough": {
-    "title": "How OpenHands Works: AI Software Engineer from Issue to PR",
+    "title": "From GitHub Issue to Merged Pull Request",
     "steps": [
       {
-        "title": "Describe the Task or Point to an Issue",
-        "description": "In the chat interface, describe what you want built or paste a GitHub issue URL. OpenHands reads the issue, explores the codebase, and understands the context. Planning Mode (beta) shows you its approach before it starts coding.",
+        "title": "Point to a GitHub Issue",
+        "description": "Share a GitHub issue URL or describe a bug in natural language: 'The CSV export is missing the timestamp column.' OpenHands reads the issue, explores the repository structure, and identifies the relevant source files.",
         "image": "/screenshots/openhands/step-1.png"
       },
       {
-        "title": "Agent Plans and Writes Code",
-        "description": "The agent creates a plan, then writes code in a sandboxed Docker environment. It navigates the file system, reads existing code for context, and generates new code that fits the project's patterns and conventions.",
+        "title": "Agent Plans and Writes the Fix",
+        "description": "OpenHands creates an implementation plan, then writes the code — modifying the CSV export function to include timestamps, updating the column header mapping, and adjusting the data serialization. It uses a sandboxed environment with full terminal access.",
         "image": "/screenshots/openhands/step-2.png"
       },
       {
-        "title": "Run Tests and Iterate",
-        "description": "OpenHands executes terminal commands to run tests, lint checks, and builds. When tests fail, it reads the error output, diagnoses the issue, and iterates on the code until tests pass.",
+        "title": "Runs Tests and Iterates",
+        "description": "The agent runs the existing test suite to verify nothing breaks, then writes new tests for the timestamp column feature. If tests fail, it reads the error output, diagnoses the issue, and fixes the code automatically — repeating until green.",
         "image": "/screenshots/openhands/step-3.png"
       },
       {
-        "title": "Open a Pull Request",
-        "description": "Once the implementation is complete and tests pass, the agent creates a GitHub PR with a descriptive title, detailed description of changes, and test results. All changes are contained in the sandboxed environment.",
+        "title": "Opens a Pull Request",
+        "description": "OpenHands creates a branch, commits the changes with a descriptive message, and opens a PR linking back to the original issue. The PR includes a summary of changes, test results, and the reasoning behind implementation decisions.",
         "image": "/screenshots/openhands/step-4.png"
       },
       {
-        "title": "Review and Collaborate",
-        "description": "Review the PR in your normal workflow. Ask OpenHands follow-up questions or request changes via the chat interface. The agent iterates based on review feedback. Self-host via Docker or use OpenHands Cloud for managed access.",
+        "title": "Responds to Review Feedback",
+        "description": "When reviewers leave comments — 'Can you use ISO 8601 format for the timestamp?' — OpenHands reads the feedback, makes the requested changes, and pushes updated commits. It participates in the review cycle like a team member.",
         "image": "/screenshots/openhands/step-5.png"
       }
     ]

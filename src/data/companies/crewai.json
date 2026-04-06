@@ -14,27 +14,27 @@
   "screenshots": [
     {
       "path": "/screenshots/crewai/studio-overview.png",
-      "alt": "CrewAI Studio \u2014 visual crew builder overview with agent configuration",
+      "alt": "CrewAI Studio — visual crew builder overview with agent configuration",
       "screen": "studio-overview"
     },
     {
       "path": "/screenshots/crewai/studio-canvas.png",
-      "alt": "CrewAI Studio \u2014 drag-and-drop visual canvas for crew orchestration",
+      "alt": "CrewAI Studio — drag-and-drop visual canvas for crew orchestration",
       "screen": "visual-canvas"
     },
     {
       "path": "/screenshots/crewai/studio-execution.png",
-      "alt": "CrewAI Studio \u2014 crew execution view with agent activity monitoring",
+      "alt": "CrewAI Studio — crew execution view with agent activity monitoring",
       "screen": "execution-view"
     },
     {
       "path": "/screenshots/crewai/studio-prompt.png",
-      "alt": "CrewAI Studio \u2014 AI-assisted prompt builder for agent configuration",
+      "alt": "CrewAI Studio — AI-assisted prompt builder for agent configuration",
       "screen": "prompt-builder"
     },
     {
       "path": "/screenshots/crewai/agent-factory.png",
-      "alt": "CrewAI Studio v2 \u2014 agent factory with drag-and-drop tools and tasks",
+      "alt": "CrewAI Studio v2 — agent factory with drag-and-drop tools and tasks",
       "screen": "agent-factory"
     }
   ],
@@ -57,7 +57,7 @@
   "uxAnalysis": {
     "builderFlow": "Code-first Python approach. Agents defined with role/goal/backstory/tools. Tasks have descriptions and expected outputs. Crew ties agents and tasks with a process type. YAML config externalizes settings. CLI scaffolds projects. CrewAI+ adds visual drag-and-drop builder.",
     "strengths": [
-      "Intuitive API \u2014 basic crew in under 20 lines of Python",
+      "Intuitive API — basic crew in under 20 lines of Python",
       "Role-based paradigm maps naturally to division of labor",
       "YAML configs allow non-code iteration",
       "Broad LLM provider support via LiteLLM",
@@ -75,7 +75,7 @@
     ],
     "notableFeatures": [
       "Hierarchical process with automatic manager agent",
-      "Agent delegation \u2014 agents autonomously delegate subtasks",
+      "Agent delegation — agents autonomously delegate subtasks",
       "YAML-based GitOps-friendly crew configuration",
       "Multi-LLM crews with different models per agent",
       "Flows orchestration primitive for event-driven execution"
@@ -86,7 +86,7 @@
     "2025 Q1: CrewAI Enterprise rebranded to CrewAI+ with visual builder",
     "2024 Q4: Raised $18M Series A led by Insight Partners",
     "2024 Q3: Launched CrewAI Enterprise platform",
-    "2024 Q3: Introduced Flows \u2014 event-driven crew execution",
+    "2024 Q3: Introduced Flows — event-driven crew execution",
     "2024 Q2: Reached 15K+ GitHub stars, 50K+ Discord members"
   ],
   "lastResearched": "2026-04-04",
@@ -146,7 +146,7 @@
           {
             "name": "Multi-Agent Coordination",
             "score": 4,
-            "rationale": "Core strength \u2014 sequential, hierarchical, delegation patterns."
+            "rationale": "Core strength — sequential, hierarchical, delegation patterns."
           },
           {
             "name": "Human-in-the-Loop Design",
@@ -248,12 +248,12 @@
       }
     ]
   },
-  "scoringRationale": "CrewAI scores 62/100. Builder Experience (12) is a standout \u2014 intuitive API and YAML configs. Integration Depth (13) is strongest with broad connector and LLM support. Governance (8) and Ecosystem maturity (8) are weakest \u2014 enterprise features still maturing.",
+  "scoringRationale": "CrewAI scores 62/100. Builder Experience (12) is a standout — intuitive API and YAML configs. Integration Depth (13) is strongest with broad connector and LLM support. Governance (8) and Ecosystem maturity (8) are weakest — enterprise features still maturing.",
   "competence": "Multi-Agent Orchestration Framework",
   "targetUser": "Developers building role-based agent teams",
   "marketIntelligence": {
     "communityBuzz": [
-      "Wins on accessibility \u2014 lowest barrier to entry per community consensus",
+      "Wins on accessibility — lowest barrier to entry per community consensus",
       "Role-based metaphor resonates with non-ML engineers and business teams",
       "CrewAI+ visual builder generating positive early feedback",
       "API breaking changes between versions frustrate production users",
@@ -297,32 +297,32 @@
     "sales-outreach"
   ],
   "walkthrough": {
-    "title": "How CrewAI Works: Build an Agent Crew in Minutes",
+    "title": "Sales Prospect Research with a CrewAI Agent Team",
     "steps": [
       {
-        "image": "/screenshots/crewai/step-1.png",
-        "title": "Define Your Agents",
-        "description": "Create agents with specific roles, goals, and backstories. Each agent gets tools and an LLM model. CrewAI Studio lets you do this visually or via YAML."
+        "title": "Define Specialized Agent Roles",
+        "description": "Create a crew of agents — a Researcher to gather prospect data, an Analyst to evaluate fit against ICP criteria, and a Writer to draft personalized outreach. Each agent has role-specific instructions and tools.",
+        "image": "/screenshots/crewai/studio-canvas.png"
       },
       {
-        "image": "/screenshots/crewai/step-2.png",
-        "title": "Orchestrate the Crew",
-        "description": "Connect agents into a crew using the drag-and-drop canvas. Define tasks, set process type (sequential or hierarchical), and configure delegation patterns."
+        "title": "Orchestrate the Research Pipeline",
+        "description": "Configure the crew's workflow: the Researcher scrapes LinkedIn, Crunchbase, and news; the Analyst scores leads using BANT criteria; the Writer generates tailored emails. Tasks flow sequentially with shared context.",
+        "image": "/screenshots/crewai/studio-execution.png"
       },
       {
-        "image": "/screenshots/crewai/step-3.png",
-        "title": "Execute & Monitor",
-        "description": "Run your crew and watch agents collaborate in real-time. Monitor execution progress, view intermediate outputs, and track token usage across the workflow."
+        "title": "Execute and Monitor in CrewAI Studio",
+        "description": "Launch the crew in Studio's visual interface. Watch each agent's reasoning in real-time, inspect tool calls, and see how context passes between agents. Track token usage and execution time per task.",
+        "image": "/screenshots/crewai/studio-overview.png"
       },
       {
-        "image": "/screenshots/crewai/step-4.png",
-        "title": "Iterate with AI-Assisted Prompts",
-        "description": "Use the built-in AI assistant to refine agent prompts and task descriptions. Test different configurations and compare outputs across runs."
+        "title": "Review and Iterate with AI-Assisted Prompts",
+        "description": "Review the research output — prospect profiles, scoring rationale, and draft emails. Use Studio's AI prompt assistant to refine agent instructions and re-run specific tasks without restarting the entire crew.",
+        "image": "/screenshots/crewai/studio-prompt.png"
       },
       {
-        "image": "/screenshots/crewai/step-5.png",
         "title": "Scale with the Agent Factory",
-        "description": "CrewAI Studio v2 provides a full agent factory: manage agent repositories, assign tools and integrations, and deploy crews to production with one click."
+        "description": "Once the crew is validated, deploy it as a reusable template in CrewAI's Agent Factory. Run it against new prospect lists on a schedule, monitor outcomes, and continuously improve agent performance.",
+        "image": "/screenshots/crewai/agent-factory.png"
       }
     ]
   },

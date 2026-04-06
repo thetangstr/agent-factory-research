@@ -28,7 +28,7 @@
     "File processing (PDF, CSV, DOCX)"
   ],
   "uxAnalysis": {
-    "builderFlow": "Web-based admin UI: (1) Connect datasources \u2014 select type, configure connection, set embedding/chunking. (2) Create agent \u2014 name, model, prompt, attach datasources/tools. (3) Optionally create crew with multiple agents. (4) Chat via built-in interface. Functional but admin-panel aesthetic.",
+    "builderFlow": "Web-based admin UI: (1) Connect datasources — select type, configure connection, set embedding/chunking. (2) Create agent — name, model, prompt, attach datasources/tools. (3) Optionally create crew with multiple agents. (4) Chat via built-in interface. Functional but admin-panel aesthetic.",
     "strengths": [
       "Data-first: datasource config is first-class, not afterthought",
       "Low RAG barrier: connect data and chat in minutes without code",
@@ -224,31 +224,31 @@
     "workflow-automation"
   ],
   "walkthrough": {
-    "title": "How Agent Cloud Works: Build RAG-First Data Agents",
+    "title": "Building a Data Extraction Pipeline with Agent Cloud",
     "steps": [
       {
-        "title": "Connect Your Data Sources",
-        "description": "Start by connecting your data: PostgreSQL, MySQL, MongoDB, S3, Google Cloud Storage, or any of 300+ sources via Airbyte. Agent Cloud's data-first architecture means every agent is grounded in your real data from the start.",
+        "title": "Connect Enterprise Data Sources",
+        "description": "Link your databases, APIs, and document stores to Agent Cloud. Configure connectors for PostgreSQL, BigQuery, S3, or custom APIs. The platform handles authentication, schema discovery, and connection pooling.",
         "image": "/screenshots/agent-cloud/step-1.png"
       },
       {
-        "title": "Configure Embedding and Vectorization",
-        "description": "Choose embedding models, configure chunking strategies, and set up the Qdrant vector database. Documents are automatically processed, chunked, and indexed for semantic retrieval.",
+        "title": "Configure RAG with Embedding Models",
+        "description": "Select your embedding model and chunking strategy. Agent Cloud vectorizes your documents and stores them in its built-in vector database, creating a searchable knowledge layer your agents can query in real-time.",
         "image": "/screenshots/agent-cloud/step-2.png"
       },
       {
-        "title": "Build Agents in the Web UI",
-        "description": "Use the visual web interface to create agents. Select LLM providers (OpenAI, Anthropic, Google, Ollama for local models), assign tools, connect knowledge bases, and configure agent behavior.",
+        "title": "Build Extraction Agents in the Web UI",
+        "description": "Define agents with specific extraction goals — pull financial metrics from earnings reports, extract product specs from catalogs, or summarize customer feedback. Assign tools, models, and output schemas to each agent.",
         "image": "/screenshots/agent-cloud/step-3.png"
       },
       {
         "title": "Orchestrate Multi-Agent Crews",
-        "description": "Compose agents into multi-agent crews using the built-in CrewAI integration. Define roles, assign tasks, and configure communication patterns between agents.",
+        "description": "Compose agents into crews using CrewAI integration. A research agent finds sources, an extraction agent pulls structured data, and a validation agent checks accuracy. Run pipelines on schedule or via webhook triggers.",
         "image": "/screenshots/agent-cloud/step-4.png"
       },
       {
         "title": "Deploy Self-Hosted or Cloud",
-        "description": "Deploy via Docker Compose for self-hosted environments or use Agent Cloud's managed SaaS. Chat with your agents through the web interface, iterate on configurations, and monitor performance.",
+        "description": "Run your extraction pipeline on Agent Cloud's managed infrastructure or deploy self-hosted with Docker. Monitor agent performance, review extracted data quality, and iterate on agent instructions.",
         "image": "/screenshots/agent-cloud/step-5.png"
       }
     ]

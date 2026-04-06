@@ -243,31 +243,31 @@
     "data-extraction"
   ],
   "walkthrough": {
-    "title": "How Reworkd Works: AI-Powered Web Data Extraction",
+    "title": "Structured Data Extraction from Product Catalogs",
     "steps": [
       {
         "title": "Define Your Data Schema",
-        "description": "Describe the data you want to extract in natural language \u2014 e.g., 'company name, CEO, funding amount, headquarters city.' Reworkd converts this into a structured extraction schema.",
+        "description": "Specify what data you need extracted — product name, SKU, price, description, specifications, availability. Reworkd's schema builder lets you define the exact output structure with field types, validation rules, and required/optional flags.",
         "image": "/screenshots/reworkd/step-1.png"
       },
       {
-        "title": "Provide Target URLs",
-        "description": "Enter the URLs or domains you want to scrape. The agent handles dynamic JavaScript rendering, pagination, and anti-bot detection automatically.",
+        "title": "Provide Target URLs or Upload Pages",
+        "description": "Point Reworkd at product catalog URLs, or upload HTML pages directly. The platform handles pagination, infinite scroll, and dynamic content loading — no need to reverse-engineer JavaScript-rendered pages.",
         "image": "/screenshots/reworkd/step-2.png"
       },
       {
         "title": "Tarsier Vision Model Processes Pages",
-        "description": "The Tarsier vision-language library converts page screenshots into tagged text that LLMs can reason about. This enables extraction from complex layouts, charts, and dynamic content that traditional scrapers miss.",
+        "description": "Reworkd's Tarsier vision-language model reads pages like a human — understanding visual layout, table structures, and contextual relationships between elements. It extracts data even from non-standard layouts that traditional scrapers miss.",
         "image": "/screenshots/reworkd/step-3.png"
       },
       {
-        "title": "Review Extracted Data",
-        "description": "Preview extracted records in a structured table. Verify accuracy, adjust schema definitions, and re-run problem pages. The agent learns from corrections to improve subsequent extractions.",
+        "title": "Review and Validate Extracted Data",
+        "description": "Preview extracted data in a spreadsheet-like interface. Flag incorrect entries, and Reworkd learns from corrections to improve accuracy on subsequent pages. Confidence scores highlight fields that may need human review.",
         "image": "/screenshots/reworkd/step-4.png"
       },
       {
         "title": "Export and Integrate",
-        "description": "Export structured data as CSV or JSON. Use the REST API for programmatic job management and recurring extraction schedules.",
+        "description": "Export clean, structured data as CSV, JSON, or push directly to your database via API. Schedule recurring extractions to keep your product data current. Monitor extraction accuracy and volume over time.",
         "image": "/screenshots/reworkd/step-5.png"
       }
     ]

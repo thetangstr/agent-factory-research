@@ -7,7 +7,7 @@
   "oneLiner": "Autonomous AI agent that keeps codebases healthy by generating PRs for dependency updates, security patches, and doc maintenance.",
   "founded": "2023",
   "funding": "Seed stage; exact amount undisclosed",
-  "pricing": "Freemium \u2014 free for public repos; paid plans for private repos/teams; Enterprise custom pricing",
+  "pricing": "Freemium — free for public repos; paid plans for private repos/teams; Enterprise custom pricing",
   "website": "https://devra.ai",
   "screenshots": [],
   "capabilities": [
@@ -23,16 +23,16 @@
     "Configurable ignore lists and update policies"
   ],
   "uxAnalysis": {
-    "builderFlow": "Lightweight GitHub/GitLab app install: authorize, select repos, optionally configure YAML for custom policies. No visual builder \u2014 purpose-built for code maintenance. Agent runs autonomously, surfacing work through PRs in existing developer workflow.",
+    "builderFlow": "Lightweight GitHub/GitLab app install: authorize, select repos, optionally configure YAML for custom policies. No visual builder — purpose-built for code maintenance. Agent runs autonomously, surfacing work through PRs in existing developer workflow.",
     "strengths": [
-      "Extremely low friction onboarding \u2014 install app and agent starts working",
+      "Extremely low friction onboarding — install app and agent starts working",
       "Fits seamlessly into existing PR-based developer workflows",
       "AI-powered doc updates go beyond traditional dependency bots",
       "Natural HITL via standard code review",
       "No context switching for developers"
     ],
     "weaknesses": [
-      "Narrow scope \u2014 only dependency/doc maintenance, not general-purpose",
+      "Narrow scope — only dependency/doc maintenance, not general-purpose",
       "No visual builder or drag-and-drop",
       "Competes against free tools (Dependabot, Renovate)",
       "Early-stage with unclear long-term viability",
@@ -208,31 +208,31 @@
     "security-monitoring"
   ],
   "walkthrough": {
-    "title": "How Devra Works: Autonomous Code Maintenance",
+    "title": "Automated Code Fix: Issue to Pull Request",
     "steps": [
       {
         "title": "Install the GitHub/GitLab App",
-        "description": "Authorize Devra and select which repositories to monitor. No configuration file required \u2014 the agent starts scanning immediately with sensible defaults. Optionally add a YAML config for custom policies.",
+        "description": "Connect Devra to your repository with a one-click app install. Devra gets read access to your codebase and issues, and write access to create branches and pull requests. No code changes to your repo required.",
         "image": "/screenshots/devra/step-1.png"
       },
       {
-        "title": "Agent Scans for Issues",
-        "description": "Devra continuously monitors your repos for outdated dependencies, known security vulnerabilities (CVEs), and documentation that has drifted from the code. Unlike Dependabot, it uses LLM-powered code understanding to assess impact.",
+        "title": "Agent Scans for Security Vulnerabilities",
+        "description": "Devra continuously monitors your codebase for security issues, deprecated dependencies, and code quality problems. It understands your codebase context — not just syntax patterns, but architectural intent and data flow.",
         "image": "/screenshots/devra/step-2.png"
       },
       {
-        "title": "AI Generates Pull Requests",
-        "description": "For each issue found, Devra generates a complete PR with code changes, dependency bumps, and migration notes. For major version upgrades, it detects breaking changes and updates affected code paths.",
+        "title": "AI Generates Fix Pull Requests",
+        "description": "When Devra identifies an issue, it generates a targeted fix — a new branch with minimal, focused changes. The PR includes a clear description of the problem, the fix rationale, and any test updates needed.",
         "image": "/screenshots/devra/step-3.png"
       },
       {
         "title": "Review in Your Existing Workflow",
-        "description": "PRs appear in your normal review queue with clear descriptions, changelog summaries, and CI/CD pipeline results. Review, comment, request changes, or merge \u2014 all through your existing Git workflow.",
+        "description": "The PR appears in your normal GitHub/GitLab review flow. Your team reviews the diff, runs CI, and merges just like any human-authored PR. Devra responds to review comments and iterates on the fix.",
         "image": "/screenshots/devra/step-4.png"
       },
       {
         "title": "Configure Policies and Schedules",
-        "description": "Customize scan frequency, ignore lists, auto-merge rules for patch updates, and notification preferences. Set policies per-repo or organization-wide. Track maintenance health over time.",
+        "description": "Set rules for what Devra should fix autonomously vs. flag for review. Schedule scans for off-hours, define severity thresholds for auto-PR creation, and exclude files or directories from scanning.",
         "image": "/screenshots/devra/step-5.png"
       }
     ]

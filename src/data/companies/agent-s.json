@@ -29,13 +29,13 @@
     "strengths": [
       "Novel hierarchical planning advances GUI agent capabilities",
       "State-of-the-art OSWorld benchmark (~34.5%)",
-      "Works with any desktop app \u2014 no app-specific integration",
+      "Works with any desktop app — no app-specific integration",
       "Cross-platform macOS/Linux/Windows",
       "Apache 2.0 open source",
       "Self-experience retrieval enables learning from past tasks"
     ],
     "weaknesses": [
-      "~34.5% success rate \u2014 not production-ready",
+      "~34.5% success rate — not production-ready",
       "No enterprise features (auth, RBAC, audit, compliance)",
       "GUI interaction is slow and fragile to UI changes",
       "No HITL controls or kill switches",
@@ -222,31 +222,31 @@
     "data-extraction"
   ],
   "walkthrough": {
-    "title": "How Agent S Works: Autonomous Desktop GUI Control",
+    "title": "Autonomous Web Task Execution with Agent S2",
     "steps": [
       {
-        "title": "Set Up the Environment",
-        "description": "Clone the repo, install Python 3.10+ dependencies, and configure platform-specific accessibility libraries (macOS Accessibility API, Linux AT-SPI, Windows UI Automation). Set your LLM API key (GPT-4o, Claude, or open-source models).",
+        "title": "Define a Task in Natural Language",
+        "description": "Describe what you need done on the web: 'Go to Kayak, search for flights from SFO to JFK next Friday, and compile the top 5 cheapest options.' Agent S2 uses its experience-augmented hierarchical planning to break this into subtasks.",
         "image": "/screenshots/agent-s/step-1.png"
       },
       {
-        "title": "Define a Task in Natural Language",
-        "description": "Describe what you want the agent to do: 'Open the spreadsheet, copy Q3 revenue figures, create a chart in Slides, and email the presentation to the team.' The agent decomposes this into hierarchical sub-tasks.",
+        "title": "Manager-Worker Planning Decomposes the Task",
+        "description": "The Manager agent creates a high-level plan, then delegates specific GUI interactions to Worker agents. Each worker specializes in a subtask — navigating to Kayak, filling search forms, scrolling results, extracting prices.",
         "image": "/screenshots/agent-s/step-2.png"
       },
       {
-        "title": "Manager-Worker Planning",
-        "description": "The Manager agent creates a high-level plan using Experience-Augmented Hierarchical Planning. It retrieves relevant past trajectories and web knowledge to inform the strategy. Worker agents execute individual UI actions.",
+        "title": "Autonomous GUI Interaction via Vision",
+        "description": "Workers interact with the actual browser UI using screen understanding — clicking buttons, typing in fields, scrolling, and reading text. The Mixture-of-Grounding technique combines visual and DOM-based element identification for precision.",
         "image": "/screenshots/agent-s/step-3.png"
       },
       {
-        "title": "Autonomous GUI Interaction",
-        "description": "Worker agents capture screenshots, parse accessibility trees, and interact with desktop applications \u2014 clicking buttons, typing text, navigating menus. Each action is logged as a trajectory for future learning.",
+        "title": "Experience Learning Improves Over Time",
+        "description": "Agent S2 stores successful interaction patterns in its Online Web Knowledge Graph. Next time it encounters Kayak or similar travel sites, it draws on past experience to navigate faster and avoid dead ends.",
         "image": "/screenshots/agent-s/step-4.png"
       },
       {
-        "title": "Results and Trajectory Logging",
-        "description": "The agent reports task completion status with screenshots of the final state. All trajectories are stored for self-experience retrieval, improving performance on similar future tasks. Evaluate on OSWorld benchmark (~34.5%).",
+        "title": "Results and Full Trajectory Logging",
+        "description": "Review the compiled flight data plus a complete action trajectory — every screenshot, click, and reasoning step. Export structured results to CSV or feed into downstream automation via API.",
         "image": "/screenshots/agent-s/step-5.png"
       }
     ]

@@ -12,12 +12,12 @@
   "screenshots": [
     {
       "path": "/screenshots/openai-operator/operator-interface.png",
-      "alt": "OpenAI Operator \u2014 browser agent interface navigating a website autonomously",
+      "alt": "OpenAI Operator — browser agent interface navigating a website autonomously",
       "screen": "browser-agent"
     },
     {
       "path": "/screenshots/openai-operator/cua-model.png",
-      "alt": "OpenAI CUA \u2014 Computer-Using Agent model architecture diagram",
+      "alt": "OpenAI CUA — Computer-Using Agent model architecture diagram",
       "screen": "architecture"
     }
   ],
@@ -232,12 +232,12 @@
       }
     ]
   },
-  "scoringRationale": "Operator scores 52/100. Ecosystem (18) is standout \u2014 OpenAI's unmatched community, funding, innovation. Governance (12) benefits from HITL design. Integration (11) browser breadth but no structured depth. Builder (10), Deployment (9), Collaboration (6) reflect consumer-first product, not enterprise agent platform.",
+  "scoringRationale": "Operator scores 52/100. Ecosystem (18) is standout — OpenAI's unmatched community, funding, innovation. Governance (12) benefits from HITL design. Integration (11) browser breadth but no structured depth. Builder (10), Deployment (9), Collaboration (6) reflect consumer-first product, not enterprise agent platform.",
   "competence": "Browser/Computer Use Agent",
   "targetUser": "Users automating web-based tasks via visual AI",
   "marketIntelligence": {
     "communityBuzz": [
-      "Operator now integrated into ChatGPT as agent mode \u2014 standalone interface consolidated",
+      "Operator now integrated into ChatGPT as agent mode — standalone interface consolidated",
       "CUA browser agent praised for zero-integration approach but fragile to UI changes",
       "Expensive vision tokens per task is the main cost concern",
       "87% WebVoyager benchmark gets attention but real-world reliability is lower"
@@ -274,40 +274,40 @@
     "sales-outreach"
   ],
   "walkthrough": {
-    "title": "How OpenAI Operator Works: Browser Agent Powered by CUA",
+    "title": "Automated Web Research with OpenAI Operator",
     "steps": [
       {
-        "image": "/screenshots/openai-operator/step-1.png",
-        "title": "Describe Your Task",
-        "description": "Type what you want done in natural language. Operator opens a sandboxed browser and begins navigating websites autonomously using vision-based screen understanding."
+        "title": "Describe Your Research Task",
+        "description": "Tell Operator what you need in natural language: 'Research the top 10 AI agent platforms, find their pricing pages, and compile a comparison table.' The CUA model plans the browsing sequence autonomously.",
+        "image": "/screenshots/openai-operator/operator-interface.png"
       },
       {
-        "title": "Watch the Agent Work",
-        "description": "See the browser in real-time as CUA clicks, types, scrolls, and navigates. An on-screen narration explains what the agent is doing and why at each step.",
-        "image": "/screenshots/openai-operator/step-2.png"
+        "title": "Watch the Agent Navigate",
+        "description": "Operator opens a browser and navigates websites using vision-based screen understanding — no APIs or integrations needed. It reads pages, clicks links, fills forms, and extracts data like a human researcher would.",
+        "image": "/screenshots/openai-operator/cua-model.png"
       },
       {
         "title": "Approve Sensitive Actions",
-        "description": "Operator automatically pauses for your confirmation before logins, purchases, or form submissions with personal data. You can take over the browser at any time.",
+        "description": "When Operator encounters a login page, payment form, or destructive action, it pauses and asks for your approval before proceeding. You maintain control over sensitive operations while the agent handles the rest.",
         "image": "/screenshots/openai-operator/step-3.png"
       },
       {
-        "title": "Review the Audit Trail",
-        "description": "Every action is captured as a screenshot sequence with the agent's reasoning. Replay the full session to verify what was done and how.",
+        "title": "Review the Compiled Results",
+        "description": "Operator delivers structured output — a formatted comparison table with pricing tiers, feature lists, and source URLs. Review the audit trail showing every page visited and action taken for full transparency.",
         "image": "/screenshots/openai-operator/step-4.png"
       }
     ]
   },
   "youtubeReviews": [
     {
-      "videoId": "CSE36ypb5Lo",
-      "title": "OpenAI Operator: First Look at the AI Browser Agent",
-      "channel": "Matt Wolfe"
+      "videoId": "CSE77wAdDLg",
+      "title": "Introduction to Operator & Agents",
+      "channel": "OpenAI"
     },
     {
-      "videoId": "oagNFai1RDk",
-      "title": "I Tested OpenAI Operator - Here's What Happened",
-      "channel": "AI Explained"
+      "videoId": "gYqs-wUKZsM",
+      "title": "Demonstrating Operator",
+      "channel": "OpenAI"
     }
   ]
 }

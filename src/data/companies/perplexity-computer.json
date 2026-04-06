@@ -228,31 +228,31 @@
     "sales-outreach"
   ],
   "walkthrough": {
-    "title": "How Perplexity Computer Works: Citation-Grounded Web Research",
+    "title": "Competitive Intelligence Research with Comet Agents",
     "steps": [
       {
-        "title": "Define Your Research Task",
-        "description": "Describe what you need in natural language: 'Find the top 20 AI startups that raised Series A in Q1 2026, including funding amount, lead investor, and product description.' The agent plans a multi-step web research strategy.",
+        "title": "Define Your Research Objective",
+        "description": "Describe what intelligence you need: 'Research the pricing strategies of the top 5 CRM platforms and compare their enterprise tiers.' Comet's AI plans a multi-step research strategy across live web sources.",
         "image": "/screenshots/perplexity-computer/step-1.png"
       },
       {
         "title": "Agent Browses the Live Web",
-        "description": "Using computer-use capabilities, the agent autonomously navigates websites, search engines, and databases. It handles dynamic JavaScript pages, pagination, and login-gated content where credentials are provided.",
+        "description": "Comet navigates to each competitor's website, reads pricing pages, feature comparison tables, and case studies. Unlike static search, the agent clicks through interactive elements, expands hidden sections, and follows pagination to get complete data.",
         "image": "/screenshots/perplexity-computer/step-2.png"
       },
       {
-        "title": "Extract and Structure Data",
-        "description": "As the agent browses, it extracts relevant data into your specified schema. Every data point is citation-grounded \u2014 linked back to the source URL and page where it was found.",
+        "title": "Extract and Structure Findings",
+        "description": "Raw research is transformed into structured data — normalized pricing tables, feature matrices, and competitive positioning summaries. Comet identifies discrepancies, highlights unique differentiators, and notes recent pricing changes.",
         "image": "/screenshots/perplexity-computer/step-3.png"
       },
       {
-        "title": "Compile Research Output",
-        "description": "The agent compiles findings into structured formats (JSON, markdown tables, reports) with full source attribution. Cross-references multiple sources to validate accuracy and flags conflicting information.",
+        "title": "Compile Citation-Grounded Report",
+        "description": "The agent produces a formatted report with every claim linked to its source URL. No hallucinated data — everything is grounded in what was actually found on the live web. Export as markdown, PDF, or feed into downstream tools.",
         "image": "/screenshots/perplexity-computer/step-4.png"
       },
       {
-        "title": "API Integration for Scale",
-        "description": "Use the API for batch research jobs, recurring competitive intelligence monitoring, and integration into data pipelines. Enterprise tier provides higher rate limits and priority processing.",
+        "title": "API Integration for Ongoing Monitoring",
+        "description": "Use the Sonar API to automate competitive monitoring on a schedule. Set up daily or weekly research runs that track pricing changes, new feature launches, and messaging shifts — delivered as structured data to your tools.",
         "image": "/screenshots/perplexity-computer/step-5.png"
       }
     ]

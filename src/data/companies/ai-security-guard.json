@@ -200,38 +200,38 @@
       }
     ]
   },
-  "scoringRationale": "AI Security Guard scores 55/100. Governance (14) is standout \u2014 guardrails ARE the product. Builder (12) and Deployment (12) decent for focused tool. Collaboration (5) and Ecosystem (1) minimal \u2014 point solution, not platform.",
+  "scoringRationale": "AI Security Guard scores 55/100. Governance (14) is standout — guardrails ARE the product. Builder (12) and Deployment (12) decent for focused tool. Collaboration (5) and Ecosystem (1) minimal — point solution, not platform.",
   "competence": "Agent Security & Guardrails",
   "targetUser": "Security teams protecting AI agent deployments from attacks",
   "supportedCUJs": [
     "security-monitoring"
   ],
   "walkthrough": {
-    "title": "How AI Security Guard Works: Real-Time AI Agent Firewall",
+    "title": "Detecting and Blocking Prompt Injection Attacks",
     "steps": [
       {
-        "title": "Integrate the SDK",
-        "description": "Add the AI Security Guard SDK to your agent framework or LLM pipeline. It sits as middleware between users/agents and the AI model \u2014 all inputs and outputs pass through the scanning layer with sub-100ms latency.",
+        "title": "Integrate the Security SDK",
+        "description": "Add AI Security Guard's lightweight SDK to your agent pipeline — it wraps your LLM calls with input/output scanning. One-line integration for LangChain, CrewAI, or custom agent frameworks. Under 5ms latency overhead.",
         "image": "/screenshots/ai-security-guard/step-1.png"
       },
       {
-        "title": "Configure Threat Policies",
-        "description": "Use the web console to select which threat categories to monitor: prompt injection, PII/data leakage, jailbreak attempts, toxicity, and custom patterns. Set sensitivity thresholds per category and define block vs. alert behavior.",
+        "title": "Configure Threat Detection Policies",
+        "description": "Define what threats to monitor: prompt injection attempts, jailbreak patterns, PII leakage, toxic content, and off-topic manipulation. Set sensitivity thresholds and choose block vs. alert mode for each threat category.",
         "image": "/screenshots/ai-security-guard/step-2.png"
       },
       {
         "title": "Real-Time Input Scanning",
-        "description": "Every prompt and agent input is scanned in real-time before reaching the LLM. Multi-turn jailbreak detection catches sophisticated attacks that span multiple messages. Malicious inputs are blocked and logged.",
+        "description": "Every user message is scanned before reaching your LLM. The detector identifies injection patterns — hidden instructions, role hijacking, delimiter attacks, and encoded payloads. Malicious inputs are blocked with an explanation.",
         "image": "/screenshots/ai-security-guard/step-3.png"
       },
       {
-        "title": "Output Monitoring and DLP",
-        "description": "Agent outputs are scanned for sensitive data leakage (PII, credentials, internal data), policy violations, and harmful content. Sensitive data is redacted or blocked before reaching the end user.",
+        "title": "Output Monitoring and Data Loss Prevention",
+        "description": "Agent responses are scanned for accidental PII exposure, credential leaks, and unauthorized data disclosure. DLP rules prevent your agent from revealing internal system prompts, API keys, or customer data.",
         "image": "/screenshots/ai-security-guard/step-4.png"
       },
       {
-        "title": "Audit and Incident Response",
-        "description": "All scans are logged with full context for audit and compliance. Security dashboards show threat trends, blocked attempts, and policy effectiveness. Alerts integrate with SIEM and incident response workflows.",
+        "title": "Audit Trail and Incident Response",
+        "description": "Every blocked threat is logged with full context — the original input, detection confidence, and policy matched. Security teams get real-time alerts and can review incident timelines to tune detection rules.",
         "image": "/screenshots/ai-security-guard/step-5.png"
       }
     ]

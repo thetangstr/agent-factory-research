@@ -31,7 +31,7 @@
   "uxAnalysis": {
     "builderFlow": "K8s-native: agents defined as CRDs via kubectl or web UI. Specs declare LLM provider, system prompt, tools, permissions in YAML. Web UI provides chat interface and management console. Pre-built templates for DevOps scenarios. Assumes K8s familiarity.",
     "strengths": [
-      "True K8s-native \u2014 agents are first-class K8s resources",
+      "True K8s-native — agents are first-class K8s resources",
       "CRD definitions are GitOps-friendly and version-controllable",
       "Leverages K8s RBAC for agent permissions",
       "Deep DevOps tool integrations (kubectl, Helm, Istio, Prometheus)",
@@ -40,7 +40,7 @@
     ],
     "weaknesses": [
       "Steep learning curve outside K8s teams",
-      "K8s-only \u2014 no standalone deployment",
+      "K8s-only — no standalone deployment",
       "Narrow tool ecosystem (cloud-native only)",
       "No RAG or knowledge base",
       "Early-stage with limited docs",
@@ -216,7 +216,7 @@
       }
     ]
   },
-  "scoringRationale": "Kagent scores 52/100. Deployment (14) is standout \u2014 K8s-native CRD approach is unique differentiator. Integration (11) deep but narrow. Builder (10), Governance (10), Collaboration (8) limited as early project. Ecosystem (5) young with ~1.5K stars.",
+  "scoringRationale": "Kagent scores 52/100. Deployment (14) is standout — K8s-native CRD approach is unique differentiator. Integration (11) deep but narrow. Builder (10), Governance (10), Collaboration (8) limited as early project. Ecosystem (5) young with ~1.5K stars.",
   "competence": "DevOps Agent Platform",
   "targetUser": "Platform engineering teams automating Kubernetes operations",
   "marketIntelligence": {
@@ -242,31 +242,31 @@
     "devops-infra"
   ],
   "walkthrough": {
-    "title": "How Kagent Works: Kubernetes-Native AI Agent for DevOps",
+    "title": "Kubernetes Incident Diagnosis and Remediation",
     "steps": [
       {
-        "title": "Install via Helm Chart",
-        "description": "Deploy Kagent to your Kubernetes cluster with a single Helm install command. The operator registers custom resource definitions (CRDs) for agent management. No external dependencies beyond the cluster.",
+        "title": "Install Kagent via Helm Chart",
+        "description": "Deploy Kagent to your cluster with a single Helm install. It creates CRDs for Agent, Tool, and ModelConfig resources. Kagent runs as a Kubernetes-native operator — no external dependencies, no data leaving your cluster.",
         "image": "/screenshots/kagent/step-1.png"
       },
       {
-        "title": "Define Agents Declaratively",
-        "description": "Create agents using Kubernetes YAML manifests \u2014 just like any other K8s resource. Specify the agent's capabilities (kubectl, Helm, Istio, Argo CD, Prometheus), LLM backend, and RBAC permissions. Apply with kubectl.",
+        "title": "Define Agents as Kubernetes Resources",
+        "description": "Declare agents in YAML — a diagnostics agent with kubectl and log-reading tools, a remediation agent with Helm and restart capabilities. Agents are Kubernetes resources managed with standard kubectl, GitOps, and RBAC.",
         "image": "/screenshots/kagent/step-2.png"
       },
       {
-        "title": "Chat with Your Cluster",
-        "description": "Open the Kagent web UI and interact with your agents conversationally. Ask 'Why is pod X crashing?' or 'Deploy service Y to staging.' The agent uses kubectl, queries Prometheus metrics, and checks Helm releases to answer.",
+        "title": "Chat to Diagnose Cluster Issues",
+        "description": "When an alert fires, ask the agent: 'Why is the payments pod crashlooping?' The agent runs kubectl commands, reads logs, checks resource limits, and traces the issue to an OOM kill caused by a memory leak in the latest deploy.",
         "image": "/screenshots/kagent/step-3.png"
       },
       {
-        "title": "Agent Diagnoses and Remediates",
-        "description": "When issues arise, the agent runs diagnostic commands (describe pods, check events, query metrics), correlates findings across tools, and proposes remediation. For approved operations, it applies fixes directly to the cluster.",
+        "title": "Agent Remediates with Approval",
+        "description": "The agent proposes a fix — rollback to the previous deployment version. With human-in-the-loop enabled, it waits for your approval before executing. For known safe operations, configure auto-remediation policies.",
         "image": "/screenshots/kagent/step-4.png"
       },
       {
         "title": "GitOps-Compatible Management",
-        "description": "Agent definitions are standard YAML \u2014 store them in Git, manage via Argo CD, and version control your agent fleet. K8s RBAC controls what each agent can access, ensuring least-privilege security.",
+        "description": "Agent configurations are version-controlled YAML. Update agent tools, model configs, or policies via PR. Argo CD or Flux sync changes to the cluster automatically. Full audit trail of agent capability changes.",
         "image": "/screenshots/kagent/step-5.png"
       }
     ]
