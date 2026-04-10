@@ -57,7 +57,7 @@ export default function MarketingPage() {
           </span>
         </div>
         <Link
-          href="/login"
+          href="/dashboard"
           className="px-4 py-2 rounded-lg text-sm font-medium transition-opacity hover:opacity-90"
           style={{
             background: "var(--md-sys-color-primary)",
@@ -65,7 +65,7 @@ export default function MarketingPage() {
             textDecoration: "none",
           }}
         >
-          Sign in
+          Explore Research
         </Link>
       </nav>
 
@@ -100,7 +100,7 @@ export default function MarketingPage() {
         </p>
         <div className="flex items-center justify-center gap-4">
           <Link
-            href="/login"
+            href="/dashboard"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium transition-opacity hover:opacity-90"
             style={{
               background: "var(--md-sys-color-primary)",
@@ -108,7 +108,7 @@ export default function MarketingPage() {
               textDecoration: "none",
             }}
           >
-            Get started
+            Explore Research
             <ArrowRight style={{ width: 16, height: 16 }} />
           </Link>
         </div>
